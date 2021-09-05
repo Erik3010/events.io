@@ -1,0 +1,22 @@
+@import "scss/variables";
+
+.btn {
+  cursor: pointer;
+  border-radius: 5px;
+  padding: 0.875rem 2rem;
+  border: 1px solid transparent;
+  font-weight: 600;
+  @at-root {
+    &-primary {
+      background: $primary;
+      color: $white;
+      &:hover,
+      &:focus {
+        background: $primaryDark;
+      }
+      &:focus {
+        box-shadow: $shadow;
+      }
+    }
+  }
+}

@@ -1,6 +1,7 @@
 import styles from "pages/Login/Login.module.scss";
 import { Link } from "react-router-dom";
-import classNames from "classnames";
+
+import LoginForm from "components/LoginForm/LoginForm";
 
 function Login() {
   return (
@@ -16,26 +17,15 @@ function Login() {
             <p>Getting Started Now</p>
             <h2>Login to you account</h2>
           </div>
-          <form className={styles["login-form"]}>
-            <div className="form-control">
-              <label htmlFor="">Username</label>
-              <input type="text" />
-            </div>
-            <div className="form-control">
-              <label htmlFor="">Password</label>
-              <input type="password" />
-            </div>
-            <Link to="/" className={styles["login-form-link"]}>
-              Forgot Password?
-            </Link>
-            <button className="button" type="submit">
-              Log In
-            </button>
-          </form>
+          <LoginForm />
         </div>
         <div className={styles["login-content-footer"]}>
           <Link to="/">Events.io</Link> made with love by{" "}
-          <a target="_blank" href="https://github.com/Erik3010">
+          <a
+            target="_blank"
+            rel="noreferrer"
+            href="https://github.com/Erik3010"
+          >
             Erik3010
           </a>
         </div>

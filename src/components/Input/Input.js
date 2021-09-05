@@ -1,10 +1,10 @@
-import styles from "components/Input/Input";
+import styles from "components/Input/Input.module.scss";
 
-function Input() {
+function Input({ label, type }) {
   return (
-    <div>
-      <label>Username</label>
-      <input type="text" />
+    <div className={styles["form-control"]}>
+      <label htmlFor={label}>{label}</label>
+      <input type={type} id={label} placeholder={label} />
     </div>
   );
 }

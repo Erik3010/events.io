@@ -23,20 +23,6 @@
           }
         }
       }
-      button {
-        width: 100%;
-        margin-top: 2rem;
-      }
-      &-link {
-        display: block;
-        color: $primary;
-        font-size: 0.8rem;
-        text-align: right;
-        margin-top: 0.75rem;
-      }
-      > div + div {
-        margin-top: 1rem;
-      }
     }
     &-footer {
       font-size: 0.875rem;
