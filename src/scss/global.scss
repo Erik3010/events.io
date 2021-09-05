@@ -1,0 +1,94 @@
+@import-normalize;
+
+@import "variables";
+@import "breakpoints";
+
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Inter", sans-serif;
+  outline: none;
+  color: $text;
+}
+
+::selection {
+  background: $primary;
+  color: $white;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+}
+
+a {
+  text-decoration: none;
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+.container {
+  margin: 0 auto;
+  max-width: 100%;
+  padding: 0 2rem;
+  @media screen and (min-width: $breakpoint-sm) {
+    max-width: 540px;
+  }
+  @media screen and (min-width: $breakpoint-md) {
+    max-width: 720px;
+  }
+  @media screen and (min-width: $breakpoint-lg) {
+    max-width: 960px;
+  }
+  @media screen and (min-width: $breakpoint-xl) {
+    max-width: 1140px;
+  }
+}
+
+.text-primary {
+  color: $primary;
+}
+
+.button {
+  background: $primary;
+  color: $white;
+  cursor: pointer;
+  border-radius: 5px;
+  padding: 0.875rem 2rem;
+  border: 1px solid transparent;
+  font-weight: 600;
+  &:hover,
+  &:focus {
+    background: $primaryDark;
+  }
+  &:focus {
+    box-shadow: $shadow;
+  }
+}
+
+.form-control {
+  display: flex;
+  flex-direction: column;
+  label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-size: 0.875rem;
+    font-weight: 500;
+  }
+  input {
+    background: $white;
+    border: 0.0625rem solid #e4e6eb;
+    font-size: 0.875rem;
+    padding: 0.75rem 1rem;
+    border-radius: 0.45rem;
+    &:focus {
+      box-shadow: $shadow;
+      border-color: $primary;
+    }
+  }
+}
