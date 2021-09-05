@@ -1,4 +1,4 @@
-import styles from "components/Input/Input.module.scss";
+import styles from "components/Basic/Input/Input.module.scss";
 
 function Input({ label, type }) {
   return (

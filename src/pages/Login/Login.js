@@ -1,7 +1,8 @@
 import styles from "pages/Login/Login.module.scss";
 import { Link } from "react-router-dom";
 
-import LoginForm from "components/LoginForm/LoginForm";
+import LoginFormHeader from "components/Login/LoginFormHeader/LoginFormHeader";
+import LoginForm from "components/Login/LoginForm/LoginForm";
 
 function Login() {
   return (
@@ -13,10 +14,7 @@ function Login() {
           </h2>
         </div>
         <div className={styles["login-content-body"]}>
-          <div className={styles["login-form-header"]}>
-            <p>Getting Started Now</p>
-            <h2>Login to you account</h2>
-          </div>
+          <LoginFormHeader />
           <LoginForm />
         </div>
         <div className={styles["login-content-footer"]}>

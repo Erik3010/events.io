@@ -1,7 +1,7 @@
-import styles from "components/LoginForm/LoginForm.module.scss";
+import styles from "components/Login/LoginForm/LoginForm.module.scss";
 
-import Input from "components/Input/Input";
-import Button from "components/Button/Button";
+import Input from "components/Basic/Input/Input";
+import Button from "components/Basic/Button/Button";
 import { Link } from "react-router-dom";
 
 function LoginForm() {

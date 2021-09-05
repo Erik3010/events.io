@@ -1,4 +1,4 @@
-import styles from "components/Button/Button.module.scss";
+import styles from "components/Basic/Button/Button.module.scss";
 import classNames from "classnames";
 
 function Button({ children }) {
