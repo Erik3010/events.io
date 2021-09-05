@@ -1,0 +1,11 @@
+@import "scss/variables";
+
+.login-content-footer {
+  font-size: 0.875rem;
+  color: $gray;
+  a {
+    color: $gray;
+    font-weight: 500;
+    text-decoration: underline;
+  }
+}
