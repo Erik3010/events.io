@@ -1,50 +1,17 @@
 @import "scss/variables";
+@import "scss/breakpoints";
 
 .login-container {
   height: 100%;
   display: grid;
   grid-template-columns: 2fr 3fr;
+  @media screen and (max-width: $breakpoint-md) {
+    grid-template-columns: 1fr;
+  }
   .login-content {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     padding: 3rem 4rem;
-  }
-  .login-sidebar {
-    background: $primary;
-    position: relative;
-    flex-direction: column;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 3rem 8rem;
-    &-overlay {
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      overflow: hidden;
-      > * {
-        opacity: 0.05;
-        fill: none;
-      }
-    }
-    &-wrapper {
-      z-index: 99;
-    }
-    &-text {
-      width: 500px;
-      margin-top: 0.75rem;
-      h1 {
-        font-weight: 600;
-        margin-bottom: 0.25rem;
-        color: $white;
-      }
-      p {
-        color: $placeholder;
-        font-size: 0.8rem;
-      }
-    }
   }
 }
