@@ -22,5 +22,20 @@
         transform: scale(0.98);
       }
     }
+    &-secondary {
+      background: $white;
+      color: $primary;
+      border-color: $primary;
+      &:hover,
+      &:focus {
+        background: rgba(52, 93, 238, 0.05);
+      }
+      &:focus {
+        box-shadow: $shadow;
+      }
+      &:active {
+        transform: scale(0.98);
+      }
+    }
   }
 }

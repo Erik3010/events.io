@@ -16,7 +16,7 @@ function LoginForm() {
       <Link to="/" className={styles["login-form-link"]}>
         Forgot Password?
       </Link>
-      <Button>Log in</Button>
+      <Button type="primary">Log in</Button>
     </form>
   );
 }
