@@ -5,8 +5,12 @@ import Button from "components/Basic/Button/Button";
 import { Link } from "react-router-dom";
 
 function LoginForm() {
+  const loginHandler = (e) => {
+    e.preventDefault();
+  };
+
   return (
-    <form className={styles["login-form"]}>
+    <form className={styles["login-form"]} onSubmit={loginHandler}>
       <Input label="Username" type="text" />
       <Input label="Password" type="password" />
       <Link to="/" className={styles["login-form-link"]}>

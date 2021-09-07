@@ -6,6 +6,7 @@
   padding: 0.875rem 2rem;
   border: 1px solid transparent;
   font-weight: 600;
+  transition: all $transition;
   @at-root {
     &-primary {
       background: $primary;
@@ -16,6 +17,9 @@
       }
       &:focus {
         box-shadow: $shadow;
+      }
+      &:active {
+        transform: scale(0.98);
       }
     }
   }
