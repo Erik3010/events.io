@@ -7,7 +7,7 @@ function LoginSidebar() {
   return (
     <div className={styles["login-sidebar"]}>
       <div className={styles["login-sidebar-overlay"]}>
-        {/* <Pattern width={800} height={800} viewBox="0 0 1100 1100" /> */}
+        <Pattern width={800} height={800} viewBox="0 0 1100 1100" />
       </div>
       <div className={styles["login-sidebar-wrapper"]}>
         <Banner width={320} height={320} />
