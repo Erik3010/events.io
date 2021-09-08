@@ -28,7 +28,7 @@
       border-color: $primary;
       &:hover,
       &:focus {
-        background: rgba(52, 93, 238, 0.05);
+        background: $transparentPrimary;
       }
       &:focus {
         box-shadow: $shadow;

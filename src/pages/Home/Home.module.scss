@@ -87,7 +87,20 @@
         border-color: $primary;
       }
       &-header {
-        margin-bottom: 3rem;
+        .event-badge {
+          display: inline-block;
+          font-size: .625rem;
+          border-radius: .25rem;
+          background: rgba(52, 93, 238, 0.25);
+          color: $primary;
+          padding: 0 .75rem;
+          height: 1.5rem;
+          text-align: center;
+          line-height: 1.5rem;
+          text-transform: uppercase;
+          font-weight: 600;
+        }
+        margin-bottom: 3.5rem;
       }
       &-content {
         h3 {

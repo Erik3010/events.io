@@ -41,7 +41,9 @@ function Home() {
           </div>
           <div className={styles["event-container"]}>
             <div className={styles["event-card"]}>
-              <div className={styles["event-card-header"]}>tag</div>
+              <div className={styles["event-card-header"]}>
+                <span className={styles["event-badge"]}>12 hours</span>
+              </div>
               <div className={styles["event-card-content"]}>
                 <h3>Event List</h3>
                 <p>20 Agustus 2021</p>
