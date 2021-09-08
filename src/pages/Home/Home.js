@@ -1,6 +1,7 @@
 import styles from "pages/Home/Home.module.scss";
 
 import { ReactComponent as ChevronDown } from "assets/icons/chevron-down.svg";
+import { ReactComponent as DotsVertical } from "assets/icons/dots-vertical.svg";
 import { Link } from "react-router-dom";
 import Button from "components/Basic/Button/Button";
 
@@ -42,7 +43,12 @@ function Home() {
           <div className={styles["event-container"]}>
             <div className={styles["event-card"]}>
               <div className={styles["event-card-header"]}>
-                <span className={styles["event-badge"]}>12 hours</span>
+                <div>
+                  <span className={styles["event-badge"]}>12 hours to go</span>
+                </div>
+                <div className={styles["event-menu-icon"]}>
+                  <DotsVertical width={22} height={22} />
+                </div>
               </div>
               <div className={styles["event-card-content"]}>
                 <h3>Event List</h3>

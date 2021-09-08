@@ -87,13 +87,27 @@
         border-color: $primary;
       }
       &-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        .event-menu-icon {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          padding: 0.25rem;
+          transition: all $transition;
+          &:hover {
+            background: rgba(52, 93, 238, 0.08);
+            border-radius: 0.35rem;
+          }
+        }
         .event-badge {
           display: inline-block;
-          font-size: .625rem;
-          border-radius: .25rem;
+          font-size: 0.625rem;
+          border-radius: 0.25rem;
           background: rgba(52, 93, 238, 0.25);
           color: $primary;
-          padding: 0 .75rem;
+          padding: 0 0.75rem;
           height: 1.5rem;
           text-align: center;
           line-height: 1.5rem;
