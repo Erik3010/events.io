@@ -1,0 +1,43 @@
+@import "scss/variables";
+
+.header-profile {
+  @at-root {
+    &-container {
+      display: flex;
+      align-items: center;
+    }
+    &-icon {
+      margin-left: 2.5rem;
+      cursor: pointer;
+      color: $text;
+    }
+  }
+  display: flex;
+  align-items: center;
+  &-initial {
+    background: $primary;
+    color: $white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 0.45rem;
+    font-weight: 700;
+    font-size: 0.75rem;
+    cursor: pointer;
+    margin-right: 0.85rem;
+  }
+  &-info {
+    &-title {
+      font-weight: 600;
+      font-size: 0.85rem;
+    }
+    &-subtitle {
+      font-weight: 500;
+      color: $subtitle;
+      font-size: 0.75rem;
+      margin-top: -0.15rem;
+    }
+  }
+}

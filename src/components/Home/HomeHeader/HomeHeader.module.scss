@@ -1,0 +1,15 @@
+@import "scss/variables";
+
+.home-header {
+  display: flex;
+  justify-content: space-between;
+  &-title {
+    h3 {
+      font-size: 1.25rem;
+    }
+    p {
+      color: $subtitle;
+      font-size: 0.8rem;
+    }
+  }
+}

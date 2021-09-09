@@ -1,0 +1,79 @@
+@import "scss/variables";
+
+.event-card {
+  position: relative;
+  background: $white;
+  border-radius: 0.5rem;
+  box-shadow: rgba(0, 0, 0, 0.04) 0px 10px 20px, rgba(0, 0, 0, 0.04) 0px 2px 6px, rgba(0, 0, 0, 0.06) 0px 0px 1px;
+  border: 1px solid $border;
+  cursor: pointer;
+  transition: all $transition;
+  overflow: hidden;
+  height: 10.5rem;
+  &-overlay {
+    position: absolute;
+    background: $transparentPrimary;
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    transition: all $transition;
+    right: -60%;
+    top: 40%;
+  }
+  &:hover .event-card-overlay {
+    transform: scale(2.5);
+  }
+  &:hover {
+    transform: scale(1.03);
+    box-shadow: rgba(0, 0, 0, 0.04) 0px 10px 20px, rgba(0, 0, 0, 0.04) 0px 2px 6px, rgba(0, 0, 0, 0.06) 0px 0px 1px;
+    border-color: $primary;
+  }
+  &-body {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding: 1.15rem;
+    .event-card-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      .event-menu-icon {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 0.25rem;
+        transition: all $transition;
+        &:hover {
+          background: rgba(52, 93, 238, 0.08);
+          border-radius: 0.35rem;
+        }
+      }
+      .event-badge {
+        display: inline-block;
+        font-size: 0.625rem;
+        border-radius: 0.25rem;
+        background: rgba(52, 93, 238, 0.25);
+        color: $primary;
+        padding: 0 0.75rem;
+        height: 1.5rem;
+        text-align: center;
+        line-height: 1.5rem;
+        text-transform: uppercase;
+        font-weight: 600;
+      }
+      margin-bottom: 3.5rem;
+    }
+    .event-card-content {
+      h3 {
+        font-size: 1.05rem;
+        font-weight: 700;
+      }
+      p {
+        color: $subtitle;
+        font-size: 0.75rem;
+      }
+    }
+  }
+}
