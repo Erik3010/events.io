@@ -12,7 +12,7 @@ function Home() {
         <div className="container">
           <HomeHeader />
           <div className={styles["event-container"]}>
-            {Array(10)
+            {Array(20)
               .fill()
               .map((item, index) => {
                 return <EventCard key={index} />;

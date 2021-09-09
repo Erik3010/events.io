@@ -1,0 +1,13 @@
+@import "scss/variables";
+
+.dropdown-item {
+  padding: 0.5rem 1rem;
+  font-size: 0.75rem;
+  font-weight: 500;
+  width: 100%;
+  text-align: left;
+  cursor: pointer;
+  &:hover {
+    background: $lightGray;
+  }
+}

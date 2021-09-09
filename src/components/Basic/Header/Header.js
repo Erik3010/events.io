@@ -1,6 +1,5 @@
 import styles from "components/Basic/Header/Header.module.scss";
 
-import { Link } from "react-router-dom";
 import HeaderProfile from "components/Basic/HeaderProfile/HeaderProfile";
 
 function Header() {
