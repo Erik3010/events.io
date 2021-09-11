@@ -10,12 +10,13 @@ import Dropdown from "components/Basic/Dropdown/Dropdown";
 function HeaderProfile() {
   const [showDropdown, setShowDropdown] = useState(false);
 
-  const handleToggle = () => {
-    setShowDropdown((prev) => !prev);
+  const toggleDropdown = (e) => {
+    e.stopPropagation();
+    setShowDropdown(!showDropdown);
   };
 
   return (
-    <Dropdown.Base show={showDropdown} onToggle={handleToggle}>
+    <Dropdown.Base show={showDropdown} close={() => setShowDropdown(false)}>
       <div className={styles["header-profile-container"]}>
         <div className={styles["header-profile"]}>
           <div className={styles["header-profile-initial"]}>TE</div>
@@ -26,7 +27,10 @@ function HeaderProfile() {
             <p className={styles["header-profile-info-subtitle"]}>User</p>
           </div>
         </div>
-        <div className={styles["header-profile-icon"]} onClick={handleToggle}>
+        <div
+          className={styles["header-profile-icon"]}
+          onClick={(e) => toggleDropdown(e)}
+        >
           <ChevronDown
             className={showDropdown ? styles["active"] : ""}
             width={18}
