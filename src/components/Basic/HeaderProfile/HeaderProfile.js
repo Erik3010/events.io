@@ -19,15 +19,19 @@ function HeaderProfile() {
       <div className={styles["header-profile-container"]}>
         <div className={styles["header-profile"]}>
           <div className={styles["header-profile-initial"]}>TE</div>
-          <div eclassName={styles["header-profile-info"]}>
+          <div className={styles["header-profile-info"]}>
             <Link to="/" className={styles["header-profile-info-title"]}>
               Tester 123
             </Link>
             <p className={styles["header-profile-info-subtitle"]}>User</p>
           </div>
         </div>
-        <div className={styles["header-profile-icon"]}>
-          <ChevronDown width={18} height={18} />
+        <div className={styles["header-profile-icon"]} onClick={handleToggle}>
+          <ChevronDown
+            className={showDropdown ? styles["active"] : ""}
+            width={18}
+            height={18}
+          />
         </div>
       </div>
 

@@ -10,6 +10,12 @@
       margin-left: 2.5rem;
       cursor: pointer;
       color: $text;
+      > svg {
+        transition: $transition;
+        &.active {
+          transform: rotate(180deg);
+        }
+      }
     }
   }
   display: flex;
