@@ -2,12 +2,16 @@ import { useState } from "react";
 
 import styles from "components/Basic/HeaderProfile/HeaderProfile.module.scss";
 
-import { Link } from "react-router-dom";
+import { Link, useHistory } from "react-router-dom";
 import { ReactComponent as ChevronDown } from "assets/icons/chevron-down.svg";
+import { ReactComponent as Logout } from "assets/icons/logout.svg";
 
 import Dropdown from "components/Basic/Dropdown/Dropdown";
+import classNames from "classnames";
 
 function HeaderProfile() {
+  const history = useHistory();
+
   const [showDropdown, setShowDropdown] = useState(false);
 
   const toggleDropdown = (e) => {
@@ -32,7 +36,7 @@ function HeaderProfile() {
           onClick={(e) => toggleDropdown(e)}
         >
           <ChevronDown
-            className={showDropdown ? styles["active"] : ""}
+            className={classNames({ [styles["active"]]: showDropdown })}
             width={18}
             height={18}
           />
@@ -40,9 +44,16 @@ function HeaderProfile() {
       </div>
 
       <Dropdown.Menu>
-        <Dropdown.Item>Item 1</Dropdown.Item>
-        <Dropdown.Item>Item 2</Dropdown.Item>
-        <Dropdown.Item>Item 3</Dropdown.Item>
+        <Dropdown.Item onClick={() => history.push("/login")}>
+          View Profile
+        </Dropdown.Item>
+        <Dropdown.Item>Change Profile</Dropdown.Item>
+        <Dropdown.Item>
+          <div className={styles["dropdown-item-with-icon"]}>
+            <Logout stroke="#f03e3e" width={16} height={16} />{" "}
+            <span>Logout</span>
+          </div>
+        </Dropdown.Item>
       </Dropdown.Menu>
     </Dropdown.Base>
   );

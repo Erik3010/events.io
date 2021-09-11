@@ -5,7 +5,7 @@ import styles from "components/Basic/Dropdown/DropdownMenu/DropdownMenu.module.s
 import DropdownContext from "components/Basic/Dropdown/DropdownContext";
 
 function DropdownMenu({ children }) {
-  const { show, close } = useContext(DropdownContext);
+  const { show } = useContext(DropdownContext);
 
   return show && <div className={styles["dropdown-menu"]}>{children}</div>;
 }

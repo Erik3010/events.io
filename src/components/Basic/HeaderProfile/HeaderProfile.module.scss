@@ -47,3 +47,12 @@
     }
   }
 }
+
+.dropdown-item-with-icon {
+  display: flex;
+  align-items: center;
+  > * + * {
+    margin-left: 0.5rem;
+    color: $error;
+  }
+}
