@@ -4,15 +4,19 @@ import EventCard from "components/Event/EventCard/EventCard";
 import Header from "components/Basic/Header/Header";
 import HomeHeader from "components/Home/HomeHeader/HomeHeader";
 
+import { useState } from "react";
+
 import CreateEventModal from "components/Event/CreateEventModal/CreateEventModal";
 
 function Home() {
+  const [showCreateEventModal, setShowCreateEventModal] = useState(false);
+
   return (
     <div>
       <Header />
       <div className={styles["home-container"]}>
         <div className="container">
-          <HomeHeader />
+          <HomeHeader onCreateEvent={() => setShowCreateEventModal(true)} />
           <div className={styles["event-container"]}>
             {Array(20)
               .fill()
@@ -23,7 +27,7 @@ function Home() {
         </div>
       </div>
 
-      <CreateEventModal />
+      <CreateEventModal show={showCreateEventModal} />
     </div>
   );
 }

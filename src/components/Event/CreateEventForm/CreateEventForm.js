@@ -14,8 +14,8 @@ function CreateEventForm() {
         className={styles["create-event-form"]}
         onSubmit={(e) => submitEventHandler(e)}
       >
-        <Input type="text" label="Event Name" />
-        <Input type="text" label="Event Name" />
+        <Input type="text" label="Name" />
+        <Input type="date" label="Date" />
         <Button type="primary">Create Event</Button>
       </form>
     </div>

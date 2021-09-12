@@ -2,7 +2,7 @@ import styles from "components/Home/HomeHeader/HomeHeader.module.scss";
 
 import Button from "components/Basic/Button/Button";
 
-function HomeHeader() {
+function HomeHeader({ onCreateEvent }) {
   return (
     <div className={styles["home-header"]}>
       <div className={styles["home-header-title"]}>
@@ -10,7 +10,9 @@ function HomeHeader() {
         <p>There are 3 upcoming events. Check it out!</p>
       </div>
       <div>
-        <Button type="secondary">Browse Events</Button>
+        <Button onClick={onCreateEvent} type="secondary">
+          Create Event
+        </Button>
       </div>
     </div>
   );
