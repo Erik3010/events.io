@@ -1,0 +1,8 @@
+.create-event-form {
+  > * + * {
+    margin-top: 1.25rem;
+  }
+  button {
+    margin-top: 2rem;
+  }
+}

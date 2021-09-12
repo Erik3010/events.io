@@ -1,8 +1,10 @@
 import styles from "pages/Home/Home.module.scss";
 
-import EventCard from "components/Event/EventCard";
+import EventCard from "components/Event/EventCard/EventCard";
 import Header from "components/Basic/Header/Header";
 import HomeHeader from "components/Home/HomeHeader/HomeHeader";
+
+import CreateEventModal from "components/Event/CreateEventModal/CreateEventModal";
 
 function Home() {
   return (
@@ -20,6 +22,8 @@ function Home() {
           </div>
         </div>
       </div>
+
+      <CreateEventModal />
     </div>
   );
 }

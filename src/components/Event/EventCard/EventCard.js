@@ -1,4 +1,4 @@
-import styles from "components/Event/EventCard.module.scss";
+import styles from "components/Event/EventCard/EventCard.module.scss";
 
 import { ReactComponent as DotsVertical } from "assets/icons/dots-vertical.svg";
 
