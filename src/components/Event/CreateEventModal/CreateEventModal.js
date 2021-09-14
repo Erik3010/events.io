@@ -2,13 +2,16 @@ import styles from "components/Event/CreateEventModal/CreateEventModal.module.sc
 
 import CreateEventForm from "components/Event/CreateEventForm/CreateEventForm";
 
-import classname from "classnames";
+import { ReactComponent as Cancel } from "assets/icons/cancel.svg";
 
 function CreateEventModal({ show }) {
   return (
     <>
       {show && (
         <div className={styles["event-modal-container"]}>
+          <div className={styles["event-modal-close"]}>
+            <Cancel width={25} height={25} />
+          </div>
           <div className={styles["event-modal"]}>
             <div className={styles["event-modal-header"]}>
               <h1 className={styles["event-modal-header-title"]}>

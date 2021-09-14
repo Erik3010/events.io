@@ -12,6 +12,24 @@
   flex-direction: column;
   align-items: center;
   .event-modal {
+    @at-root {
+      &-close {
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 0.35rem;
+        border-radius: 0.25rem;
+        position: absolute;
+        z-index: 99;
+        right: 1.5rem;
+        top: 1.5rem;
+        transition: 0.1s $transition;
+        &:hover {
+          background: $lightGray;
+        }
+      }
+    }
     width: 40%;
     padding: 2.5rem;
     &-header {
