@@ -27,7 +27,10 @@ function Home() {
         </div>
       </div>
 
-      <CreateEventModal show={showCreateEventModal} />
+      <CreateEventModal
+        show={showCreateEventModal}
+        onClose={() => setShowCreateEventModal(false)}
+      />
     </div>
   );
 }
