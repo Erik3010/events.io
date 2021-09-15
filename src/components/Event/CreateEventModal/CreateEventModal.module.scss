@@ -31,8 +31,24 @@
         }
       }
     }
-    width: 40%;
-    padding: 2.5rem;
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1.75fr 1fr;
+    &-content {
+      padding: 2.5rem;
+    }
+    &-decoration {
+      background: url("../../../assets/decoration.png");
+      background-size: 100%;
+      background-position: bottom left;
+      background-repeat: no-repeat;
+      @at-root {
+        &-right {
+          transform: rotateY(180deg);
+        }
+      }
+    }
     &-header {
       display: flex;
       flex-direction: column;
