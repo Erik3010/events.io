@@ -34,14 +34,18 @@
     width: 40%;
     padding: 2.5rem;
     &-header {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
       text-align: center;
       &-title {
-        font-size: 1.5rem;
+        font-size: 1.75rem;
         margin: 0;
       }
       &-tagline {
+        width: 80%;
         color: $subtitle;
-        font-size: 0.875rem;
+        font-size: 0.75rem;
       }
     }
     &-body {

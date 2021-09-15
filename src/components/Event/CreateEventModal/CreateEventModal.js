@@ -39,7 +39,8 @@ function CreateEventModal({ show, onClose }) {
                 Create New Event
               </h1>
               <p className={styles["event-modal-header-tagline"]}>
-                Make you own event
+                It take less than 5 minute to fill out the information that
+                needed to create your own events.
               </p>
             </div>
             <div className={styles["event-modal-body"]}>
