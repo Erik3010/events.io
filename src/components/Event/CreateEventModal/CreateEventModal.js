@@ -6,6 +6,7 @@ import { ReactComponent as Cancel } from "assets/icons/cancel.svg";
 
 import { Transition } from "react-transition-group";
 import classnames from "classnames";
+import { useEffect } from "react/cjs/react.development";
 
 const transitionStyle = {
   entering: { opacity: 0, transform: "scale(.95)" },
@@ -15,6 +16,11 @@ const transitionStyle = {
 };
 
 function CreateEventModal({ show, onClose }) {
+  useEffect(() => {
+    if (show) document.body.style.overflow = "hidden";
+    else document.body.style.overflow = "unset";
+  }, [show]);
+
   return (
     <Transition
       in={show}
