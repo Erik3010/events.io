@@ -1,10 +1,18 @@
 import styles from "components/Event/EventCard/EventCard.module.scss";
 
+import { useHistory } from "react-router-dom";
+
 import { ReactComponent as DotsVertical } from "assets/icons/dots-vertical.svg";
 
 function EventCard() {
+  const history = useHistory();
+
+  const clickHandler = () => {
+    history.push("/event/asd");
+  };
+
   return (
-    <div className={styles["event-card"]}>
+    <div className={styles["event-card"]} onClick={clickHandler}>
       <div className={styles["event-card-overlay"]}></div>
       <div className={styles["event-card-body"]}>
         <div className={styles["event-card-header"]}>
