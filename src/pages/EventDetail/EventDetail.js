@@ -1,5 +1,11 @@
+import Default from "containers/Default";
+
 function EventDetail({ match }) {
-  return <div>{match.params.slug}</div>;
+  return (
+    <Default>
+      <div>{match.params.slug}</div>
+    </Default>
+  );
 }
 
 export default EventDetail;

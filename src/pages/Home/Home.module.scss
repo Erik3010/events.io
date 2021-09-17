@@ -1,24 +1,19 @@
 @import "scss/variables";
 @import "scss/breakpoints";
 
-.home-container {
-  background: $background;
-  padding-top: 2.5rem;
-  min-height: 100vh;
-  .event-container {
-    margin-top: 3rem;
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 1.5rem;
-    padding-bottom: 3rem;
-    @media screen and (max-width: $breakpoint-lg) {
-      grid-template-columns: repeat(3, 1fr);
-    }
-    @media screen and (max-width: $breakpoint-md) {
-      grid-template-columns: repeat(2, 1fr);
-    }
-    @media screen and (max-width: $breakpoint-sm) {
-      grid-template-columns: 1fr;
-    }
+.event-container {
+  margin-top: 3rem;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+  padding-bottom: 3rem;
+  @media screen and (max-width: $breakpoint-lg) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  @media screen and (max-width: $breakpoint-md) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  @media screen and (max-width: $breakpoint-sm) {
+    grid-template-columns: 1fr;
   }
 }

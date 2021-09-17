@@ -12,6 +12,7 @@
   font-family: "Inter", sans-serif;
   outline: none;
   color: $text;
+  scroll-behavior: smooth;
 }
 
 ::selection {
@@ -58,4 +59,10 @@ a {
 
 .text-error {
   color: $error;
+}
+
+.default-container {
+  background: $background;
+  padding-top: 2.5rem;
+  min-height: 100vh;
 }
