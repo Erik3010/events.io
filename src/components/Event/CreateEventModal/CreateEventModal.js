@@ -24,11 +24,7 @@ function CreateEventModal({ show, onClose }) {
   return (
     <Transition
       in={show}
-      timeout={{
-        appear: 0,
-        enter: 0,
-        exit: 300,
-      }}
+      timeout={200}
       appear
       unmountOnExit
     >

@@ -11,7 +11,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  transition: 0.2s $transition;
+  transition: $transition;
   .event-modal {
     @at-root {
       &-close {
@@ -25,9 +25,10 @@
         z-index: 99;
         right: 1.5rem;
         top: 1.5rem;
-        transition: 0.1s $transition;
+        transition: $transition;
         &:hover {
           background: $lightGray;
+          color: $primary;
         }
       }
     }

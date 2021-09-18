@@ -19,11 +19,7 @@ function DropdownMenu({ children }) {
   return (
     <Transition
       in={show}
-      timeout={{
-        appear: 300,
-        enter: 100,
-        exit: 300,
-      }}
+      timeout={200}
       appear
       unmountOnExit
     >

@@ -17,6 +17,6 @@ $error: #f03e3e;
 // $shadow: 0 0 0.125rem 0.125rem rgba(40, 78, 214, 0.15);
 $shadow: rgba(52, 93, 238, 0.25) 0px 0px 0px 3px;
 
-$transition: 0.2s ease-in-out;
+$transition: 0.2s cubic-bezier(0.33, 1, 0.68, 1);
 
 $transparentPrimary: rgba(52, 93, 238, 0.05);
