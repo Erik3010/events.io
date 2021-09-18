@@ -15,7 +15,11 @@ function CreateEventForm() {
         onSubmit={(e) => submitEventHandler(e)}
       >
         <Input type="text" label="Name" />
-        <Input type="datetime-local" label="Date" />
+        <div className={styles["group-form"]}>
+          <Input type="date" label="Date" />
+          <Input type="time" label="Time" />
+        </div>
+        <Input type="text" label="Location" />
         <Button type="primary">Create Event</Button>
       </form>
     </div>

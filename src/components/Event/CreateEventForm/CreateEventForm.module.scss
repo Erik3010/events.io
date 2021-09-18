@@ -5,4 +5,13 @@
   button {
     margin-top: 2rem;
   }
+  .group-form {
+    display: flex;
+    > :first-child {
+      width: 100%;
+    }
+    > * + * {
+      margin-left: 1rem;
+    }
+  }
 }
