@@ -5,7 +5,7 @@ import CreateEventForm from "components/Event/CreateEventForm/CreateEventForm";
 import { ReactComponent as Cancel } from "assets/icons/cancel.svg";
 
 import { Transition } from "react-transition-group";
-import classnames from "classnames";
+import cx from "classnames";
 import { useEffect } from "react/cjs/react.development";
 
 const transitionStyle = {
@@ -22,12 +22,7 @@ function CreateEventModal({ show, onClose }) {
   }, [show]);
 
   return (
-    <Transition
-      in={show}
-      timeout={200}
-      appear
-      unmountOnExit
-    >
+    <Transition in={show} timeout={200} appear unmountOnExit>
       {(state) => (
         <div
           style={{ ...transitionStyle[state] }}
@@ -53,7 +48,7 @@ function CreateEventModal({ show, onClose }) {
               </div>
             </div>
             <div
-              className={classnames(
+              className={cx(
                 styles["event-modal-decoration"],
                 styles["event-modal-decoration-right"]
               )}

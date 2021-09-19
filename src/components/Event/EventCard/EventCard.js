@@ -3,6 +3,7 @@ import styles from "components/Event/EventCard/EventCard.module.scss";
 import { useHistory } from "react-router-dom";
 
 import { ReactComponent as DotsVertical } from "assets/icons/dots-vertical.svg";
+import Badge from "components/Basic/Badge/Badge";
 
 function EventCard() {
   const history = useHistory();
@@ -17,7 +18,7 @@ function EventCard() {
       <div className={styles["event-card-body"]}>
         <div className={styles["event-card-header"]}>
           <div>
-            <span className={styles["event-badge"]}>12 hours to go</span>
+            <Badge color="primary">12 hours to go</Badge>
           </div>
           <div className={styles["event-menu-icon"]}>
             <DotsVertical width={22} height={22} />

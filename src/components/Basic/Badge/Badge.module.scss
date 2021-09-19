@@ -1,0 +1,21 @@
+@import "scss/variables";
+
+.badge {
+  display: inline-block;
+  font-size: 0.625rem;
+  border-radius: 0.25rem;
+  padding: 0 0.75rem;
+  height: 1.5rem;
+  text-align: center;
+  line-height: 1.5rem;
+  text-transform: uppercase;
+  font-weight: 600;
+  &--primary {
+    background: rgba(52, 93, 238, 0.25);
+    color: $primary;
+  }
+  &--secondary {
+    background: rgba(214, 38, 85, 0.25);
+    color: #d62655;
+  }
+}

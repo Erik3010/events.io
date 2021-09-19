@@ -7,7 +7,7 @@ import { ReactComponent as ChevronDown } from "assets/icons/chevron-down.svg";
 import { ReactComponent as Logout } from "assets/icons/logout.svg";
 
 import Dropdown from "components/Basic/Dropdown/Dropdown";
-import classNames from "classnames";
+import cx from "classnames";
 
 function HeaderProfile() {
   const history = useHistory();
@@ -36,7 +36,7 @@ function HeaderProfile() {
           onClick={(e) => toggleDropdown(e)}
         >
           <ChevronDown
-            className={classNames({ [styles["active"]]: showDropdown })}
+            className={cx({ [styles["active"]]: showDropdown })}
             width={18}
             height={18}
           />

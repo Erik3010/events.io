@@ -37,5 +37,9 @@
         transform: scale(0.97);
       }
     }
+    &-small {
+      padding: 0.65rem 1.25rem;
+      font-size: 0.75rem;
+    }
   }
 }

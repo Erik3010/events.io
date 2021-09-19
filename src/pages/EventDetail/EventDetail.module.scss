@@ -1,0 +1,65 @@
+@import "scss/variables";
+
+.event-detail-container {
+  .event-detail-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    .event-detail-title {
+      .event-detail-subtitle {
+        display: flex;
+        align-items: center;
+        h2 {
+          font-weight: 600;
+          font-size: 1.35rem;
+        }
+        > * + * {
+          margin-left: 1rem;
+        }
+      }
+      .event-detail-info {
+        &-container {
+          display: flex;
+          margin-top: 0.25rem;
+          > * + * {
+            margin-left: 1.5rem;
+          }
+        }
+        svg {
+          stroke: $subtitle;
+          margin-right: 0.35rem;
+        }
+        display: flex;
+        align-items: center;
+        color: $subtitle;
+        font-size: 0.75rem;
+      }
+    }
+  }
+  .event-detail-body {
+    margin-top: 1.75rem;
+    .event-detail-tab {
+      display: flex;
+      > * + * {
+        margin-left: 1rem;
+      }
+      &-item {
+        font-size: 0.8rem;
+        cursor: pointer;
+        padding: 0.45rem 1.25rem;
+        border-radius: 0.25rem;
+        &:hover {
+          background: $lightGray;
+        }
+        &.active {
+          font-weight: 600;
+          background: rgba(52, 93, 238, 0.18);
+          color: $primary;
+        }
+      }
+    }
+    .event-detail-content {
+      margin-top: 2rem;
+    }
+  }
+}
