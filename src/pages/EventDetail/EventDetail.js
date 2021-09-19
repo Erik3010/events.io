@@ -6,10 +6,35 @@ import styles from "pages/EventDetail/EventDetail.module.scss";
 
 import cx from "classnames";
 
+import { useState } from "react";
+
 import { ReactComponent as Clock } from "assets/icons/clock.svg";
 import { ReactComponent as User } from "assets/icons/user.svg";
+import EventSession from "components/Event/EventSession/EventSession";
+import EventAttendees from "components/Event/EventAttendees/EventAttendees";
+import EventTimeline from "components/Event/EventTimeline/EventTimeline";
 
 function EventDetail() {
+  const tabs = [
+    {
+      id: "sessions",
+      name: "Sessions",
+      component: EventSession,
+    },
+    {
+      id: "attendees",
+      name: "Attendees",
+      component: EventAttendees,
+    },
+    {
+      id: "rooms",
+      name: "Room's Timeline",
+      component: EventTimeline,
+    },
+  ];
+
+  const [selectedTab, setSelectedTab] = useState(tabs[0]);
+
   return (
     <Default>
       <div className={styles["event-detail-container"]}>
@@ -24,7 +49,7 @@ function EventDetail() {
                 <Clock width={16} height={16} /> {new Date().toLocaleString()}
               </div>
               <div className={styles["event-detail-info"]}>
-                <User width={16} height={16} /> {new Date().toLocaleString()}
+                <User width={16} height={16} /> Organizer
               </div>
             </div>
           </div>
@@ -34,17 +59,21 @@ function EventDetail() {
         </div>
         <div className={styles["event-detail-body"]}>
           <div className={styles["event-detail-tab"]}>
-            <div
-              className={cx(styles["event-detail-tab-item"], styles["active"])}
-            >
-              Sessions
-            </div>
-            <div className={styles["event-detail-tab-item"]}>Attendees</div>
-            <div className={styles["event-detail-tab-item"]}>
-              Rooms Timeline
-            </div>
+            {tabs.map((tab) => {
+              return (
+                <div
+                  key={tab.id}
+                  className={cx(styles["event-detail-tab-item"], {
+                    [styles["active"]]: selectedTab.id === tab.id,
+                  })}
+                  onClick={() => setSelectedTab(tab)}
+                >
+                  {tab.name}
+                </div>
+              );
+            })}
           </div>
-          <div className={styles["event-detail-content"]}>asd</div>
+          <div className={styles["event-detail-content"]}></div>
         </div>
       </div>
     </Default>
