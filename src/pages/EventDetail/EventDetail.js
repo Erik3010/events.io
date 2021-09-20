@@ -6,7 +6,7 @@ import styles from "pages/EventDetail/EventDetail.module.scss";
 
 import cx from "classnames";
 
-import { useState, memo } from "react";
+import { useState } from "react";
 
 import { ReactComponent as Clock } from "assets/icons/clock.svg";
 import { ReactComponent as User } from "assets/icons/user.svg";

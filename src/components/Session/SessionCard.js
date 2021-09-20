@@ -11,7 +11,7 @@ function SessionCard() {
       <div className={styles["session-card-header"]}>
         <div className={styles["session-card-header-title"]}>
           <div className={styles["session-card-indicator"]}></div>{" "}
-          <h4>Session title</h4>
+          <h4>Vue 3 Workshop</h4>
         </div>
       </div>
       <div className={styles["session-card-content"]}>
