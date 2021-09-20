@@ -9,7 +9,7 @@ function EventCard() {
   const history = useHistory();
 
   const clickHandler = () => {
-    history.push("/event/asd/sessions");
+    history.push("/event/asd");
   };
 
   return (
