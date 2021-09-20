@@ -10,7 +10,7 @@ function BaseDropdown({ show, close, children }) {
     window.addEventListener("click", close);
 
     return () => window.removeEventListener("click", close);
-  }, []);
+  }, [close]);
 
   return (
     <DropdownContext.Provider value={contextValue}>

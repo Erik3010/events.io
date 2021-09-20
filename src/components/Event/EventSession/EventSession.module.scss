@@ -1,0 +1,74 @@
+@import "scss/variables";
+
+.session {
+  &-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+  }
+  &-card {
+    background: $white;
+    box-shadow: $shadowSm;
+    border: 1px solid $border;
+    border-radius: 0.5rem;
+    padding: 1.25rem 1.5rem;
+    transition: $transition;
+    &:hover {
+      border-color: $primary;
+      box-shadow: $shadowMd;
+    }
+    &-header {
+      margin-bottom: 0.15rem;
+      &-title {
+        display: flex;
+        align-items: center;
+        font-weight: 600;
+        h4 {
+          display: -webkit-box;
+          overflow: hidden;
+          -webkit-line-clamp: 1;
+          -webkit-box-orient: vertical;
+          width: 90%;
+        }
+      }
+    }
+    &-indicator {
+      width: 0.55rem;
+      height: 0.55rem;
+      background: $primary;
+      border-radius: 50%;
+      margin-right: 0.65rem;
+    }
+    &-content {
+      &-info {
+        margin-bottom: 1rem;
+        display: flex;
+        > * + * {
+          margin-left: 1rem;
+        }
+        &-item {
+          font-size: 0.75rem;
+          color: $subtitle;
+          stroke: $subtitle;
+          display: flex;
+          align-items: center;
+          svg {
+            margin-right: 0.25rem;
+          }
+        }
+      }
+      &-description {
+        font-size: 0.75rem;
+        color: $subtitle;
+        line-height: 1.75;
+        display: -webkit-box;
+        overflow: hidden;
+        -webkit-line-clamp: 3;
+        -webkit-box-orient: vertical;
+      }
+      &-cta {
+        margin-top: 1rem;
+      }
+    }
+  }
+}

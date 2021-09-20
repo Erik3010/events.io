@@ -6,7 +6,7 @@ import styles from "pages/EventDetail/EventDetail.module.scss";
 
 import cx from "classnames";
 
-import { useState, useCallback } from "react";
+import { useState, memo } from "react";
 
 import { ReactComponent as Clock } from "assets/icons/clock.svg";
 import { ReactComponent as User } from "assets/icons/user.svg";
@@ -34,13 +34,6 @@ function EventDetail() {
   ];
 
   const [selectedTab, setSelectedTab] = useState(tabs[0]);
-
-  const onChangeTab = useCallback(
-    (tab) => {
-      setSelectedTab(tab);
-    },
-    [selectedTab]
-  );
 
   return (
     <Default>
@@ -73,7 +66,7 @@ function EventDetail() {
                   className={cx(styles["event-detail-tab-item"], {
                     [styles["active"]]: selectedTab.id === tab.id,
                   })}
-                  onClick={() => onChangeTab(tab)}
+                  onClick={() => setSelectedTab(tab)}
                 >
                   {tab.name}
                 </div>
