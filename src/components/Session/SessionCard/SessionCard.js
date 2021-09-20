@@ -1,4 +1,4 @@
-import styles from "components/Session/SessionCard.module.scss";
+import styles from "components/Session/SessionCard/SessionCard.module.scss";
 
 import { ReactComponent as User } from "assets/icons/user.svg";
 import { ReactComponent as Clock } from "assets/icons/clock.svg";

@@ -1,9 +1,16 @@
 @import "scss/variables";
+@import "scss/breakpoints";
 
 .session {
   &-container {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 1rem;
+    gap: 1.5rem;
+    @media screen and (max-width: $breakpoint-md) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    @media screen and (max-width: $breakpoint-sm) {
+      grid-template-columns: 1fr;
+    }
   }
 }

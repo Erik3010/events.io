@@ -1,6 +1,6 @@
 import styles from "components/Event/EventSession/EventSession.module.scss";
 
-import SessionCard from "components/Session/SessionCard";
+import SessionCard from "components/Session/SessionCard/SessionCard";
 
 function EventSession() {
   return (
