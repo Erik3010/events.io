@@ -6,7 +6,6 @@
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 1.5rem;
-  padding-bottom: 3rem;
   @media screen and (max-width: $breakpoint-lg) {
     grid-template-columns: repeat(3, 1fr);
   }
