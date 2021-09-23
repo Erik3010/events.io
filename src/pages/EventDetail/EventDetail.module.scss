@@ -50,6 +50,8 @@
       display: flex;
       overflow: auto;
       white-space: nowrap;
+      border-bottom: 1px solid $lightGray;
+      font-weight: 600;
       > * + * {
         margin-left: 1rem;
       }
@@ -57,14 +59,13 @@
         font-size: 0.8rem;
         cursor: pointer;
         padding: 0.45rem 1.25rem;
-        border-radius: 0.25rem;
+        color: $gray;
         &:hover {
-          background: $lightGray;
+          color: $text;
         }
         &.active {
-          font-weight: 600;
-          background: rgba(52, 93, 238, 0.18);
-          color: $primary;
+          border-bottom: 2px solid $primary;
+          color: $text;
         }
       }
     }
