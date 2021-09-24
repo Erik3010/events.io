@@ -1,8 +1,9 @@
 @import "scss/variables";
 
 .btn {
-  cursor: pointer;
+  color: $white;
   border-radius: 5px;
+  cursor: pointer;
   padding: 0.875rem 2rem;
   border: 1px solid transparent;
   font-weight: 600;
@@ -10,7 +11,6 @@
   @at-root {
     &-primary {
       background: $primary;
-      color: $white;
       &:hover,
       &:focus {
         background: $primaryDark;
@@ -35,6 +35,16 @@
       }
       &:active {
         transform: scale(0.97);
+      }
+    }
+    &-danger {
+      background: $error;
+      &:hover,
+      &:active {
+        background: $errorDarker;
+      }
+      &:focus {
+        box-shadow: $shadowError;
       }
     }
     &-small {

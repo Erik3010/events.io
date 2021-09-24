@@ -1,0 +1,39 @@
+@import "scss/variables";
+
+.attendee {
+  &-container {
+    overflow-y: auto;
+  }
+  &-table {
+    min-width: 100%;
+    border-collapse: collapse;
+    > * + *,
+    tbody > * + * {
+      border-top: 1px solid $lightGray;
+    }
+    th,
+    td {
+      padding: 1.25rem 0.75rem;
+      font-size: 0.875rem;
+    }
+    th {
+      text-align: left;
+      font-weight: 500;
+      color: $subtitle;
+      padding: 0.75rem;
+    }
+  }
+  &-user {
+    display: flex;
+    &-content {
+      margin-left: 0.85rem;
+      h4 {
+        font-size: 0.875rem;
+      }
+      p {
+        color: $subtitle;
+        font-size: 0.75rem;
+      }
+    }
+  }
+}
