@@ -50,7 +50,7 @@
       display: flex;
       overflow: auto;
       white-space: nowrap;
-      border-bottom: 1px solid $lightGray;
+      border-bottom: 1px solid $border;
       font-weight: 600;
       > * + * {
         margin-left: 1rem;
