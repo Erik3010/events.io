@@ -1,0 +1,21 @@
+@import "scss/variables";
+
+.avatar {
+  color: $white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 0.45rem;
+  font-weight: 700;
+  font-size: 0.75rem;
+  cursor: pointer;
+  margin-right: 0.85rem;
+  &-primary {
+    background: $primary;
+  }
+  &-accent {
+    background: $accent;
+  }
+}

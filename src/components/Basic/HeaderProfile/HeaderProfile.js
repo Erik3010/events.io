@@ -8,6 +8,7 @@ import { ReactComponent as Logout } from "assets/icons/logout.svg";
 
 import Dropdown from "components/Basic/Dropdown/Dropdown";
 import cx from "classnames";
+import Avatar from "components/Basic/Avatar/Avatar";
 
 function HeaderProfile() {
   const history = useHistory();
@@ -23,7 +24,7 @@ function HeaderProfile() {
     <Dropdown.Base show={showDropdown} close={() => setShowDropdown(false)}>
       <div className={styles["header-profile-container"]}>
         <div className={styles["header-profile"]}>
-          <div className={styles["header-profile-initial"]}>TE</div>
+          <Avatar color="primary">TE</Avatar>
           <div className={styles["header-profile-info"]}>
             <Link to="/" className={styles["header-profile-info-title"]}>
               Tester 123
