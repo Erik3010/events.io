@@ -3,19 +3,21 @@
 .event-timeline {
   display: grid;
   grid-template-columns: 1fr 3fr;
+  gap: 2rem;
   .channel-sidebar {
     .channel-list {
       > * + * {
-        margin-top: 0.75rem;
+        margin-top: 0.65rem;
       }
       .channel-card {
         padding: 0.75rem 1rem;
         border-radius: 0.35rem;
-        border: 1.35px solid $placeholder;
+        border: 1px solid $placeholder;
         cursor: pointer;
         transition: $transition;
+        background: $white;
         &-title {
-          font-weight: bold;
+          font-weight: 600;
           font-size: 0.875rem;
         }
         &-subtitle {
@@ -24,8 +26,36 @@
         }
         &:hover {
           border-color: $primary;
-          box-shadow: $shadowMd;
+          box-shadow: $shadowSm;
         }
+        &.active {
+          background: $primary;
+          border-color: $primary;
+          box-shadow: $shadowMd;
+          .channel-card-subtitle {
+            color: $placeholder;
+          }
+          * {
+            color: $white;
+          }
+        }
+      }
+    }
+  }
+  .timeline {
+    &-header {
+      h1 {
+        span {
+          margin-right: 0.25rem;
+          color: $gray;
+        }
+        margin: 0;
+        font-size: 1.5rem;
+        font-weight: 600;
+      }
+      p {
+        color: $subtitle;
+        font-size: 0.875rem;
       }
     }
   }
