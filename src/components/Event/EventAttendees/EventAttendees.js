@@ -10,7 +10,7 @@ function EventAttendees() {
           <tr>
             <th>User</th>
             <th>Ticket</th>
-            <th>Register At</th>
+            <th>Time Register</th>
             <th>Action</th>
           </tr>
         </thead>
