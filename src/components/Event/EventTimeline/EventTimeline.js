@@ -3,6 +3,8 @@ import styles from "components/Event/EventTimeline/EventTimeline.module.scss";
 import cx from "classnames";
 
 import ChannelCard from "components/Channel/ChannelCard/ChannelCard";
+import SessionItem from "components/Session/SessionItem/SessionItem";
+import TimelineHeader from "components/Timeline/TimelineHeader/TimelineHeader";
 
 function EventTimeline() {
   return (
@@ -17,12 +19,7 @@ function EventTimeline() {
         </div>
       </div>
       <div className={styles["timeline-container"]}>
-        <div className={styles["timeline-header"]}>
-          <h1>
-            <span>#</span>roadmap
-          </h1>
-          <p>This is a roadmap of javascript frontend</p>
-        </div>
+        <TimelineHeader />
         <div className={styles["timeline-content"]}>
           <div className={styles["timeline-table"]}>
             <div className={styles["timeline-header"]}>
@@ -49,11 +46,7 @@ function EventTimeline() {
                 </div>
                 <div className={styles["timeline-cell"]}>
                   <div className={styles["session-list"]}>
-                    <div
-                      className={cx([styles["session-item"], styles["talk"]])}
-                    >
-                      Vue workshop
-                    </div>
+                    <SessionItem>Vue workshop</SessionItem>
                   </div>
                 </div>
               </div>

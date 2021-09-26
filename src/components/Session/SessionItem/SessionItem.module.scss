@@ -1,0 +1,30 @@
+@import "scss/variables";
+
+.session-item {
+  position: absolute;
+  left: 0;
+  font-size: 0.65rem;
+  padding: 0.25rem 0.5rem;
+  border-radius: 0.25rem;
+  font-weight: 500;
+  background: white;
+  box-shadow: $shadowSm;
+  word-break: break-all;
+  cursor: pointer;
+  transition: $transition;
+  &:hover {
+    color: $white;
+  }
+  &.workshop {
+    border: 1px solid $accent;
+    &:hover {
+      background: $accent;
+    }
+  }
+  &.talk {
+    border: 1px solid $primary;
+    &:hover {
+      background: $primary;
+    }
+  }
+}
