@@ -54,7 +54,11 @@ function EventTimeline() {
                 </div>
                 <div className={styles["timeline-cell"]}>
                   <div className={styles["session-list"]}>
-                    <div className={styles["session-item"]}>Vue workshop</div>
+                    <div
+                      className={cx([styles["session-item"], styles["talk"]])}
+                    >
+                      Vue workshop
+                    </div>
                   </div>
                 </div>
               </div>
