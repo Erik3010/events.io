@@ -6,39 +6,10 @@
   gap: 2rem;
   .channel-sidebar {
     .channel-list {
+      height: 300px;
+      overflow: auto;
       > * + * {
         margin-top: 0.65rem;
-      }
-      .channel-card {
-        padding: 0.75rem 1rem;
-        border-radius: 0.35rem;
-        border: 1px solid $placeholder;
-        cursor: pointer;
-        transition: $transition;
-        background: $white;
-        &-title {
-          font-weight: 600;
-          font-size: 0.875rem;
-        }
-        &-subtitle {
-          color: $subtitle;
-          font-size: 0.75rem;
-        }
-        &:hover {
-          border-color: $primary;
-          box-shadow: $shadowSm;
-        }
-        &.active {
-          background: $primary;
-          border-color: $primary;
-          box-shadow: $shadowMd;
-          .channel-card-subtitle {
-            color: $placeholder;
-          }
-          * {
-            color: $white;
-          }
-        }
       }
     }
   }

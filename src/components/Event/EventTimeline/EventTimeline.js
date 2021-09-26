@@ -2,23 +2,18 @@ import styles from "components/Event/EventTimeline/EventTimeline.module.scss";
 
 import cx from "classnames";
 
+import ChannelCard from "components/Event/Channel/ChannelCard/ChannelCard";
+
 function EventTimeline() {
   return (
     <div className={styles["event-timeline"]}>
       <div className={styles["channel-sidebar"]}>
         <div className={styles["channel-list"]}>
-          <div className={cx([styles["channel-card"], styles["active"]])}>
-            <div className={styles["channel-card-title"]}>#roadmap</div>
-            <div className={styles["channel-card-subtitle"]}>
-              This is a roadmap of javascript frontend
-            </div>
-          </div>
-          <div className={styles["channel-card"]}>
-            <div className={styles["channel-card-title"]}>#roadmap</div>
-            <div className={styles["channel-card-subtitle"]}>
-              This is a roadmap of javascript frontend
-            </div>
-          </div>
+          {Array(50)
+            .fill()
+            .map((_, index) => (
+              <ChannelCard isActive={index === 0} />
+            ))}
         </div>
       </div>
       <div className={styles["timeline-container"]}>
