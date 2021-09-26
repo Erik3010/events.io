@@ -1,0 +1,15 @@
+@import "scss/variables";
+
+.user-profile {
+  display: flex;
+  &-content {
+    margin-left: 0.85rem;
+    h4 {
+      font-size: 0.875rem;
+    }
+    p {
+      color: $subtitle;
+      font-size: 0.75rem;
+    }
+  }
+}

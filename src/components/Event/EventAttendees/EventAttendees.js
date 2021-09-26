@@ -1,5 +1,5 @@
-import Avatar from "components/Basic/Avatar/Avatar";
 import Button from "components/Basic/Button/Button";
+import UserProfile from "components/Basic/UserProfile/UserProfile";
 import styles from "components/Event/EventAttendees/EventAttendees.module.scss";
 
 function EventAttendees() {
@@ -17,13 +17,10 @@ function EventAttendees() {
         <tbody>
           <tr>
             <td>
-              <div className={styles["attendee-user"]}>
-                <Avatar color="accent">RO</Avatar>
-                <div className={styles["attendee-user-content"]}>
-                  <h4>Richard Roe</h4>
-                  <p>richard@gmail.com</p>
-                </div>
-              </div>
+              <UserProfile
+                username="Richard Roe"
+                email="richardroe@gmail.com"
+              />
             </td>
             <td>Early bird</td>
             <td>{new Date().toLocaleString()}</td>

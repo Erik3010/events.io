@@ -1,0 +1,54 @@
+@import "scss/variables";
+
+.timeline-table {
+  .timeline-header {
+    border-top: 1px solid $border;
+    .timeline-cell {
+      flex: 1;
+      padding: 0.5rem 1rem;
+      color: $subtitle;
+      font-weight: 500;
+      font-size: 0.75rem;
+    }
+  }
+  .timeline-header,
+  .timeline-row {
+    display: flex;
+    min-width: 900px;
+    border-bottom: 1px solid $border;
+    .timeline-cell {
+      &.timeline-room-header,
+      &.timeline-room-title {
+        border-right: 1px solid $border;
+        max-width: 10rem;
+      }
+    }
+  }
+  .timeline-body {
+    .timeline-row {
+      .timeline-room-title {
+        font-weight: 500;
+        cursor: pointer;
+        transition: $transition;
+      }
+      &:hover {
+        background: $lightGray;
+        .timeline-room-title {
+          font-weight: 500;
+          background: $primary;
+          color: $white;
+        }
+      }
+      .timeline-cell {
+        padding: 2rem 1rem;
+        flex: 1;
+        font-size: 0.875rem;
+        .session-list {
+          display: flex;
+          position: relative;
+          height: 100%;
+        }
+      }
+    }
+  }
+}
