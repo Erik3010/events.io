@@ -8,6 +8,7 @@
     .channel-list {
       height: 300px;
       overflow: auto;
+      padding-right: 0.5rem;
       > * + * {
         margin-top: 0.65rem;
       }

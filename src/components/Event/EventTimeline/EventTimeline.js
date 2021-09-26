@@ -2,7 +2,7 @@ import styles from "components/Event/EventTimeline/EventTimeline.module.scss";
 
 import cx from "classnames";
 
-import ChannelCard from "components/Event/Channel/ChannelCard/ChannelCard";
+import ChannelCard from "components/Channel/ChannelCard/ChannelCard";
 
 function EventTimeline() {
   return (

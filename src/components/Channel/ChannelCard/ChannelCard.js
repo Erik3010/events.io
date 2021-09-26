@@ -1,4 +1,4 @@
-import styles from "components/Event/Channel/ChannelCard/ChannelCard.module.scss";
+import styles from "components/Channel/ChannelCard/ChannelCard.module.scss";
 
 import cx from "classnames";
 
