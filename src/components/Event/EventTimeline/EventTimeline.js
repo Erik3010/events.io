@@ -52,24 +52,11 @@ function EventTimeline() {
                 >
                   Main Hall
                 </div>
-                <div className={styles["timeline-cell"]}>Main Hall</div>
-                <div className={styles["timeline-cell"]}>Main Hall</div>
-                <div className={styles["timeline-cell"]}>Main Hall</div>
-                <div className={styles["timeline-cell"]}>Main Hall</div>
-              </div>
-              <div className={styles["timeline-row"]}>
-                <div
-                  className={cx([
-                    styles["timeline-cell"],
-                    styles["timeline-room-title"],
-                  ])}
-                >
-                  Main Hall
+                <div className={styles["timeline-cell"]}>
+                  <div className={styles["session-list"]}>
+                    <div className={styles["session-item"]}>Vue workshop</div>
+                  </div>
                 </div>
-                <div className={styles["timeline-cell"]}>Main Hall</div>
-                <div className={styles["timeline-cell"]}>Main Hall</div>
-                <div className={styles["timeline-cell"]}>Main Hall</div>
-                <div className={styles["timeline-cell"]}>Main Hall</div>
               </div>
             </div>
           </div>

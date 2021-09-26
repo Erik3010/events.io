@@ -45,9 +45,9 @@
   .timeline {
     &-container {
       overflow-y: auto;
-      padding-bottom: .75rem;
+      padding-bottom: 0.75rem;
       &::-webkit-scrollbar {
-        height: .5rem;
+        height: 0.5rem;
       }
       &::-webkit-scrollbar-track {
         background: none;
@@ -83,6 +83,7 @@
         .timeline-header {
           border-top: 1px solid $border;
           .timeline-cell {
+            flex: 1;
             padding: 0.5rem 1rem;
             color: $subtitle;
             font-weight: 500;
@@ -94,11 +95,11 @@
           min-width: 900px;
           border-bottom: 1px solid $border;
           .timeline-cell {
-            flex: 1;
             font-size: 0.875rem;
             &.timeline-room-header,
             &.timeline-room-title {
               border-right: 1px solid $border;
+              max-width: 10rem;
             }
           }
         }
@@ -119,6 +120,29 @@
             }
             .timeline-cell {
               padding: 2rem 1rem;
+              flex: 1;
+              .session-list {
+                display: flex;
+                position: relative;
+                height: 100%;
+                .session-item {
+                  position: absolute;
+                  left: 0;
+                  font-size: 0.65rem;
+                  padding: 0.25rem 0.5rem;
+                  border: 1px solid $primary;
+                  border-radius: 0.25rem;
+                  font-weight: 500;
+                  background: white;
+                  box-shadow: $shadowSm;
+                  word-break: break-all;
+                  cursor: pointer;
+                  transition: $transition;
+                  &:hover {
+                    background: $transparentPrimary;
+                  }
+                }
+              }
             }
           }
         }
