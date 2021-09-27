@@ -22,7 +22,9 @@ function EventAttendees() {
                 email="richardroe@gmail.com"
               />
             </td>
-            <td>Early bird</td>
+            <td>
+              <div className={styles["ticket-badge"]}>Early bird</div>
+            </td>
             <td>{new Date().toLocaleString()}</td>
             <td>
               <Button type="danger" small>

@@ -35,6 +35,21 @@ function TimelineTable() {
             </div>
           </div>
         </div>
+        <div className={styles["timeline-row"]}>
+          <div
+            className={cx([
+              styles["timeline-cell"],
+              styles["timeline-room-title"],
+            ])}
+          >
+            Main Hall
+          </div>
+          <div className={styles["timeline-cell"]}>
+            <div className={styles["session-list"]}>
+              <SessionItem>Vue workshop</SessionItem>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   );

@@ -32,7 +32,7 @@
         transition: $transition;
       }
       &:hover {
-        background: $lightGray;
+        background: $background;
         .timeline-room-title {
           font-weight: 500;
           background: $primary;
