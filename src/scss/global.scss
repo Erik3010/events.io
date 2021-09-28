@@ -20,6 +20,22 @@
   color: $white;
 }
 
+::-webkit-scrollbar {
+  height: 0.5rem;
+  width: 0.5rem;
+}
+::-webkit-scrollbar-track {
+  background: #ebeaea;
+}
+::-webkit-scrollbar-thumb {
+  transition: $transition;
+  background: #c3c3c3;
+  border-radius: 10rem;
+  &:hover {
+    background: #a8a5a5;
+  }
+}
+
 html,
 body,
 #root {
