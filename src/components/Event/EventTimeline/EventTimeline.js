@@ -12,7 +12,7 @@ function EventTimeline() {
           {Array(50)
             .fill()
             .map((_, index) => (
-              <ChannelCard isActive={index === 0} />
+              <ChannelCard key={index} isActive={index === 0} />
             ))}
         </div>
       </div>
