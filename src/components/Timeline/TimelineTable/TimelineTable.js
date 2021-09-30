@@ -42,7 +42,7 @@ function TimelineTable() {
               styles["timeline-room-title"],
             ])}
           >
-            Main Hall
+            Hall
           </div>
           <div className={styles["timeline-cell"]}>
             <div className={styles["session-list"]}>
