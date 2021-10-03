@@ -1,6 +1,8 @@
 @import "scss/variables";
 
 .timeline-table {
+  background: $white;
+  min-width: 900px;
   .timeline-header {
     border-top: 1px solid $border;
     .timeline-cell {
@@ -14,7 +16,7 @@
   .timeline-header,
   .timeline-row {
     display: flex;
-    min-width: 900px;
+    width: 100%;
     border-bottom: 1px solid $border;
     .timeline-cell {
       &.timeline-room-header,

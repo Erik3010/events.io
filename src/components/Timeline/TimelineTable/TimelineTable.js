@@ -13,7 +13,9 @@ function TimelineTable() {
             styles["timeline-cell"],
             styles["timeline-room-header"],
           ])}
-        ></div>
+        >
+          Room
+        </div>
         <div className={styles["timeline-cell"]}>09:00</div>
         <div className={styles["timeline-cell"]}>11:00</div>
         <div className={styles["timeline-cell"]}>13:00</div>
