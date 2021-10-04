@@ -54,7 +54,7 @@ function EventDetail() {
             </div>
           </div>
           <Button small type="primary">
-            Register this Events
+            Register this Event
           </Button>
         </div>
         <div className={styles["event-detail-body"]}>
