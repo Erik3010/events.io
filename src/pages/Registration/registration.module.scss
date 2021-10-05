@@ -1,0 +1,26 @@
+@import "scss/variables";
+
+.registration-header {
+  &-title {
+    h1 {
+      font-size: 1.45rem;
+      margin: 0;
+    }
+  }
+  &-subtitle {
+    display: flex;
+    margin-top: 0.25rem;
+    font-size: 0.75rem;
+    .registration-sub-content {
+      color: $subtitle;
+      span {
+        font-weight: 500;
+        color: $text;
+      }
+    }
+    .separator {
+      margin: 0 0.75rem;
+      color: $border;
+    }
+  }
+}
