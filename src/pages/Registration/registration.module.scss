@@ -30,9 +30,24 @@
     display: flex;
     align-items: center;
     &-item {
+      padding: 0.5rem 1rem;
       cursor: pointer;
       display: flex;
       align-items: center;
+      &.disabled {
+        cursor: not-allowed;
+        .registration-stepper-item {
+          &-icon {
+            opacity: 0.6;
+          }
+          &-content {
+            p,
+            h3 {
+              color: $gray;
+            }
+          }
+        }
+      }
       &-icon {
         background: $primary;
         margin-right: 0.75rem;
@@ -61,7 +76,6 @@
       height: 1px;
       background: $border;
       width: 2rem;
-      margin: 1.25rem;
     }
   }
 }

@@ -54,7 +54,12 @@ function Registration() {
               </div>
             </div>
             <div className={styles["registration-stepper-line"]}></div>
-            <div className={styles["registration-stepper-item"]}>
+            <div
+              className={cx(
+                styles["registration-stepper-item"],
+                styles["disabled"]
+              )}
+            >
               <div className={styles["registration-stepper-item-icon"]}>
                 <ShieldCheck width={16} height={16} />
               </div>
