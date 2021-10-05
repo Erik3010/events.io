@@ -1,26 +1,67 @@
 @import "scss/variables";
 
 .registration-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
   &-title {
     h1 {
       font-size: 1.45rem;
       margin: 0;
     }
-  }
-  &-subtitle {
-    display: flex;
-    margin-top: 0.25rem;
-    font-size: 0.75rem;
-    .registration-sub-content {
-      color: $subtitle;
-      span {
-        font-weight: 500;
-        color: $text;
+    .registration-header-subtitle {
+      display: flex;
+      margin-top: 0.25rem;
+      font-size: 0.75rem;
+      .registration-sub-content {
+        color: $subtitle;
+        span {
+          font-weight: 500;
+          color: $text;
+        }
       }
     }
     .separator {
       margin: 0 0.75rem;
       color: $border;
+    }
+  }
+  .registration-stepper {
+    display: flex;
+    align-items: center;
+    &-item {
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      &-icon {
+        background: $primary;
+        margin-right: 0.75rem;
+        border-radius: 50%;
+        width: 30px;
+        height: 30px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        svg {
+          fill: $white;
+        }
+      }
+      &-content {
+        p {
+          color: $subtitle;
+          font-size: 0.65rem;
+        }
+        h3 {
+          font-weight: 600;
+          font-size: 0.875rem;
+        }
+      }
+    }
+    &-line {
+      height: 1px;
+      background: $border;
+      width: 2rem;
+      margin: 1.25rem;
     }
   }
 }
