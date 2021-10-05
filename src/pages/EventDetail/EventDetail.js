@@ -6,6 +6,7 @@ import styles from "pages/EventDetail/EventDetail.module.scss";
 
 import cx from "classnames";
 
+import { Link } from "react-router-dom";
 import { useState } from "react";
 
 import { ReactComponent as Clock } from "assets/icons/clock.svg";
@@ -53,9 +54,11 @@ function EventDetail() {
               </div>
             </div>
           </div>
-          <Button small type="primary">
-            Register this Event
-          </Button>
+          <Link to="/registration">
+            <Button small type="primary">
+              Register this Event
+            </Button>
+          </Link>
         </div>
         <div className={styles["event-detail-body"]}>
           <div className={styles["event-detail-tab"]}>
