@@ -12,7 +12,7 @@ import { ReactComponent as ShieldCheck } from "assets/icons/shield-check-solid.s
 function Registration() {
   return (
     <Default>
-      <div>
+      <div className={styles["registration-container"]}>
         <div className={styles["registration-header"]}>
           <div className={styles["registration-header-title"]}>
             <h1>Vue Conference</h1>
@@ -29,7 +29,7 @@ function Registration() {
               </div>
               <div className={styles["separator"]}>|</div>
               <div className={styles["registration-sub-content"]}>
-                Location: <span>Zoom (Online Meeting)</span>
+                Location: <span>Online Meeting (Zoom)</span>
               </div>
             </div>
           </div>
@@ -69,6 +69,28 @@ function Registration() {
               </div>
             </div>
           </div>
+        </div>
+        <div className={styles["registration-body"]}>
+          <div className={styles["registration-content"]}>
+            <div className={styles["registration-content-header"]}>
+              <div className={styles["registration-content-header-icon"]}>
+                <UserGroup width={18} height={18} />
+              </div>
+              <div className={styles["registration-content-header-group"]}>
+                <h4 className={styles["registration-content-header-title"]}>
+                  Attendee Info
+                </h4>
+                <p className={styles["registration-content-header-subtitle"]}>
+                  Fill you infomation. So we can show correct information to the
+                  event organizer
+                </p>
+              </div>
+            </div>
+            <div className={styles["registration-content-body"]}>
+              <form></form>
+            </div>
+          </div>
+          <div className={styles["registration-summary"]}></div>
         </div>
       </div>
     </Default>
