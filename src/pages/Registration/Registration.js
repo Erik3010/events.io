@@ -8,6 +8,7 @@ import { ReactComponent as User } from "assets/icons/user-solid.svg";
 import { ReactComponent as UserGroup } from "assets/icons/user-group-solid.svg";
 import { ReactComponent as Ticket } from "assets/icons/ticket-solid.svg";
 import { ReactComponent as ShieldCheck } from "assets/icons/shield-check-solid.svg";
+import Input from "components/Basic/Input/Input";
 
 function Registration() {
   return (
@@ -87,7 +88,12 @@ function Registration() {
               </div>
             </div>
             <div className={styles["registration-content-body"]}>
-              <form></form>
+              <form className={styles["registration-form"]}>
+                <Input type="text" label="First Name" autocomplete="off" />
+                <Input type="text" label="Last Name" autocomplete="off" />
+                <Input type="email" label="Email" autocomplete="off" />
+                <Input type="tel" label="Phone" autocomplete="off" />
+              </form>
             </div>
           </div>
           <div className={styles["registration-summary"]}></div>
