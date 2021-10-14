@@ -176,17 +176,29 @@ function Registration() {
                   <div
                     className={styles["registration-summary-list-content-item"]}
                   >
-                    <span>Date</span>
+                    <span>
+                      1 <span className={styles["times"]}>x</span> Early bid
+                    </span>
                     <span
                       className={
                         styles["registration-summary-list-content-item-value"]
                       }
                     >
-                      {new Intl.DateTimeFormat("en-US", {
-                        year: "numeric",
-                        month: "short",
-                        day: "numeric",
-                      }).format(new Date())}
+                      $10.00
+                    </span>
+                  </div>
+                  <div
+                    className={styles["registration-summary-list-content-item"]}
+                  >
+                    <span>
+                      2 <span className={styles["times"]}>x</span> Early bid
+                    </span>
+                    <span
+                      className={
+                        styles["registration-summary-list-content-item-value"]
+                      }
+                    >
+                      $20.00
                     </span>
                   </div>
                 </div>
