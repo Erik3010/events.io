@@ -110,7 +110,90 @@ function Registration() {
               </form>
             </div>
           </div>
-          <div className={styles["registration-summary"]}></div>
+          <div className={styles["registration-summary"]}>
+            <div className={styles["registration-summary-title"]}>
+              <div className={styles["registration-summary-title-tagline"]}>
+                Registration ID
+              </div>
+              <div className={styles["registration-summary-title-id"]}>
+                #ORD12093819
+              </div>
+            </div>
+            <div className={styles["registration-summary-content"]}>
+              <div className={styles["registration-summary-list"]}>
+                <div className={styles["registration-summary-list-title"]}>
+                  Registration Information
+                </div>
+                <div className={styles["registration-summary-list-content"]}>
+                  <div
+                    className={styles["registration-summary-list-content-item"]}
+                  >
+                    <span>Date</span>
+                    <span
+                      className={
+                        styles["registration-summary-list-content-item-value"]
+                      }
+                    >
+                      {new Intl.DateTimeFormat("en-US", {
+                        year: "numeric",
+                        month: "short",
+                        day: "numeric",
+                      }).format(new Date())}
+                    </span>
+                  </div>
+                  <div
+                    className={styles["registration-summary-list-content-item"]}
+                  >
+                    <span>Time</span>
+                    <span
+                      className={
+                        styles["registration-summary-list-content-item-value"]
+                      }
+                    >
+                      10:10
+                    </span>
+                  </div>
+                  <div
+                    className={styles["registration-summary-list-content-item"]}
+                  >
+                    <span>Total People</span>
+                    <span
+                      className={
+                        styles["registration-summary-list-content-item-value"]
+                      }
+                    >
+                      2
+                    </span>
+                  </div>
+                </div>
+              </div>
+              <div className={styles["registration-summary-divider"]}></div>
+              <div className={styles["registration-summary-list"]}>
+                <div className={styles["registration-summary-list-title"]}>
+                  Tickets
+                </div>
+                <div className={styles["registration-summary-list-content"]}>
+                  <div
+                    className={styles["registration-summary-list-content-item"]}
+                  >
+                    <span>Date</span>
+                    <span
+                      className={
+                        styles["registration-summary-list-content-item-value"]
+                      }
+                    >
+                      {new Intl.DateTimeFormat("en-US", {
+                        year: "numeric",
+                        month: "short",
+                        day: "numeric",
+                      }).format(new Date())}
+                    </span>
+                  </div>
+                </div>
+              </div>
+              <div className={styles["registration-summary-divider"]}></div>
+            </div>
+          </div>
         </div>
       </div>
     </Default>

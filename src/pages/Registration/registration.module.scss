@@ -143,6 +143,56 @@
           }
         }
       }
+      &-summary {
+        padding: 1rem 1.25rem;
+        &-title {
+          background: rgba(52, 93, 238, 0.2);
+          border-radius: 0.25rem;
+          padding: 0.5rem 0.75rem;
+          margin-bottom: 1rem;
+          &-tagline {
+            font-size: 0.65rem;
+            color: $primary;
+          }
+          &-id {
+            font-weight: 600;
+            font-size: 0.875rem;
+            color: $primary;
+          }
+        }
+        &-content {
+          .registration-summary-list {
+            &-title {
+              font-weight: 600;
+              margin-bottom: 0.5rem;
+              font-size: 0.85rem;
+            }
+            &-content {
+              font-size: 0.8rem;
+              > * + * {
+                margin-top: 0.25rem;
+              }
+              &-item {
+                display: flex;
+                justify-content: space-between;
+                > * {
+                  color: $subtitle;
+                }
+                &-value {
+                  color: $lightText;
+                  font-weight: 500;
+                }
+              }
+            }
+          }
+        }
+        &-divider {
+          margin: 0.75rem 0;
+          height: 1px;
+          border-top: 1px dashed $border;
+          width: 100%;
+        }
+      }
     }
   }
 }
