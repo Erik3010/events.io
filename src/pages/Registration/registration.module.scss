@@ -122,10 +122,24 @@
         }
         &-body {
           padding-bottom: 0.5rem;
-          .registration-form {
+          .attendee-form {
             display: grid;
-            grid-template-columns: repeat(2, 1fr);
             gap: 1rem;
+            &-group {
+              display: grid;
+              grid-template-columns: repeat(2, 1fr);
+              gap: 1rem;
+            }
+            label {
+              font-size: 0.75rem;
+            }
+            &-action {
+              margin-top: 0.75rem;
+              display: flex;
+              .right {
+                margin-left: auto;
+              }
+            }
           }
         }
       }
