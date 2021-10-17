@@ -70,11 +70,11 @@ a {
 }
 
 .text-primary {
-  color: $primary;
+  color: $primary !important;
 }
 
 .text-error {
-  color: $error;
+  color: $error !important;
 }
 
 .default-container {

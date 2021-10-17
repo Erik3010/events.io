@@ -146,7 +146,7 @@
       &-summary {
         padding: 1rem 1.25rem;
         &-title {
-          background: rgba(52, 93, 238, 0.2);
+          background: rgba(52, 93, 238, 0.15);
           border-radius: 0.25rem;
           padding: 0.5rem 0.75rem;
           margin-bottom: 1rem;
@@ -184,6 +184,9 @@
                 &-value {
                   color: $lightText;
                   font-weight: 500;
+                }
+                &-gtotal {
+                  font-size: 0.875rem;
                 }
               }
             }
