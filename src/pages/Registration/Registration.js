@@ -248,7 +248,7 @@ function Registration() {
                         styles["registration-summary-list-content-item-value"]
                       }
                     >
-                      $20.00
+                      $25.00
                     </span>
                   </div>
                 </div>
