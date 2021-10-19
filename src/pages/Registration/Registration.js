@@ -13,45 +13,28 @@ import Button from "components/Basic/Button/Button";
 
 import Summary from "components/Registration/RegistrationSummary/RegistrationSummary";
 import RegistrationStepperItem from "components/Registration/RegistrationStepperItem/RegistrationStepperItem";
+import RegistrationHeader from "components/Registration/RegistrationHeader/RegistrationHeader";
 
 function Registration() {
   return (
     <Default>
       <div className={styles["registration-container"]}>
         <div className={styles["registration-header"]}>
-          <div className={styles["registration-header-title"]}>
-            <h1>Vue Conference</h1>
-            <div className={styles["registration-header-subtitle"]}>
-              <div className={styles["registration-sub-content"]}>
-                Order Date:{" "}
-                <span>
-                  {new Intl.DateTimeFormat("en-US", {
-                    year: "numeric",
-                    month: "long",
-                    day: "numeric",
-                  }).format(new Date())}
-                </span>
-              </div>
-              <div className={styles["separator"]}>|</div>
-              <div className={styles["registration-sub-content"]}>
-                Location: <span>Online Meeting (Zoom)</span>
-              </div>
-            </div>
-          </div>
+          <RegistrationHeader />
           <div className={styles["registration-stepper"]}>
             <RegistrationStepperItem
               icon={<UserGroup width={16} height={16} />}
               stepCount={1}
               title="Attendee Info"
+              hasLine={true}
             />
-            <div className={styles["registration-stepper-line"]}></div>
             <RegistrationStepperItem
               icon={<Ticket width={16} height={16} />}
               stepCount={2}
               title="Choose Ticket"
               disabled={true}
+              hasLine={true}
             />
-            <div className={styles["registration-stepper-line"]}></div>
             <RegistrationStepperItem
               icon={<ShieldCheck width={16} height={16} />}
               stepCount={3}

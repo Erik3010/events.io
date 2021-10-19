@@ -5,36 +5,9 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    &-title {
-      h1 {
-        font-size: 1.45rem;
-        margin: 0;
-      }
-      .registration-header-subtitle {
-        display: flex;
-        margin-top: 0.25rem;
-        font-size: 0.75rem;
-        .registration-sub-content {
-          color: $subtitle;
-          span {
-            font-weight: 500;
-            color: $text;
-          }
-        }
-      }
-      .separator {
-        margin: 0 0.75rem;
-        color: $border;
-      }
-    }
     .registration-stepper {
       display: flex;
       align-items: center;
-      &-line {
-        height: 1px;
-        background: $border;
-        width: 2rem;
-      }
     }
   }
   &-body {

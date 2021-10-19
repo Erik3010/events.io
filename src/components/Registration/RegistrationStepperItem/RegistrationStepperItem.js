@@ -2,20 +2,29 @@ import styles from "components/Registration/RegistrationStepperItem/Registration
 
 import cx from "classnames";
 
-function RegistrationStepperItem({ icon, stepCount, title, disabled = false }) {
+function RegistrationStepperItem({
+  icon,
+  stepCount,
+  title,
+  disabled = false,
+  hasLine = false,
+}) {
   return (
-    <div
-      className={cx({
-        [styles["registration-stepper-item"]]: true,
-        [styles["disabled"]]: disabled,
-      })}
-    >
-      <div className={styles["registration-stepper-item-icon"]}>{icon}</div>
-      <div className={styles["registration-stepper-item-content"]}>
-        <p>Step {stepCount}</p>
-        <h3>{title}</h3>
+    <>
+      <div
+        className={cx({
+          [styles["registration-stepper-item"]]: true,
+          [styles["disabled"]]: disabled,
+        })}
+      >
+        <div className={styles["registration-stepper-item-icon"]}>{icon}</div>
+        <div className={styles["registration-stepper-item-content"]}>
+          <p>Step {stepCount}</p>
+          <h3>{title}</h3>
+        </div>
       </div>
-    </div>
+      {hasLine && <div className={styles["registration-stepper-line"]}></div>}
+    </>
   );
 }
 
