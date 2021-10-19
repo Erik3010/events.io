@@ -30,49 +30,6 @@
     .registration-stepper {
       display: flex;
       align-items: center;
-      &-item {
-        padding: 0.5rem 1rem;
-        cursor: pointer;
-        display: flex;
-        align-items: center;
-        &.disabled {
-          cursor: not-allowed;
-          .registration-stepper-item {
-            &-icon {
-              opacity: 0.6;
-            }
-            &-content {
-              p,
-              h3 {
-                color: $gray;
-              }
-            }
-          }
-        }
-        &-icon {
-          background: $primary;
-          margin-right: 0.75rem;
-          border-radius: 50%;
-          width: 30px;
-          height: 30px;
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          svg {
-            fill: $white;
-          }
-        }
-        &-content {
-          p {
-            color: $subtitle;
-            font-size: 0.65rem;
-          }
-          h3 {
-            font-weight: 600;
-            font-size: 0.875rem;
-          }
-        }
-      }
       &-line {
         height: 1px;
         background: $border;
@@ -86,8 +43,7 @@
     gap: 2rem;
     margin-top: 3rem;
     .registration {
-      &-content,
-      &-summary {
+      &-content {
         background: $white;
         border: 1px solid $border;
         border-radius: 0.35rem;
@@ -141,62 +97,6 @@
               }
             }
           }
-        }
-      }
-      &-summary {
-        padding: 1rem 1.25rem;
-        &-title {
-          background: rgba(52, 93, 238, 0.15);
-          border-radius: 0.25rem;
-          padding: 0.5rem 0.75rem;
-          margin-bottom: 1rem;
-          &-tagline {
-            font-size: 0.65rem;
-            color: $primary;
-          }
-          &-id {
-            font-weight: 600;
-            font-size: 0.875rem;
-            color: $primary;
-          }
-        }
-        &-content {
-          .registration-summary-list {
-            &-title {
-              font-weight: 600;
-              margin-bottom: 0.5rem;
-              font-size: 0.85rem;
-            }
-            &-content {
-              font-size: 0.8rem;
-              > * + * {
-                margin-top: 0.25rem;
-              }
-              &-item {
-                display: flex;
-                justify-content: space-between;
-                > * {
-                  color: $subtitle;
-                }
-                .times {
-                  color: $gray;
-                }
-                &-value {
-                  color: $lightText;
-                  font-weight: 500;
-                }
-                &-gtotal {
-                  font-size: 0.875rem;
-                }
-              }
-            }
-          }
-        }
-        &-divider {
-          margin: 0.75rem 0;
-          height: 1px;
-          border-top: 1px dashed $border;
-          width: 100%;
         }
       }
     }

@@ -11,6 +11,9 @@ import { ReactComponent as ShieldCheck } from "assets/icons/shield-check-solid.s
 import Input from "components/Basic/Input/Input";
 import Button from "components/Basic/Button/Button";
 
+import Summary from "components/Registration/RegistrationSummary/RegistrationSummary";
+import RegistrationStepperItem from "components/Registration/RegistrationStepperItem/RegistrationStepperItem";
+
 function Registration() {
   return (
     <Default>
@@ -36,40 +39,25 @@ function Registration() {
             </div>
           </div>
           <div className={styles["registration-stepper"]}>
-            <div className={styles["registration-stepper-item"]}>
-              <div className={styles["registration-stepper-item-icon"]}>
-                <UserGroup width={16} height={16} />
-              </div>
-              <div className={styles["registration-stepper-item-content"]}>
-                <p>Step 1</p>
-                <h3>Attendee Info</h3>
-              </div>
-            </div>
+            <RegistrationStepperItem
+              icon={<UserGroup width={16} height={16} />}
+              stepCount={1}
+              title="Attendee Info"
+            />
             <div className={styles["registration-stepper-line"]}></div>
-            <div className={styles["registration-stepper-item"]}>
-              <div className={styles["registration-stepper-item-icon"]}>
-                <Ticket width={16} height={16} />
-              </div>
-              <div className={styles["registration-stepper-item-content"]}>
-                <p>Step 2</p>
-                <h3>Choose Ticket</h3>
-              </div>
-            </div>
+            <RegistrationStepperItem
+              icon={<Ticket width={16} height={16} />}
+              stepCount={2}
+              title="Choose Ticket"
+              disabled={true}
+            />
             <div className={styles["registration-stepper-line"]}></div>
-            <div
-              className={cx(
-                styles["registration-stepper-item"],
-                styles["disabled"]
-              )}
-            >
-              <div className={styles["registration-stepper-item-icon"]}>
-                <ShieldCheck width={16} height={16} />
-              </div>
-              <div className={styles["registration-stepper-item-content"]}>
-                <p>Step 3</p>
-                <h3>Confirmation</h3>
-              </div>
-            </div>
+            <RegistrationStepperItem
+              icon={<ShieldCheck width={16} height={16} />}
+              stepCount={3}
+              title="Confirmation"
+              disabled={true}
+            />
           </div>
         </div>
         <div className={styles["registration-body"]}>
@@ -110,151 +98,7 @@ function Registration() {
               </form>
             </div>
           </div>
-          <div className={styles["registration-summary"]}>
-            <div className={styles["registration-summary-title"]}>
-              <div className={styles["registration-summary-title-tagline"]}>
-                Registration ID
-              </div>
-              <div className={styles["registration-summary-title-id"]}>
-                #ORD12093819
-              </div>
-            </div>
-            <div className={styles["registration-summary-content"]}>
-              <div className={styles["registration-summary-list"]}>
-                <div className={styles["registration-summary-list-title"]}>
-                  Registration Information
-                </div>
-                <div className={styles["registration-summary-list-content"]}>
-                  <div
-                    className={styles["registration-summary-list-content-item"]}
-                  >
-                    <span>Date</span>
-                    <span
-                      className={
-                        styles["registration-summary-list-content-item-value"]
-                      }
-                    >
-                      {new Intl.DateTimeFormat("en-US", {
-                        year: "numeric",
-                        month: "short",
-                        day: "numeric",
-                      }).format(new Date())}
-                    </span>
-                  </div>
-                  <div
-                    className={styles["registration-summary-list-content-item"]}
-                  >
-                    <span>Time</span>
-                    <span
-                      className={
-                        styles["registration-summary-list-content-item-value"]
-                      }
-                    >
-                      10:10
-                    </span>
-                  </div>
-                  <div
-                    className={styles["registration-summary-list-content-item"]}
-                  >
-                    <span>Total People</span>
-                    <span
-                      className={
-                        styles["registration-summary-list-content-item-value"]
-                      }
-                    >
-                      2
-                    </span>
-                  </div>
-                </div>
-              </div>
-              <div className={styles["registration-summary-divider"]}></div>
-              <div className={styles["registration-summary-list"]}>
-                <div className={styles["registration-summary-list-title"]}>
-                  Tickets
-                </div>
-                <div className={styles["registration-summary-list-content"]}>
-                  <div
-                    className={styles["registration-summary-list-content-item"]}
-                  >
-                    <span>
-                      1 <span className={styles["times"]}>x</span> Early bid
-                    </span>
-                    <span
-                      className={
-                        styles["registration-summary-list-content-item-value"]
-                      }
-                    >
-                      $10.00
-                    </span>
-                  </div>
-                  <div
-                    className={styles["registration-summary-list-content-item"]}
-                  >
-                    <span>
-                      2 <span className={styles["times"]}>x</span> Early bid
-                    </span>
-                    <span
-                      className={
-                        styles["registration-summary-list-content-item-value"]
-                      }
-                    >
-                      $20.00
-                    </span>
-                  </div>
-                </div>
-              </div>
-              <div className={styles["registration-summary-divider"]}></div>
-              <div className={styles["registration-summary-list"]}>
-                <div className={styles["registration-summary-list-content"]}>
-                  <div
-                    className={styles["registration-summary-list-content-item"]}
-                  >
-                    <span>Subtotal</span>
-                    <span
-                      className={
-                        styles["registration-summary-list-content-item-value"]
-                      }
-                    >
-                      $30.00
-                    </span>
-                  </div>
-                  <div
-                    className={styles["registration-summary-list-content-item"]}
-                  >
-                    <span>Fee</span>
-                    <span
-                      className={cx(
-                        styles["registration-summary-list-content-item-value"],
-                        "text-error"
-                      )}
-                    >
-                      -$10.00
-                    </span>
-                  </div>
-                </div>
-              </div>
-              <div className={styles["registration-summary-divider"]}></div>
-              <div className={styles["registration-summary-list"]}>
-                <div className={styles["registration-summary-list-content"]}>
-                  <div
-                    className={cx(
-                      styles["registration-summary-list-content-item"],
-                      styles["registration-summary-list-content-item-gtotal"]
-                    )}
-                  >
-                    <span>Grandtotal</span>
-                    <span
-                      className={
-                        styles["registration-summary-list-content-item-value"]
-                      }
-                    >
-                      $25.00
-                    </span>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
+          <Summary />
         </div>
       </div>
     </Default>
