@@ -1,0 +1,14 @@
+@import "scss/variables";
+
+.attendee-form {
+  display: grid;
+  gap: 1rem;
+  &-group {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
+  label {
+    font-size: 0.75rem;
+  }
+}

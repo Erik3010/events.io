@@ -8,12 +8,13 @@ import { ReactComponent as User } from "assets/icons/user-solid.svg";
 import { ReactComponent as UserGroup } from "assets/icons/user-group-solid.svg";
 import { ReactComponent as Ticket } from "assets/icons/ticket-solid.svg";
 import { ReactComponent as ShieldCheck } from "assets/icons/shield-check-solid.svg";
-import Input from "components/Basic/Input/Input";
 import Button from "components/Basic/Button/Button";
 
-import Summary from "components/Registration/RegistrationSummary/RegistrationSummary";
+import RegistrationSummary from "components/Registration/RegistrationSummary/RegistrationSummary";
 import RegistrationStepperItem from "components/Registration/RegistrationStepperItem/RegistrationStepperItem";
 import RegistrationHeader from "components/Registration/RegistrationHeader/RegistrationHeader";
+import AttendeeForm from "components/Registration/AttendeeForm/AttendeeForm";
+import RegistrationContentHeader from "components/Registration/RegistrationContentHeader/RegistrationContentHeader";
 
 function Registration() {
   return (
@@ -45,43 +46,25 @@ function Registration() {
         </div>
         <div className={styles["registration-body"]}>
           <div className={styles["registration-content"]}>
-            <div className={styles["registration-content-header"]}>
-              <div className={styles["registration-content-header-icon"]}>
-                <UserGroup width={18} height={18} />
-              </div>
-              <div className={styles["registration-content-header-group"]}>
-                <h4 className={styles["registration-content-header-title"]}>
-                  Attendee Info
-                </h4>
-                <p className={styles["registration-content-header-subtitle"]}>
-                  Fill you infomation. So we can show correct information to the
-                  event organizer
-                </p>
-              </div>
-            </div>
+            <RegistrationContentHeader
+              icon={<UserGroup width={18} height={18} />}
+              title="Attendee Info"
+              tagline="Fill you infomation. So we can show correct information to the
+                  event organizer"
+            />
             <div className={styles["registration-content-body"]}>
-              <form
-                className={styles["attendee-form"]}
-                onSubmit={(e) => e.preventDefault()}
-              >
-                <div className={styles["attendee-form-group"]}>
-                  <Input type="text" label="First Name" autoComplete="off" />
-                  <Input type="text" label="Last Name" autoComplete="off" />
-                </div>
-                <Input type="email" label="Email" autoComplete="off" />
-                <Input type="tel" label="Phone" autoComplete="off" />
-                <div className={styles["attendee-form-action"]}>
-                  <div>
-                    <Button type="secondary">Back</Button>
-                  </div>
-                  <div className={styles["right"]}>
-                    <Button type="primary">Next</Button>
-                  </div>
-                </div>
-              </form>
+              <AttendeeForm />
+            </div>
+            <div className={styles["registration-content-action"]}>
+              <div>
+                <Button type="secondary">Back</Button>
+              </div>
+              <div className={styles["right"]}>
+                <Button type="primary">Next</Button>
+              </div>
             </div>
           </div>
-          <Summary />
+          <RegistrationSummary />
         </div>
       </div>
     </Default>

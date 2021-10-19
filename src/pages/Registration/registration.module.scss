@@ -13,6 +13,7 @@
   &-body {
     display: grid;
     grid-template-columns: 2fr 1fr;
+    align-items: start;
     gap: 2rem;
     margin-top: 3rem;
     .registration {
@@ -22,53 +23,15 @@
         border-radius: 0.35rem;
       }
       &-content {
-        padding: 1rem 1.25rem;
-        &-header {
-          display: flex;
-          align-items: center;
-          border-bottom: 1px solid $lightGray;
-          padding: 1rem 1.25rem 0.75rem;
-          margin: -1rem -1.25rem 1rem;
-          font-size: 0.875rem;
-          &-icon {
-            margin-right: 1rem;
-            fill: $white;
-            background: $primary;
-            border-radius: 50%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            width: 36px;
-            height: 36px;
-          }
-          &-title {
-            font-weight: 600;
-          }
-          &-subtitle {
-            color: $subtitle;
-            font-size: 0.7rem;
-          }
-        }
+        padding: 1rem 1.25rem 1.25rem;
         &-body {
           padding-bottom: 0.5rem;
-          .attendee-form {
-            display: grid;
-            gap: 1rem;
-            &-group {
-              display: grid;
-              grid-template-columns: repeat(2, 1fr);
-              gap: 1rem;
-            }
-            label {
-              font-size: 0.75rem;
-            }
-            &-action {
-              margin-top: 0.75rem;
-              display: flex;
-              .right {
-                margin-left: auto;
-              }
-            }
+        }
+        &-action {
+          margin-top: 1.25rem;
+          display: flex;
+          .right {
+            margin-left: auto;
           }
         }
       }

@@ -2,7 +2,7 @@ import styles from "components/Registration/RegistrationSummary/RegistrationSumm
 
 import cx from "classnames";
 
-function Summary() {
+function RegistrationSummary() {
   return (
     <div className={styles["registration-summary"]}>
       <div className={styles["registration-summary-title"]}>
@@ -138,4 +138,4 @@ function Summary() {
   );
 }
 
-export default Summary;
+export default RegistrationSummary;
