@@ -19,7 +19,8 @@ function RegistrationTicket({ isActive = false }) {
       )}
       <div className={styles["registration-ticket-item-header"]}>
         <div className={styles["registration-ticket-item-header-title"]}>
-          Early Bird
+          <div>Early Bird</div>
+          <div className={styles["registration-ticket-badge"]}>Amount</div>
         </div>
         <div className={styles["registration-ticket-item-header-tagline"]}>
           30 tickets left
