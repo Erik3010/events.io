@@ -1,62 +1,50 @@
 @import "scss/variables";
 
-.registration-ticket {
-  &-container {
+.registration-ticket-item {
+  &-check {
+    position: absolute;
+    right: 0.75rem;
+    background: $primary;
+    border-radius: 50%;
+    width: 1rem;
+    height: 1rem;
     display: flex;
-    overflow: auto;
-    max-width: 700px;
-    flex-wrap: nowrap;
-    > * + * {
-      margin-left: 0.75rem;
+    align-items: center;
+    justify-content: center;
+    svg {
+      stroke: $white;
     }
-    padding-bottom: 0.75rem;
   }
-  &-item {
-    &-check {
-      position: absolute;
-      right: 0.75rem;
-      background: $primary;
-      border-radius: 50%;
-      width: 1rem;
-      height: 1rem;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      svg {
-        stroke: $white;
-      }
+  &:hover {
+    box-shadow: $shadowSm;
+  }
+  &.active {
+    border: 1.5px solid $primary;
+    box-shadow: $shadowMd;
+  }
+  position: relative;
+  transition: $transition;
+  cursor: pointer;
+  min-width: 250px;
+  border: 1px solid $border;
+  border-radius: 0.5rem;
+  padding: 0.75rem 1rem;
+  &-header {
+    &-title {
+      font-weight: 600;
     }
-    &:hover {
-      box-shadow: $shadowSm;
+    &-tagline {
+      font-size: 0.75rem;
+      color: $subtitle;
     }
-    &.active {
-      border: 1.5px solid $primary;
-      box-shadow: $shadowMd;
-    }
-    position: relative;
-    transition: $transition;
-    cursor: pointer;
-    min-width: 250px;
-    border: 1px solid $border;
-    border-radius: 0.5rem;
-    padding: 0.75rem 1rem;
-    &-header {
-      &-title {
-        font-weight: 600;
-      }
-      &-tagline {
-        font-size: 0.75rem;
-        color: $subtitle;
-      }
-    }
-    &-content {
-      height: 3rem;
-      display: flex;
-      flex-direction: column;
-      justify-content: flex-end;
-      color: $primary;
-      font-weight: 500;
-      font-size: 0.875rem;
-    }
+  }
+  &-content {
+    height: 3rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    color: $primary;
+    font-weight: 500;
+    font-size: 0.875rem;
   }
 }

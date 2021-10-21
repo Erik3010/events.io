@@ -15,7 +15,7 @@ import RegistrationStepperItem from "components/Registration/RegistrationStepper
 import RegistrationHeader from "components/Registration/RegistrationHeader/RegistrationHeader";
 import AttendeeForm from "components/Registration/AttendeeForm/AttendeeForm";
 import RegistrationContentHeader from "components/Registration/RegistrationContentHeader/RegistrationContentHeader";
-import RegistrationTicket from "components/Registration/RegistrationTicket/RegistrationTicket";
+import RegistrationConfiguration from "components/Registration/RegistrationConfiguration/RegistrationConfiguration";
 
 function Registration() {
   return (
@@ -33,7 +33,7 @@ function Registration() {
             <RegistrationStepperItem
               icon={<Ticket width={16} height={16} />}
               stepCount={2}
-              title="Choose Ticket"
+              title="Event Configuration"
               disabled={true}
               hasLine={true}
             />
@@ -55,7 +55,7 @@ function Registration() {
             />
             <div className={styles["registration-content-body"]}>
               {/* <AttendeeForm /> */}
-              <RegistrationTicket />
+              <RegistrationConfiguration />
             </div>
             <div className={styles["registration-content-action"]}>
               <div>
