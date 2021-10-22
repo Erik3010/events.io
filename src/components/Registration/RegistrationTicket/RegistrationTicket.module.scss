@@ -26,11 +26,14 @@
     }
     &:hover {
       box-shadow: $shadowSm;
+      border-color: $primary;
     }
     &.active {
       border: 1.75px solid $primary;
       box-shadow: $shadowMd;
+      background: $transparentPrimary;
     }
+    background: $white;
     position: relative;
     transition: $transition;
     cursor: pointer;
