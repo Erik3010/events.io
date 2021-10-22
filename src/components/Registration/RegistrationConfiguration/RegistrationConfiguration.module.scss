@@ -2,9 +2,22 @@
 
 .registration {
   &-section {
+    &-container {
+      > * + * {
+        margin-top: 2rem;
+      }
+    }
     &-title {
-      font-weight: 600;
       margin-bottom: 1rem;
+      h1 {
+        font-weight: 600;
+        font-size: 0.9rem;
+        margin: 0;
+      }
+      p {
+        font-size: 0.7rem;
+        color: $subtitle;
+      }
     }
   }
   &-ticket {
