@@ -25,6 +25,21 @@ function RegistrationConfiguration() {
           </div>
         </div>
       </div>
+      <div className={styles["registration-section"]}>
+        <div className={styles["registration-section-title"]}>
+          <h1>Additional Workshops</h1>
+          <p>Choose workshop that you want to join.</p>
+        </div>
+        <div className={styles["registration-section-content"]}>
+          <div className={styles["registration-ticket-container"]}>
+            {Array(10)
+              .fill("")
+              .map((_, index) => (
+                <RegistrationTicket isActive={index === 1} />
+              ))}
+          </div>
+        </div>
+      </div>
     </div>
   );
 }
