@@ -2,7 +2,7 @@ import styles from "components/Registration/RegistrationTicket/RegistrationTicke
 
 import cx from "classnames";
 
-import { ReactComponent as Check } from "assets/icons/Check.svg";
+import { ReactComponent as Check } from "assets/icons/check.svg";
 
 function RegistrationTicket({ isActive = false }) {
   return (
