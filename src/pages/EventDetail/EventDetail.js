@@ -6,7 +6,7 @@ import styles from "pages/EventDetail/EventDetail.module.scss";
 
 import cx from "classnames";
 
-import { Link } from "react-router-dom";
+import { Link, useHistory } from "react-router-dom";
 import { useState } from "react";
 
 import { ReactComponent as Clock } from "assets/icons/clock.svg";
@@ -14,6 +14,8 @@ import { ReactComponent as User } from "assets/icons/user.svg";
 import EventSession from "components/Event/EventSession/EventSession";
 import EventAttendees from "components/Event/EventAttendees/EventAttendees";
 import EventTimeline from "components/Event/EventTimeline/EventTimeline";
+
+import useQuery from "hooks/useQuery";
 
 function EventDetail() {
   const tabs = [
@@ -34,7 +36,17 @@ function EventDetail() {
     },
   ];
 
-  const [selectedTab, setSelectedTab] = useState(tabs[0]);
+  const query = useQuery();
+  const currentTab = Math.max(0, Math.min(2, query.get("tab") || 0));
+  const tab = tabs[currentTab];
+
+  const history = useHistory();
+
+  const onChangeTab = (tab) =>
+    history.push({
+      pathname: history.location.pathname,
+      search: `?tab=${tab}`,
+    });
 
   return (
     <Default>
@@ -62,22 +74,22 @@ function EventDetail() {
         </div>
         <div className={styles["event-detail-body"]}>
           <div className={styles["event-detail-tab"]}>
-            {tabs.map((tab) => {
+            {tabs.map((item, index) => {
               return (
                 <div
-                  key={tab.id}
+                  key={item.id}
                   className={cx(styles["event-detail-tab-item"], {
-                    [styles["active"]]: selectedTab.id === tab.id,
+                    [styles["active"]]: tab.id === item.id,
                   })}
-                  onClick={() => setSelectedTab(tab)}
+                  onClick={() => onChangeTab(index)}
                 >
-                  {tab.name}
+                  {item.name}
                 </div>
               );
             })}
           </div>
           <div className={styles["event-detail-content"]}>
-            <selectedTab.component />
+            <tab.component />
           </div>
         </div>
       </div>
