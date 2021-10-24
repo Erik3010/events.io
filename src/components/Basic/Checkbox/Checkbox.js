@@ -4,13 +4,7 @@ import { ReactComponent as Check } from "assets/icons/check.svg";
 
 import { useState } from "react";
 
-const Checkbox = ({
-  label,
-  tagline = null,
-  checked = false,
-  value,
-  onChange,
-}) => {
+function Checkbox({ label, tagline = null, checked = false, value, onChange }) {
   const [isChecked, setIsChecked] = useState(checked);
 
   const onChangeHandler = (e) => {
@@ -42,6 +36,6 @@ const Checkbox = ({
       </div>
     </label>
   );
-};
+}
 
 export default Checkbox;

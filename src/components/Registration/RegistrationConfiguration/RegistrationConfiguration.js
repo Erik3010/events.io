@@ -3,7 +3,6 @@ import styles from "components/Registration/RegistrationConfiguration/Registrati
 import cx from "classnames";
 
 import RegistrationTicket from "components/Registration/RegistrationTicket/RegistrationTicket";
-
 import Checkbox from "components/Basic/Checkbox/Checkbox";
 
 import { useState } from "react";
