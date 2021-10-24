@@ -64,6 +64,22 @@ function RegistrationConfiguration() {
                     label={`Hello ${index + 1}`}
                     tagline="Halo"
                   />
+                  <div className={styles["registration-workshop-item-info"]}>
+                    <div
+                      className={
+                        styles["registration-workshop-item-info-price"]
+                      }
+                    >
+                      $100
+                    </div>
+                    <div
+                      className={
+                        styles["registration-workshop-item-info-price-subtitle"]
+                      }
+                    >
+                      +10% tax
+                    </div>
+                  </div>
                 </div>
               ))}
           </div>
