@@ -36,8 +36,7 @@ function EventDetail() {
     },
   ];
 
-  const query = useQuery();
-  const currentTab = Math.max(0, Math.min(2, query.get("tab") || 0));
+  const currentTab = Math.max(0, Math.min(2, useQuery().get("tab") || 0));
   const tab = tabs[currentTab];
 
   const history = useHistory();
