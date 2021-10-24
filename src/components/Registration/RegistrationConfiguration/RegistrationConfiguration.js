@@ -4,9 +4,23 @@ import cx from "classnames";
 
 import RegistrationTicket from "components/Registration/RegistrationTicket/RegistrationTicket";
 
-import { ReactComponent as Check } from "assets/icons/check.svg";
+import Checkbox from "components/Basic/Checkbox/Checkbox";
+
+import { useState } from "react";
 
 function RegistrationConfiguration() {
+  const [workshops, setWorkshops] = useState([]);
+
+  const onWorkshopChangeHandler = (e) => {
+    if (e.target.checked) {
+      setWorkshops([...workshops, +e.target.value]);
+    } else {
+      setWorkshops(
+        workshops.filter((workshop) => workshop !== +e.target.value)
+      );
+    }
+  };
+
   return (
     <div className={styles["registration-section-container"]}>
       <div className={styles["registration-section"]}>
@@ -22,7 +36,7 @@ function RegistrationConfiguration() {
             {Array(10)
               .fill("")
               .map((_, index) => (
-                <RegistrationTicket isActive={index === 1} />
+                <RegistrationTicket key={index} isActive={index === 1} />
               ))}
           </div>
         </div>
@@ -34,20 +48,24 @@ function RegistrationConfiguration() {
         </div>
         <div className={styles["registration-section-content"]}>
           <div className={styles["registration-workshop"]}>
-            <label className={styles["registration-workshop-checkbox"]}>
-              <div className={styles["registration-workshop-checkbox-label"]}>
-                <h4>Workshop123123</h4>
-                <p>Lorem ipsum dolor sit amet.</p>
-              </div>
-              <input type="checkbox" />
-              <div className={styles["registration-workshop-checkbox-box"]}>
-                <Check
-                  className={styles["registration-workshop-checkbox-checkmark"]}
-                  width={15}
-                  height={15}
-                />
-              </div>
-            </label>
+            {Array(5)
+              .fill("")
+              .map((_, index) => (
+                <div
+                  key={index}
+                  className={cx({
+                    [styles["registration-workshop-item"]]: true,
+                    [styles["active"]]: workshops.includes(index),
+                  })}
+                >
+                  <Checkbox
+                    onChange={(e) => onWorkshopChangeHandler(e)}
+                    value={index}
+                    label={`Hello ${index + 1}`}
+                    tagline="Halo"
+                  />
+                </div>
+              ))}
           </div>
         </div>
       </div>

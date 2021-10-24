@@ -35,64 +35,20 @@
     }
   }
   &-workshop {
-    &-checkbox {
-      display: flex;
-      position: relative;
-      cursor: pointer;
-      user-select: none;
-      padding-left: 1.9rem;
-      input {
-        position: absolute;
-        opacity: 0;
-        cursor: pointer;
-        width: 0;
-        height: 0;
-        &:checked {
-          & ~ .registration-workshop-checkbox-box {
-            background: $primary;
-            border-color: $primary;
-            box-shadow: $shadowMd;
-            .registration-workshop-checkbox-checkmark {
-              stroke-dashoffset: 0;
-            }
-          }
-        }
-      }
-      &-label {
-        h4 {
-          font-size: 0.85rem;
-          font-weight: 600;
-          margin-bottom: -0.1rem;
-        }
-        p {
-          color: $subtitle;
-          font-size: 0.75rem;
-        }
-      }
-      &-box {
-        position: absolute;
-        top: 0.2rem;
-        left: 0;
-        width: 1.2rem;
-        height: 1.2rem;
-        border: 1px solid $border;
-        box-shadow: $shadowSm;
-        border-radius: 0.25rem;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        transition: $transition;
-        .registration-workshop-checkbox-checkmark {
-          stroke: $white;
-          stroke-dasharray: 20;
-          stroke-dashoffset: 20;
-          transition: $transition;
-        }
-      }
+    > * + * {
+      margin-top: 0.75rem;
+    }
+    &-item {
+      padding: 1rem;
+      border-radius: 0.45rem;
+      border: 1px solid $lightGray;
       &:hover {
-        .registration-workshop-checkbox-box {
-          background: #f0efef;
-        }
+        background: $transparentPrimary;
+      }
+      &.active {
+        background: $transparentPrimary;
+        border-color: $primary;
+        box-shadow: $shadowSm;
       }
     }
   }
