@@ -16,6 +16,7 @@ import RegistrationHeader from "components/Registration/RegistrationHeader/Regis
 import AttendeeForm from "components/Registration/AttendeeForm/AttendeeForm";
 import RegistrationContentHeader from "components/Registration/RegistrationContentHeader/RegistrationContentHeader";
 import RegistrationConfiguration from "components/Registration/RegistrationConfiguration/RegistrationConfiguration";
+import RegistrationConfirmation from "components/Registration/RegistrationConfirmation/RegistrationConfirmation";
 
 function Registration() {
   return (
@@ -55,7 +56,8 @@ function Registration() {
             />
             <div className={styles["registration-content-body"]}>
               {/* <AttendeeForm /> */}
-              <RegistrationConfiguration />
+              {/* <RegistrationConfiguration /> */}
+              <RegistrationConfirmation />
             </div>
             <div className={styles["registration-content-action"]}>
               <div>

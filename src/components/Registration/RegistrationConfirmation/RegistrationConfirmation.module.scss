@@ -1,0 +1,40 @@
+@import "scss/variables";
+
+.registration-section {
+  &-container {
+    > * + * {
+      margin-top: 1.75rem;
+    }
+  }
+  &-title {
+    margin-bottom: 0.85rem;
+    padding-bottom: 0.45rem;
+    border-bottom: 1px solid $lightGray;
+    h4 {
+      font-weight: 600;
+      font-size: 1rem;
+    }
+  }
+  &-content {
+    .registration-section-attendee {
+      > * + * {
+        margin-top: 0.85rem;
+      }
+      .registration-detail-row {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+      }
+      .registration-detail-item {
+        p {
+          font-size: 0.7rem;
+          font-weight: 500;
+          color: $gray;
+        }
+        h4 {
+          font-weight: 500;
+          font-size: 0.875rem;
+        }
+      }
+    }
+  }
+}
