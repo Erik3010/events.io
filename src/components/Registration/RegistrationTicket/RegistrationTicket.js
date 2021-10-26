@@ -3,6 +3,7 @@ import styles from "components/Registration/RegistrationTicket/RegistrationTicke
 import cx from "classnames";
 
 import { ReactComponent as Check } from "assets/icons/check.svg";
+import TicketBadge from "components/Registration/TicketBadge/TicketBadge";
 
 function RegistrationTicket({ isActive = false }) {
   return (
@@ -20,7 +21,7 @@ function RegistrationTicket({ isActive = false }) {
       <div className={styles["registration-ticket-item-header"]}>
         <div className={styles["registration-ticket-item-header-title"]}>
           <div>Early Bird</div>
-          <div className={styles["registration-ticket-badge"]}>Amount</div>
+          <TicketBadge>Amount</TicketBadge>
         </div>
         <div className={styles["registration-ticket-item-header-tagline"]}>
           30 tickets left

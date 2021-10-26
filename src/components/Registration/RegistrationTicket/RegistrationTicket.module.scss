@@ -1,14 +1,6 @@
 @import "scss/variables";
 
 .registration-ticket {
-  &-badge {
-    font-size: 0.6rem;
-    font-weight: 500;
-    background: #f97316;
-    padding: 0.15rem 0.45rem;
-    border-radius: 0.35rem;
-    color: $white;
-  }
   &-item {
     &-check {
       position: absolute;

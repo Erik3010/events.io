@@ -3,7 +3,7 @@
 .registration-section {
   &-container {
     > * + * {
-      margin-top: 1.75rem;
+      margin-top: 2.25rem;
     }
   }
   &-title {
@@ -12,27 +12,60 @@
     border-bottom: 1px solid $lightGray;
     h4 {
       font-weight: 600;
-      font-size: 1rem;
+      font-size: 0.9rem;
     }
   }
   &-content {
-    .registration-section-attendee {
-      > * + * {
-        margin-top: 0.85rem;
-      }
-      .registration-detail-row {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-      }
-      .registration-detail-item {
-        p {
-          font-size: 0.7rem;
-          font-weight: 500;
-          color: $gray;
+    .registration-section {
+      &-attendee {
+        > * + * {
+          margin-top: 0.85rem;
         }
-        h4 {
-          font-weight: 500;
-          font-size: 0.875rem;
+        .registration-detail-row {
+          display: grid;
+          grid-template-columns: repeat(2, 1fr);
+        }
+        .registration-detail-item {
+          p {
+            font-size: 0.7rem;
+            font-weight: 500;
+            color: $gray;
+          }
+          h4 {
+            font-weight: 500;
+            font-size: 0.875rem;
+          }
+        }
+      }
+      &-ticket {
+        display: flex;
+        justify-content: space-between;
+        border: 1px solid $border;
+        box-shadow: $shadowSm;
+        border-radius: 0.5rem;
+        padding: 1rem;
+        &-content {
+          &-title {
+            display: flex;
+            align-items: center;
+            h4 {
+              display: inline-block;
+              margin-right: 0.5rem;
+              font-weight: 600;
+            }
+          }
+          &-description {
+            color: $subtitle;
+            font-size: 0.85rem;
+            margin-top: 0.25rem;
+          }
+        }
+        &-info {
+          &-price {
+            font-weight: 600;
+            font-size: 1.05rem;
+            color: $primary;
+          }
         }
       }
     }

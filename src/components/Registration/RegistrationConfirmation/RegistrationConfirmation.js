@@ -1,5 +1,7 @@
 import styles from "components/Registration/RegistrationConfirmation/RegistrationConfirmation.module.scss";
 
+import TicketBadge from "components/Registration/TicketBadge/TicketBadge";
+
 function RegistrationConfirmation() {
   return (
     <div className={styles["registration-section-container"]}>
@@ -37,7 +39,28 @@ function RegistrationConfirmation() {
           <h4>Ticket Choosed</h4>
         </div>
         <div className={styles["registration-section-content"]}>
-          <div className={styles["registration-section-ticket"]}></div>
+          <div className={styles["registration-section-ticket"]}>
+            <div className={styles["registration-section-ticket-content"]}>
+              <div
+                className={styles["registration-section-ticket-content-title"]}
+              >
+                <h4>Early Bird</h4>
+                <TicketBadge>Amount</TicketBadge>
+              </div>
+              <div
+                className={
+                  styles["registration-section-ticket-content-description"]
+                }
+              >
+                30 tickets left
+              </div>
+            </div>
+            <div className={styles["registration-section-ticket-info"]}>
+              <div className={styles["registration-section-ticket-info-price"]}>
+                $20.00
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>

@@ -1,0 +1,12 @@
+@import "scss/variables";
+
+.ticket-badge {
+  display: inline-block;
+  font-size: 0.6rem;
+  font-weight: 500;
+  background: #f97316;
+  padding: 0.15rem 0.45rem;
+  border-radius: 0.35rem;
+  color: $white;
+  height: 1.25rem;
+}
