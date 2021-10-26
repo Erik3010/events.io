@@ -68,6 +68,38 @@
           }
         }
       }
+      &-workshop {
+        > * + * {
+          border-top: 1px solid $lightGray;
+        }
+        &-item {
+          display: flex;
+          justify-content: space-between;
+          padding: 0.65rem 0;
+          &-content {
+            h4 {
+              font-size: 0.85rem;
+              font-weight: 600;
+              margin-bottom: -0.1rem;
+            }
+            p {
+              color: $subtitle;
+              font-size: 0.7rem;
+            }
+          }
+          &-info {
+            text-align: right;
+            h4 {
+              color: $primary;
+              font-size: 0.9rem;
+            }
+            p {
+              color: $subtitle;
+              font-size: 0.65rem;
+            }
+          }
+        }
+      }
     }
   }
 }

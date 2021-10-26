@@ -63,6 +63,42 @@ function RegistrationConfirmation() {
           </div>
         </div>
       </div>
+      <div className={styles["registration-section"]}>
+        <div className={styles["registration-section-title"]}>
+          <h4>Additional Workshop</h4>
+        </div>
+        <div className={styles["registration-section-content"]}>
+          <div className={styles["registration-section-workshop"]}>
+            {Array(5)
+              .fill("")
+              .map((_, index) => {
+                return (
+                  <div
+                    key={index}
+                    className={styles["registration-section-workshop-item"]}
+                  >
+                    <div
+                      className={
+                        styles["registration-section-workshop-item-content"]
+                      }
+                    >
+                      <h4>Workshop 1</h4>
+                      <p>Evan You</p>
+                    </div>
+                    <div
+                      className={
+                        styles["registration-section-workshop-item-info"]
+                      }
+                    >
+                      <h4>$100</h4>
+                      <p>+10% tax</p>
+                    </div>
+                  </div>
+                );
+              })}
+          </div>
+        </div>
+      </div>
     </div>
   );
 }
