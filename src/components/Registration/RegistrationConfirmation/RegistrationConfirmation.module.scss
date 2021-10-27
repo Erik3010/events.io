@@ -69,13 +69,10 @@
         }
       }
       &-workshop {
-        > * + * {
-          border-top: 1px solid $lightGray;
-        }
         &-item {
           display: flex;
           justify-content: space-between;
-          padding: 0.65rem 0;
+          padding: 0.45rem 0;
           &-content {
             h4 {
               font-size: 0.85rem;

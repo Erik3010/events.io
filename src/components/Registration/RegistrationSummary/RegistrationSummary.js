@@ -2,6 +2,8 @@ import styles from "components/Registration/RegistrationSummary/RegistrationSumm
 
 import cx from "classnames";
 
+import Button from "components/Basic/Button/Button";
+
 function RegistrationSummary() {
   return (
     <div className={styles["registration-summary"]}>
@@ -133,6 +135,9 @@ function RegistrationSummary() {
             </div>
           </div>
         </div>
+      </div>
+      <div className={styles["registration-summary-footer"]}>
+        <Button type="primary">Proceed Checkout</Button>
       </div>
     </div>
   );
