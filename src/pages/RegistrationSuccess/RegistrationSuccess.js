@@ -1,7 +1,7 @@
 import styles from "pages/RegistrationSuccess/RegistrationSuccess.module.scss";
 
 function RegistrationSuccess() {
-  return <div>success page</div>;
+  return <div>success pages</div>;
 }
 
 export default RegistrationSuccess;
