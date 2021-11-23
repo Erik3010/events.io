@@ -11,14 +11,18 @@ function LoginForm() {
 
   return (
     <form className={styles["login-form"]} onSubmit={loginHandler}>
-      <Input label="Username" type="text" />
-      <Input label="Password" type="password" />
+      <div className={styles["login-form__input-group"]}>
+        <Input label="Username" type="text" />
+        <Input label="Password" type="password" />
+      </div>
       <Link to="/" className={styles["login-form__link"]}>
         Forgot Password?
       </Link>
-      <Button type="primary" full>
-        Log in
-      </Button>
+      <div className={styles["login-form__cta"]}>
+        <Button type="primary" full>
+          Log in
+        </Button>
+      </div>
     </form>
   );
 }

@@ -1,9 +1,6 @@
 @import "scss/variables";
 
 .login-form {
-  button {
-    margin-top: 2rem;
-  }
   &__link {
     display: block;
     color: $primary;
@@ -11,7 +8,12 @@
     text-align: right;
     margin-top: 0.75rem;
   }
-  > div + div {
-    margin-top: 1.25rem;
+  &__cta {
+    margin-top: 2rem;
+  }
+  &__input-group {
+    > div + div {
+      margin-top: 1.25rem;
+    }
   }
 }
