@@ -1,14 +1,14 @@
 @import "scss/variables";
 @import "scss/breakpoints";
 
-.login-container {
+.login {
   height: 100%;
   display: grid;
   grid-template-columns: 2fr 3fr;
   @media screen and (max-width: $breakpoint-md) {
     grid-template-columns: 1fr;
   }
-  .login-content {
+  &__body {
     display: flex;
     flex-direction: column;
     justify-content: space-between;

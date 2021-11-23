@@ -8,10 +8,10 @@ import LoginSidebar from "components/Login/LoginSidebar/LoginSidebar";
 
 function Login() {
   return (
-    <main className={styles["login-container"]}>
-      <div className={styles["login-content"]}>
+    <main className={styles["login"]}>
+      <div className={styles["login__body"]}>
         <LoginHeader />
-        <div className={styles["login-content-body"]}>
+        <div className={styles["login__form"]}>
           <LoginFormHeader />
           <LoginForm />
         </div>

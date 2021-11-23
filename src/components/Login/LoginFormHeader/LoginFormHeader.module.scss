@@ -2,7 +2,7 @@
 
 .login-form-header {
   margin-bottom: 2.5rem;
-  p {
+  &__subtitle {
     color: $gray;
     font-size: 0.75rem;
     font-weight: 600;

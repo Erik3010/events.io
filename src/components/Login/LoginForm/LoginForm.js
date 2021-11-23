@@ -13,7 +13,7 @@ function LoginForm() {
     <form className={styles["login-form"]} onSubmit={loginHandler}>
       <Input label="Username" type="text" />
       <Input label="Password" type="password" />
-      <Link to="/" className={styles["login-form-link"]}>
+      <Link to="/" className={styles["login-form__link"]}>
         Forgot Password?
       </Link>
       <Button type="primary">Log in</Button>
