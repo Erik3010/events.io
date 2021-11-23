@@ -1,6 +1,6 @@
 @import "scss/variables";
 
-.btn {
+.button {
   color: $white;
   border-radius: 5px;
   cursor: pointer;
@@ -8,48 +8,46 @@
   border: 1px solid transparent;
   font-weight: 600;
   transition: all $transition;
-  @at-root {
-    &-primary {
-      background: $primary;
-      &:hover,
-      &:focus {
-        background: $primaryDark;
-      }
-      &:focus {
-        box-shadow: $shadow;
-      }
-      &:active {
-        transform: scale(0.98);
-      }
+  &:active {
+    transform: scale(0.98);
+  }
+  &--primary {
+    background: $primary;
+    &:hover,
+    &:focus {
+      background: $primaryDark;
     }
-    &-secondary {
-      background: $white;
-      color: $primary;
-      border-color: $primary;
-      &:hover,
-      &:focus {
-        background: $transparentPrimary;
-      }
-      &:focus {
-        box-shadow: $shadow;
-      }
-      &:active {
-        transform: scale(0.97);
-      }
+    &:focus {
+      box-shadow: $shadow;
     }
-    &-danger {
-      background: $error;
-      &:hover,
-      &:active {
-        background: $errorDarker;
-      }
-      &:focus {
-        box-shadow: $shadowError;
-      }
+  }
+  &--secondary {
+    background: $white;
+    color: $primary;
+    border-color: $primary;
+    &:hover,
+    &:focus {
+      background: $transparentPrimary;
     }
-    &-small {
-      padding: 0.65rem 1.25rem;
-      font-size: 0.75rem;
+    &:focus {
+      box-shadow: $shadow;
     }
+  }
+  &--danger {
+    background: $error;
+    &:hover,
+    &:active {
+      background: $errorDarker;
+    }
+    &:focus {
+      box-shadow: $shadowError;
+    }
+  }
+  &--small {
+    padding: 0.65rem 1.25rem;
+    font-size: 0.75rem;
+  }
+  &--full {
+    width: 100%;
   }
 }

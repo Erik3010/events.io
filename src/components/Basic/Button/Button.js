@@ -1,11 +1,18 @@
 import styles from "components/Basic/Button/Button.module.scss";
 import cx from "classnames";
 
-function Button({ children, type, small: isSmall = false, ...props }) {
+function Button({
+  children,
+  type,
+  small: isSmall = false,
+  full: isFull = false,
+  ...props
+}) {
   return (
     <button
-      className={cx(styles["btn"], styles[`btn-${type}`], {
-        [styles["btn-small"]]: isSmall,
+      className={cx(styles["button"], styles[`button--${type}`], {
+        [styles["button--small"]]: isSmall,
+        [styles["button--full"]]: isFull,
       })}
       type="submit"
       {...props}
