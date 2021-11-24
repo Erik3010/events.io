@@ -12,7 +12,7 @@
   @media screen and (max-width: $breakpoint-md) {
     display: none !important;
   }
-  &-overlay {
+  &__overlay {
     position: absolute;
     top: 0;
     left: 0;
@@ -23,20 +23,22 @@
       opacity: 0.025;
     }
   }
-  &-wrapper {
+  &__wrapper {
     z-index: 99;
   }
-  &-text {
+  &__body {
     width: 500px;
     margin-top: 0.75rem;
-    h1 {
-      font-weight: 600;
-      margin-bottom: 0.25rem;
-      color: $white;
-    }
-    p {
-      color: $placeholder;
-      font-size: 0.8rem;
+    .login-sidebar {
+      &__title {
+        font-weight: 600;
+        margin-bottom: 0.25rem;
+        color: $white;
+      }
+      &__subtitle {
+        color: $placeholder;
+        font-size: 0.8rem;
+      }
     }
   }
 }
