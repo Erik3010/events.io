@@ -2,9 +2,6 @@ import styles from "pages/Registration/Registration.module.scss";
 
 import Default from "containers/Default";
 
-import cx from "classnames";
-
-import { ReactComponent as User } from "assets/icons/user-solid.svg";
 import { ReactComponent as UserGroup } from "assets/icons/user-group-solid.svg";
 import { ReactComponent as Ticket } from "assets/icons/ticket-solid.svg";
 import { ReactComponent as ShieldCheck } from "assets/icons/shield-check-solid.svg";
@@ -13,9 +10,7 @@ import Button from "components/Basic/Button/Button";
 import RegistrationSummary from "components/Registration/RegistrationSummary/RegistrationSummary";
 import RegistrationStepperItem from "components/Registration/RegistrationStepperItem/RegistrationStepperItem";
 import RegistrationHeader from "components/Registration/RegistrationHeader/RegistrationHeader";
-import AttendeeForm from "components/Registration/AttendeeForm/AttendeeForm";
 import RegistrationContentHeader from "components/Registration/RegistrationContentHeader/RegistrationContentHeader";
-import RegistrationConfiguration from "components/Registration/RegistrationConfiguration/RegistrationConfiguration";
 import RegistrationConfirmation from "components/Registration/RegistrationConfirmation/RegistrationConfirmation";
 
 function Registration() {
