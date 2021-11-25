@@ -1,6 +1,6 @@
 import Badge from "components/Basic/Badge/Badge";
 import Button from "components/Basic/Button/Button";
-import Default from "containers/Default";
+import Default from "containers/Default/Default";
 
 import styles from "pages/EventDetail/EventDetail.module.scss";
 

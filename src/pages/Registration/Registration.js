@@ -1,6 +1,6 @@
 import styles from "pages/Registration/Registration.module.scss";
 
-import Default from "containers/Default";
+import Default from "containers/Default/Default";
 
 import { ReactComponent as UserGroup } from "assets/icons/user-group-solid.svg";
 import { ReactComponent as Ticket } from "assets/icons/ticket-solid.svg";

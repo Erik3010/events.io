@@ -6,7 +6,7 @@ import HomeHeader from "components/Home/HomeHeader/HomeHeader";
 import { useState } from "react";
 
 import CreateEventModal from "components/Event/CreateEventModal/CreateEventModal";
-import Default from "containers/Default";
+import Default from "containers/Default/Default";
 
 function Home() {
   const [showCreateEventModal, setShowCreateEventModal] = useState(false);
@@ -14,7 +14,7 @@ function Home() {
   return (
     <Default>
       <HomeHeader onCreateEvent={() => setShowCreateEventModal(true)} />
-      <div className={styles["event-container"]}>
+      <div className={styles["event"]}>
         {Array(20)
           .fill()
           .map((item, index) => {
