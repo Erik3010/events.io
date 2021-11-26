@@ -1,6 +1,6 @@
 @import "scss/variables";
 
-.event-modal-container {
+.modal {
   background: $white;
   position: fixed;
   top: 0;
@@ -12,61 +12,59 @@
   flex-direction: column;
   align-items: center;
   transition: $transition;
-  .event-modal {
-    @at-root {
-      &-close {
-        cursor: pointer;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        padding: 0.35rem;
-        border-radius: 0.25rem;
-        position: absolute;
-        z-index: 99;
-        right: 1.5rem;
-        top: 1.5rem;
-        transition: $transition;
-        &:hover {
-          background: $lightGray;
-          color: $primary;
-        }
-      }
-    }
+  &__wrapper {
     width: 100%;
     height: 100%;
     display: grid;
     grid-template-columns: 1fr 1.75fr 1fr;
-    &-content {
-      padding: 2.5rem;
+  }
+  &__content {
+    padding: 2.5rem;
+  }
+  &__close-button {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.35rem;
+    border-radius: 0.25rem;
+    position: absolute;
+    z-index: 99;
+    right: 1.5rem;
+    top: 1.5rem;
+    transition: $transition;
+    &:hover {
+      background: $lightGray;
+      color: $primary;
     }
-    &-decoration {
-      background: url("../../../assets/decoration.png");
-      background-size: 100%;
-      background-position: bottom left;
-      background-repeat: no-repeat;
-      @at-root {
-        &-right {
-          transform: rotateY(180deg);
-        }
+  }
+  &__decoration {
+    background: url("../../../assets/decoration.png");
+    background-size: 100%;
+    background-position: bottom left;
+    background-repeat: no-repeat;
+    @at-root {
+      &--flipped {
+        transform: rotateY(180deg);
       }
     }
-    &-header {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      text-align: center;
-      &-title {
-        font-size: 1.75rem;
-        margin: 0;
-      }
-      &-tagline {
-        width: 80%;
-        color: $subtitle;
-        font-size: 0.75rem;
-      }
-    }
-    &-body {
-      margin-top: 3.5rem;
-    }
+  }
+  &__header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  &__title {
+    font-size: 1.75rem;
+    margin: 0;
+  }
+  &__tagline {
+    width: 80%;
+    color: $subtitle;
+    font-size: 0.75rem;
+  }
+  &__body {
+    margin-top: 3.5rem;
   }
 }

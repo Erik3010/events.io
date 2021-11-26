@@ -24,33 +24,28 @@ function CreateEventModal({ show, onClose }) {
   return (
     <Transition in={show} timeout={200} appear unmountOnExit>
       {(state) => (
-        <div
-          style={{ ...transitionStyle[state] }}
-          className={styles["event-modal-container"]}
-        >
-          <div className={styles["event-modal-close"]} onClick={onClose}>
+        <div style={{ ...transitionStyle[state] }} className={styles["modal"]}>
+          <div className={styles["modal__close-button"]} onClick={onClose}>
             <Cancel width={25} height={25} />
           </div>
-          <div className={styles["event-modal"]}>
-            <div className={styles["event-modal-decoration"]}></div>
-            <div className={styles["event-modal-content"]}>
-              <div className={styles["event-modal-header"]}>
-                <h1 className={styles["event-modal-header-title"]}>
-                  Create New Event
-                </h1>
-                <p className={styles["event-modal-header-tagline"]}>
+          <div className={styles["modal__wrapper"]}>
+            <div className={styles["modal__decoration"]}></div>
+            <div className={styles["modal__content"]}>
+              <div className={styles["modal__header"]}>
+                <h1 className={styles["modal__title"]}>Create New Event</h1>
+                <p className={styles["modal__tagline"]}>
                   It take less than 5 minute to fill out the information that
                   needed to create your own events.
                 </p>
               </div>
-              <div className={styles["event-modal-body"]}>
+              <div className={styles["modal__body"]}>
                 <CreateEventForm />
               </div>
             </div>
             <div
               className={cx(
-                styles["event-modal-decoration"],
-                styles["event-modal-decoration-right"]
+                styles["modal__decoration"],
+                styles["modal__decoration--flipped"]
               )}
             ></div>
           </div>
