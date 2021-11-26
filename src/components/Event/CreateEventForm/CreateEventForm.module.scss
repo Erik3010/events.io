@@ -1,17 +1,21 @@
-.create-event-form {
-  > * + * {
-    margin-top: 1.25rem;
+.form {
+  &.form--stacked {
+    > * + * {
+      margin-top: 1.25rem;
+    }
   }
-  button {
+  &__actions {
     margin-top: 2rem;
   }
-  .group-form {
+  &__input-group {
     display: flex;
-    > :first-child {
-      width: 100%;
-    }
-    > * + * {
-      margin-left: 1rem;
+    &#{&}--inline {
+      > :first-child {
+        width: 100%;
+      }
+      > * + * {
+        margin-left: 1rem;
+      }
     }
   }
 }
