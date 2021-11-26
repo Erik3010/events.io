@@ -1,7 +1,7 @@
 @import "scss/variables";
 @import "scss/breakpoints";
 
-.login-sidebar {
+.sidebar {
   background: $primary;
   position: relative;
   flex-direction: column;
@@ -29,7 +29,7 @@
   &__body {
     width: 500px;
     margin-top: 0.75rem;
-    .login-sidebar {
+    .sidebar {
       &__title {
         font-weight: 600;
         margin-bottom: 0.25rem;

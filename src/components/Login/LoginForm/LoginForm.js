@@ -10,15 +10,15 @@ function LoginForm() {
   };
 
   return (
-    <form className={styles["login-form"]} onSubmit={loginHandler}>
-      <div className={styles["login-form__input-group"]}>
+    <form className={styles["form"]} onSubmit={loginHandler}>
+      <div className={styles["form__input-group"]}>
         <Input label="Username" type="text" />
         <Input label="Password" type="password" />
       </div>
-      <Link to="/" className={styles["login-form__link"]}>
+      <Link to="/" className={styles["form__link"]}>
         Forgot Password?
       </Link>
-      <div className={styles["login-form__cta"]}>
+      <div className={styles["form__cta"]}>
         <Button type="primary" full>
           Log in
         </Button>

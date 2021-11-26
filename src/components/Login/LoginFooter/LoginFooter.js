@@ -4,10 +4,10 @@ import { Link } from "react-router-dom";
 
 function LoginFooter() {
   return (
-    <div className={styles["login-footer"]}>
+    <div className={styles["footer"]}>
       <Link to="/">Events.io</Link> made with love by{" "}
       <a
-        className={styles["login-footer__link"]}
+        className={styles["footer__link"]}
         target="_blank"
         rel="noreferrer"
         href="https://github.com/Erik3010"
