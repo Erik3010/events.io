@@ -4,8 +4,8 @@ import Button from "components/Basic/Button/Button";
 
 function HomeHeader({ onCreateEvent }) {
   return (
-    <div className={styles["home-header"]}>
-      <div className={styles["home-header__title"]}>
+    <div className={styles["header"]}>
+      <div className={styles["header__title"]}>
         <h3>Upcoming Events</h3>
         <p>There are 3 upcoming events. Check it out!</p>
       </div>

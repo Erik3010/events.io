@@ -14,7 +14,7 @@ function Home() {
   return (
     <Default>
       <HomeHeader onCreateEvent={() => setShowCreateEventModal(true)} />
-      <div className={styles["event"]}>
+      <div className={styles["container"]}>
         {Array(20)
           .fill()
           .map((item, index) => {

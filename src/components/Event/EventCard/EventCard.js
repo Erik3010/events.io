@@ -13,20 +13,20 @@ function EventCard() {
   };
 
   return (
-    <div className={styles["event-card"]} onClick={clickHandler}>
-      <div className={styles["event-card-overlay"]}></div>
-      <div className={styles["event-card-body"]}>
-        <div className={styles["event-card-header"]}>
+    <div className={styles["card"]} onClick={clickHandler}>
+      <div className={styles["card__circle"]}></div>
+      <div className={styles["card__body"]}>
+        <div className={styles["card__header"]}>
           <div>
             <Badge color="primary">12 hours to go</Badge>
           </div>
-          <div className={styles["event-menu-icon"]}>
+          <div className={styles["card__icon"]}>
             <DotsVertical width={22} height={22} />
           </div>
         </div>
-        <div className={styles["event-card-content"]}>
-          <h3>Event List</h3>
-          <p>20 Agustus 2021</p>
+        <div className={styles["card__content"]}>
+          <h3 className={styles["card__title"]}>Event List</h3>
+          <p className={styles["card__subtitle"]}>20 Agustus 2021</p>
         </div>
       </div>
     </div>
