@@ -3,14 +3,14 @@ import styles from "components/Basic/Tabs/Tabs/Tabs.module.scss";
 import TabContext from "components/Basic/Tabs/TabContext";
 import TabItem from "components/Basic/Tabs/TabItem/TabItem";
 
-import React, { useState } from "react";
+import { Children, useState } from "react";
 
 import cx from "classnames";
 
 function Tabs({ defaultActiveTab, children }) {
   const initialTab = defaultActiveTab
     ? defaultActiveTab
-    : React.Children.toArray(children)[0].props?.id ?? null;
+    : Children.toArray(children)[0].props?.id ?? null;
 
   const [activeTab, setActiveTab] = useState(initialTab);
 
@@ -21,7 +21,7 @@ function Tabs({ defaultActiveTab, children }) {
   return (
     <>
       <div className={cx(styles["tabs"], styles["tabs--stacked"])}>
-        {React.Children.map(children, (child) => {
+        {Children.map(children, (child) => {
           const { id, label } = child.props;
           return (
             <TabItem
