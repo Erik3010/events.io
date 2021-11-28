@@ -1,0 +1,15 @@
+@import "scss/variables";
+
+.tab-item {
+  font-size: 0.8rem;
+  cursor: pointer;
+  padding: 0.45rem 1.25rem;
+  color: $gray;
+  &:hover {
+    color: $text;
+  }
+  &#{&}--active {
+    border-bottom: 2px solid $primary;
+    color: $text;
+  }
+}

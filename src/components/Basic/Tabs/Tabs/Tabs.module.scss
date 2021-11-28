@@ -1,0 +1,17 @@
+@import "scss/variables";
+
+.tabs {
+  display: flex;
+  overflow: auto;
+  white-space: nowrap;
+  border-bottom: 1px solid $border;
+  font-weight: 600;
+  &.tabs--stacked {
+    > * + * {
+      margin-left: 1rem;
+    }
+  }
+  &__panel {
+    margin-top: 2rem;
+  }
+}

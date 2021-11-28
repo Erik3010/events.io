@@ -16,50 +16,24 @@ import EventTimeline from "components/Event/EventTimeline/EventTimeline";
 
 import useQuery from "hooks/useQuery";
 
+import Tabs from "components/Basic/Tabs/Tabs/Tabs";
+import TabPanel from "components/Basic/Tabs/TabPanel/TabPanel";
+
 function EventDetail() {
-  const tabs = [
-    {
-      id: "sessions",
-      name: "Sessions",
-      component: EventSession,
-    },
-    {
-      id: "attendees",
-      name: "Attendees",
-      component: EventAttendees,
-    },
-    {
-      id: "rooms",
-      name: "Room's Timeline",
-      component: EventTimeline,
-    },
-  ];
-
-  const currentTab = Math.max(0, Math.min(2, useQuery().get("tab") || 0));
-  const tab = tabs[currentTab];
-
-  const history = useHistory();
-
-  const onChangeTab = (tab) =>
-    history.push({
-      pathname: history.location.pathname,
-      search: `?tab=${tab}`,
-    });
-
   return (
     <Default>
-      <div className={styles["event-detail-container"]}>
-        <div className={styles["event-detail-header"]}>
-          <div className={styles["event-detail-title"]}>
-            <div className={styles["event-detail-subtitle"]}>
-              <h2>Vue Conference 2021</h2>{" "}
+      <div className={styles["event"]}>
+        <div className={styles["event__header-container"]}>
+          <div className={styles["event__header"]}>
+            <div className={styles["event__text"]}>
+              <h2 className={styles["event__title"]}>Vue Conference 2021</h2>{" "}
               <Badge color="secondary">ongoing</Badge>
             </div>
-            <div className={styles["event-detail-info-container"]}>
-              <div className={styles["event-detail-info"]}>
+            <div className={styles["event__subtitle-container"]}>
+              <div className={styles["event__subtitle"]}>
                 <Clock width={16} height={16} /> {new Date().toLocaleString()}
               </div>
-              <div className={styles["event-detail-info"]}>
+              <div className={styles["event__subtitle"]}>
                 <User width={16} height={16} /> Organizer
               </div>
             </div>
@@ -70,25 +44,18 @@ function EventDetail() {
             </Button>
           </Link>
         </div>
-        <div className={styles["event-detail-body"]}>
-          <div className={styles["event-detail-tab"]}>
-            {tabs.map((item, index) => {
-              return (
-                <div
-                  key={item.id}
-                  className={cx(styles["event-detail-tab-item"], {
-                    [styles["active"]]: tab.id === item.id,
-                  })}
-                  onClick={() => onChangeTab(index)}
-                >
-                  {item.name}
-                </div>
-              );
-            })}
-          </div>
-          <div className={styles["event-detail-content"]}>
-            <tab.component />
-          </div>
+        <div className={styles["event__body"]}>
+          <Tabs>
+            <TabPanel label="Sessions" id="session">
+              <EventSession />
+            </TabPanel>
+            <TabPanel label="Attendees" id="attendee">
+              <EventAttendees />
+            </TabPanel>
+            <TabPanel label="Room's Timeline" id="timeline">
+              <EventTimeline />
+            </TabPanel>
+          </Tabs>
         </div>
       </div>
     </Default>
