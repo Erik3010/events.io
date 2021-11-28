@@ -4,17 +4,13 @@ import Default from "containers/Default/Default";
 
 import styles from "pages/EventDetail/EventDetail.module.scss";
 
-import cx from "classnames";
-
-import { Link, useHistory } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 import { ReactComponent as Clock } from "assets/icons/clock.svg";
 import { ReactComponent as User } from "assets/icons/user.svg";
 import EventSession from "components/Event/EventSession/EventSession";
 import EventAttendees from "components/Event/EventAttendees/EventAttendees";
 import EventTimeline from "components/Event/EventTimeline/EventTimeline";
-
-import useQuery from "hooks/useQuery";
 
 import Tabs from "components/Basic/Tabs/Tabs/Tabs";
 import TabPanel from "components/Basic/Tabs/TabPanel/TabPanel";
