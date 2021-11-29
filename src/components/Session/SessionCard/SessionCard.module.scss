@@ -1,6 +1,6 @@
 @import "scss/variables";
 
-.session-card {
+.card {
   background: $white;
   box-shadow: $shadowSm;
   border: 1px solid $border;
@@ -11,57 +11,55 @@
     border-color: $primary;
     box-shadow: $shadowMd;
   }
-  &-header {
+  &__header {
     margin-bottom: 0.15rem;
-    &-title {
-      display: flex;
-      align-items: center;
-      font-weight: 600;
-      h4 {
-        display: -webkit-box;
-        overflow: hidden;
-        -webkit-line-clamp: 1;
-        -webkit-box-orient: vertical;
-        width: 90%;
-      }
-    }
   }
-  &-indicator {
+  &__indicator {
     width: 0.55rem;
     height: 0.55rem;
     background: $primary;
     border-radius: 50%;
     margin-right: 0.65rem;
   }
-  &-content {
-    &-info {
-      margin-bottom: 1rem;
-      display: flex;
-      > * + * {
-        margin-left: 1rem;
-      }
-      &-item {
-        font-size: 0.75rem;
-        color: $subtitle;
-        stroke: $subtitle;
-        display: flex;
-        align-items: center;
-        svg {
-          margin-right: 0.25rem;
-        }
-      }
-    }
-    &-description {
-      font-size: 0.75rem;
-      color: $subtitle;
-      line-height: 1.75;
+  &__title {
+    display: flex;
+    align-items: center;
+    font-weight: 600;
+    &-text {
       display: -webkit-box;
       overflow: hidden;
-      -webkit-line-clamp: 3;
+      -webkit-line-clamp: 1;
       -webkit-box-orient: vertical;
+      width: 90%;
     }
-    &-cta {
-      margin-top: 1rem;
+  }
+  &__info {
+    margin-bottom: 1rem;
+    display: flex;
+    > * + * {
+      margin-left: 1rem;
     }
+    &-item {
+      font-size: 0.75rem;
+      color: $subtitle;
+      stroke: $subtitle;
+      display: flex;
+      align-items: center;
+      svg {
+        margin-right: 0.25rem;
+      }
+    }
+  }
+  &__description {
+    font-size: 0.75rem;
+    color: $subtitle;
+    line-height: 1.75;
+    display: -webkit-box;
+    overflow: hidden;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+  }
+  &__actions {
+    margin-top: 1rem;
   }
 }

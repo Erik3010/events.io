@@ -7,28 +7,28 @@ import Button from "components/Basic/Button/Button";
 
 function SessionCard() {
   return (
-    <div className={styles["session-card"]}>
-      <div className={styles["session-card-header"]}>
-        <div className={styles["session-card-header-title"]}>
-          <div className={styles["session-card-indicator"]}></div>{" "}
-          <h4>Vue 3 Workshop</h4>
+    <div className={styles["card"]}>
+      <div className={styles["card__header"]}>
+        <div className={styles["card__title"]}>
+          <div className={styles["card__indicator"]}></div>{" "}
+          <h4 className={styles["card__title-text"]}>Vue 3 Workshop</h4>
         </div>
       </div>
-      <div className={styles["session-card-content"]}>
-        <div className={styles["session-card-content-info"]}>
-          <div className={styles["session-card-content-info-item"]}>
+      <div className={styles["card__body"]}>
+        <div className={styles["card__info"]}>
+          <div className={styles["card__info-item"]}>
             <User width={16} height={16} /> Evan You
           </div>
-          <div className={styles["session-card-content-info-item"]}>
+          <div className={styles["card__info-item"]}>
             <Clock width={16} height={16} /> 2020-02-14 09:30:00
           </div>
         </div>
-        <div className={styles["session-card-content-description"]}>
+        <div className={styles["card__description"]}>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis
           voluptatum quo debitis repudiandae ea voluptatibus. Lorem ipsum dolor
           sit amet consectetur adipisicing elit. Aspernatur, rerum.
         </div>
-        <div className={styles["session-card-content-cta"]}>
+        <div className={styles["card__actions"]}>
           <Button small type="secondary">
             View Detail
           </Button>
