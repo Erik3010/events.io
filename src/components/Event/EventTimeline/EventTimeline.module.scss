@@ -1,27 +1,27 @@
 @import "scss/variables";
 
-.event-timeline {
+.timeline {
   display: grid;
   grid-template-columns: 1fr 3fr;
   gap: 2rem;
-  .channel-sidebar {
-    .channel-list {
+  .channel {
+    &__sidebar {
       height: 300px;
       overflow: auto;
       padding-right: 0.5rem;
+    }
+    &__sidebar--stacked {
       > * + * {
         margin-top: 0.65rem;
       }
     }
   }
-  .timeline {
-    &-container {
-      position: relative;
-      overflow-y: auto;
-      padding-bottom: 0.75rem;
-    }
-    &-content {
-      margin-top: 3rem;
-    }
+  &__container {
+    position: relative;
+    overflow-y: auto;
+    padding-bottom: 0.75rem;
+  }
+  &__content {
+    margin-top: 3rem;
   }
 }

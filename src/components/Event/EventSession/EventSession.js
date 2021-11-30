@@ -4,7 +4,7 @@ import SessionCard from "components/Session/SessionCard/SessionCard";
 
 function EventSession() {
   return (
-    <div className={styles["session-container"]}>
+    <div className={styles["container"]}>
       {Array(20)
         .fill()
         .map((_, index) => (

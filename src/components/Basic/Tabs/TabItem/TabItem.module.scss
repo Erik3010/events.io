@@ -8,7 +8,7 @@
   &:hover {
     color: $text;
   }
-  &#{&}--active {
+  &--active {
     border-bottom: 2px solid $primary;
     color: $text;
   }

@@ -4,21 +4,26 @@ import ChannelCard from "components/Channel/ChannelCard/ChannelCard";
 import TimelineHeader from "components/Timeline/TimelineHeader/TimelineHeader";
 import TimelineTable from "components/Timeline/TimelineTable/TimelineTable";
 
+import cx from "classnames";
+
 function EventTimeline() {
   return (
-    <div className={styles["event-timeline"]}>
-      <div className={styles["channel-sidebar"]}>
-        <div className={styles["channel-list"]}>
-          {Array(50)
-            .fill()
-            .map((_, index) => (
-              <ChannelCard key={index} isActive={index === 0} />
-            ))}
-        </div>
-      </div>
-      <div className={styles["timeline-container"]}>
+    <div className={styles["timeline"]}>
+      <aside
+        className={cx(
+          styles["channel__sidebar"],
+          styles["channel__sidebar--stacked"]
+        )}
+      >
+        {Array(50)
+          .fill()
+          .map((_, index) => (
+            <ChannelCard key={index} isActive={index === 0} />
+          ))}
+      </aside>
+      <div className={styles["timeline__container"]}>
         <TimelineHeader />
-        <div className={styles["timeline-content"]}>
+        <div className={styles["timeline__content"]}>
           <TimelineTable />
         </div>
       </div>

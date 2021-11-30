@@ -4,8 +4,8 @@ import styles from "components/Event/EventAttendees/EventAttendees.module.scss";
 
 function EventAttendees() {
   return (
-    <div className={styles["attendee-container"]}>
-      <table className={styles["attendee-table"]}>
+    <div className={styles["container"]}>
+      <table className={styles["table"]}>
         <thead>
           <tr>
             <th>User</th>

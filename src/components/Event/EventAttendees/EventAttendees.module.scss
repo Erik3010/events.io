@@ -1,35 +1,33 @@
 @import "scss/variables";
 
-.attendee {
-  &-container {
-    overflow-y: auto;
+.container {
+  overflow-y: auto;
+}
+.table {
+  min-width: 100%;
+  border-collapse: collapse;
+  > * + *,
+  tbody > * + * {
+    border-top: 1px solid $lightGray;
   }
-  &-table {
-    min-width: 100%;
-    border-collapse: collapse;
-    > * + *,
-    tbody > * + * {
-      border-top: 1px solid $lightGray;
-    }
-    th,
-    td {
-      padding: 1.25rem 0.75rem;
-      font-size: 0.875rem;
-    }
-    th {
-      text-align: left;
-      font-weight: 500;
-      color: $subtitle;
-      padding: 0.75rem;
-    }
-    .ticket-badge {
-      border: 1px solid $border;
-      display: inline;
-      padding: 0.25rem 0.5rem;
-      background: $white;
-      font-size: 0.75rem;
-      font-weight: 500;
-      border-radius: 0.25rem;
-    }
+  th,
+  td {
+    padding: 1.25rem 0.75rem;
+    font-size: 0.875rem;
+  }
+  th {
+    text-align: left;
+    font-weight: 500;
+    color: $subtitle;
+    padding: 0.75rem;
+  }
+  .ticket-badge {
+    border: 1px solid $border;
+    display: inline;
+    padding: 0.25rem 0.5rem;
+    background: $white;
+    font-size: 0.75rem;
+    font-weight: 500;
+    border-radius: 0.25rem;
   }
 }
