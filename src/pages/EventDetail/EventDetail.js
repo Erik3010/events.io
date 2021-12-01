@@ -21,7 +21,7 @@ function EventDetail() {
       <div className={styles["event"]}>
         <div className={styles["event__header-container"]}>
           <div className={styles["event__header"]}>
-            <div className={styles["event__text"]}>
+            <div className={styles["event__header-text"]}>
               <h2 className={styles["event__title"]}>Vue Conference 2021</h2>{" "}
               <Badge color="secondary">ongoing</Badge>
             </div>

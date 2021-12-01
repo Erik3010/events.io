@@ -14,7 +14,7 @@
       @media screen and (max-width: $breakpoint-md) {
         margin-bottom: 1rem;
       }
-      .event__text {
+      &-text {
         display: flex;
         align-items: center;
         .event__title {
