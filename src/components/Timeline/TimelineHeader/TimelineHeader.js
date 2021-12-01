@@ -2,11 +2,13 @@ import styles from "components/Timeline/TimelineHeader/TimelineHeader.module.scs
 
 function TimelineHeader() {
   return (
-    <div className={styles["timeline-header"]}>
-      <h1>
-        <span>#</span>roadmap
+    <div className={styles["header"]}>
+      <h1 className={styles["header__title"]}>
+        <span className={styles["header__hashtag"]}>#</span>roadmap
       </h1>
-      <p>This is a roadmap of javascript frontend</p>
+      <p className={styles["header__subtitle"]}>
+        This is a roadmap of javascript frontend
+      </p>
     </div>
   );
 }

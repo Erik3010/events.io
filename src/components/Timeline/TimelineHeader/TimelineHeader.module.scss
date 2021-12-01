@@ -1,18 +1,18 @@
 @import "scss/variables";
 
-.timeline-header {
+.header {
   position: sticky;
   left: 0;
-  h1 {
-    span {
-      margin-right: 0.25rem;
-      color: $gray;
-    }
+  &__title {
     margin: 0;
     font-size: 1.5rem;
     font-weight: 600;
   }
-  p {
+  &__hashtag {
+    margin-right: 0.25rem;
+    color: $gray;
+  }
+  &__subtitle {
     color: $subtitle;
     font-size: 0.875rem;
   }
