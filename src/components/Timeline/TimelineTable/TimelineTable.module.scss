@@ -1,11 +1,11 @@
 @import "scss/variables";
 
-.timeline-table {
+.table {
   background: $white;
   min-width: 900px;
-  .timeline-header {
+  &__header {
     border-top: 1px solid $border;
-    .timeline-cell {
+    &-cell {
       flex: 1;
       padding: 0.5rem 1rem;
       color: $subtitle;
@@ -13,7 +13,7 @@
       font-size: 0.75rem;
     }
   }
-  .timeline-header,
+  &__header,
   .timeline-row {
     display: flex;
     width: 100%;

@@ -6,20 +6,20 @@ import SessionItem from "components/Session/SessionItem/SessionItem";
 
 function TimelineTable() {
   return (
-    <div className={styles["timeline-table"]}>
-      <div className={styles["timeline-header"]}>
+    <div className={styles["table"]}>
+      <div className={styles["table__header"]}>
         <div
           className={cx([
-            styles["timeline-cell"],
+            styles["table__header-cell"],
             styles["timeline-room-header"],
           ])}
         >
           Room
         </div>
-        <div className={styles["timeline-cell"]}>09:00</div>
-        <div className={styles["timeline-cell"]}>11:00</div>
-        <div className={styles["timeline-cell"]}>13:00</div>
-        <div className={styles["timeline-cell"]}>15:00</div>
+        <div className={styles["table__header-cell"]}>09:00</div>
+        <div className={styles["table__header-cell"]}>11:00</div>
+        <div className={styles["table__header-cell"]}>13:00</div>
+        <div className={styles["table__header-cell"]}>15:00</div>
       </div>
       <div className={styles["timeline-body"]}>
         <div className={styles["timeline-row"]}>
