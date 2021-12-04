@@ -3,7 +3,7 @@
 .table {
   background: $white;
   min-width: 900px;
-  &__header {
+  &__head {
     border-top: 1px solid $border;
     &-cell {
       flex: 1;
@@ -13,44 +13,39 @@
       font-size: 0.75rem;
     }
   }
-  &__header,
-  .timeline-row {
+  &__head,
+  &__row {
     display: flex;
     width: 100%;
     border-bottom: 1px solid $border;
-    .timeline-cell {
-      &.timeline-room-header,
-      &.timeline-room-title {
-        border-right: 1px solid $border;
-        max-width: 10rem;
+  }
+  .table__row {
+    &:hover {
+      background: $background;
+      .table__cell--label {
+        font-weight: 500;
+        background: $primary;
+        color: $white;
       }
     }
   }
-  .timeline-body {
-    .timeline-row {
-      .timeline-room-title {
-        font-weight: 500;
-        cursor: pointer;
-        transition: $transition;
-      }
-      &:hover {
-        background: $background;
-        .timeline-room-title {
-          font-weight: 500;
-          background: $primary;
-          color: $white;
-        }
-      }
-      .timeline-cell {
-        padding: 2rem 1rem;
-        flex: 1;
-        font-size: 0.875rem;
-        .session-list {
-          display: flex;
-          position: relative;
-          height: 100%;
-        }
-      }
+  .table__cell {
+    padding: 2rem 1rem;
+    flex: 1;
+    font-size: 0.875rem;
+    &--label {
+      font-weight: 500;
+      cursor: pointer;
+      transition: $transition;
+    }
+    &--content {
+      display: flex;
+      position: relative;
+      height: 100%;
+    }
+    &--fixed-width {
+      border-right: 1px solid $border;
+      max-width: 10rem;
     }
   }
 }
