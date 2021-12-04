@@ -5,10 +5,10 @@ import cx from "classnames";
 function ChannelCard({ isActive }) {
   return (
     <div
-      className={cx([styles["channel-card"], { [styles["active"]]: isActive }])}
+      className={cx([styles["card"], { [styles["card--active"]]: isActive }])}
     >
-      <div className={styles["channel-card-title"]}>#roadmap</div>
-      <div className={styles["channel-card-subtitle"]}>
+      <div className={styles["card__title"]}>#roadmap</div>
+      <div className={styles["card__subtitle"]}>
         This is a roadmap of javascript frontend
       </div>
     </div>

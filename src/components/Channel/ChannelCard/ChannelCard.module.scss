@@ -1,33 +1,35 @@
 @import "scss/variables";
 
-.channel-card {
+.card {
   padding: 0.75rem 1rem;
   border-radius: 0.35rem;
   border: 1px solid $placeholder;
   cursor: pointer;
   transition: $transition;
   background: $white;
-  &-title {
-    font-weight: 600;
-    font-size: 0.875rem;
-  }
-  &-subtitle {
-    color: $subtitle;
-    font-size: 0.75rem;
-  }
   &:hover {
     border-color: $primary;
     box-shadow: $shadowSm;
   }
-  &.active {
+  &__title {
+    font-weight: 600;
+    font-size: 0.875rem;
+  }
+  &__subtitle {
+    color: $subtitle;
+    font-size: 0.75rem;
+  }
+  &--active {
     background: $primary;
     border-color: $primary;
     box-shadow: $shadowMd;
-    .channel-card-subtitle {
-      color: $placeholder;
-    }
-    * {
-      color: $white;
+    .card {
+      &__title {
+        color: $white;
+      }
+      &__subtitle {
+        color: $placeholder;
+      }
     }
   }
 }
