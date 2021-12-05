@@ -1,43 +1,68 @@
 @import "scss/variables";
 
-.registration {
-  &-section {
-    &-container {
-      > * + * {
-        margin-top: 2rem;
-      }
-    }
-    &-title {
-      margin-bottom: 1rem;
-      h1 {
-        font-weight: 600;
-        font-size: 0.9rem;
-        margin: 0;
-      }
-      p {
-        font-size: 0.7rem;
-        color: $subtitle;
-      }
-    }
-  }
-  &-ticket {
-    &-container {
-      display: flex;
-      overflow: auto;
-      max-width: 700px;
-      flex-wrap: nowrap;
-      > * + * {
-        margin-left: 0.75rem;
-      }
-      &::-webkit-scrollbar {
-        display: none;
-      }
-    }
-  }
-  &-workshop {
+.sections {
+  &--stacked {
     > * + * {
-      margin-top: 0.75rem;
+      margin-top: 2rem;
     }
+  }
+  .section {
+    &__header {
+      margin-bottom: 1rem;
+      .section {
+        &__title {
+          font-weight: 600;
+          font-size: 0.9rem;
+          margin: 0;
+        }
+        &__subtitle {
+          font-size: 0.7rem;
+          color: $subtitle;
+        }
+      }
+    }
+    &__content {
+      &--stack {
+        &-vertical {
+          > * + * {
+            margin-left: 0.75rem;
+          }
+        }
+        &-horizontal {
+          > * + * {
+            margin-top: 0.75rem;
+          }
+        }
+      }
+      &--overflowed {
+        display: flex;
+        overflow: auto;
+        max-width: 700px;
+        flex-wrap: nowrap;
+        &::-webkit-scrollbar {
+          display: none;
+        }
+      }
+    }
+  }
+}
+
+.registration {
+  // &-ticket {
+  //   &-container {
+  //     display: flex;
+  //     overflow: auto;
+  //     max-width: 700px;
+  //     flex-wrap: nowrap;
+  //     > * + * {
+  //       margin-left: 0.75rem;
+  //     }
+  //     &::-webkit-scrollbar {
+  //       display: none;
+  //     }
+  //   }
+  // }
+  &-workshop {
     &-item {
       display: flex;
       justify-content: space-between;

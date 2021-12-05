@@ -1,0 +1,30 @@
+@import "scss/variables";
+
+.workshop {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  border-radius: 0.45rem;
+  border: 1px solid $lightGray;
+  transition: $transition;
+  &:hover {
+    background: $transparentPrimary;
+  }
+  &--active {
+    background: $transparentPrimary;
+    border-color: $primary;
+    box-shadow: $shadowSm;
+  }
+  &__body {
+    text-align: right;
+  }
+  &__price {
+    font-weight: 600;
+    color: $primary;
+  }
+  &__tax {
+    font-size: 0.65rem;
+    color: $subtitle;
+  }
+}
