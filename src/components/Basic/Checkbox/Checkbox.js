@@ -14,25 +14,22 @@ function Checkbox({ label, tagline = null, checked = false, value, onChange }) {
 
   return (
     <label className={styles["checkbox"]}>
-      <div className={styles["checkbox-label"]}>
-        <h4>{label}</h4>
-        {tagline && <p>{tagline}</p>}
+      <div className={styles["checkbox__label"]}>
+        <h4 className={styles["checkbox__title"]}>{label}</h4>
+        {tagline && <p className={styles["checkbox__subtitle"]}>{tagline}</p>}
       </div>
       <input
         type="checkbox"
         value={value}
         checked={isChecked}
         onChange={(e) => onChangeHandler(e)}
+        className={styles["checkbox__input"]}
       />
       <div
-        className={styles["checkbox-box"]}
+        className={styles["checkbox__box"]}
         style={{ top: tagline ? "0.2rem" : "0rem" }}
       >
-        <Check
-          className={styles["checkbox-checkmark"]}
-          width={15}
-          height={15}
-        />
+        <Check className={styles["checkbox__icon"]} width={15} height={15} />
       </div>
     </label>
   );

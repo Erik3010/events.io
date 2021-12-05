@@ -14,7 +14,7 @@ function BaseDropdown({ show, close, children }) {
 
   return (
     <DropdownContext.Provider value={contextValue}>
-      <div className={styles["dropdown-container"]}>{children} </div>
+      <div className={styles["container"]}>{children} </div>
     </DropdownContext.Provider>
   );
 }

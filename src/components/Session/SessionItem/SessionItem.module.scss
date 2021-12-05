@@ -1,6 +1,6 @@
 @import "scss/variables";
 
-.session-item {
+.item {
   position: absolute;
   left: 0;
   font-size: 0.65rem;
@@ -15,13 +15,13 @@
   &:hover {
     color: $white;
   }
-  &.workshop {
+  &--workshop {
     border: 1px solid $accent;
     &:hover {
       background: $accent;
     }
   }
-  &.talk {
+  &--talk {
     border: 1px solid $primary;
     &:hover {
       background: $primary;

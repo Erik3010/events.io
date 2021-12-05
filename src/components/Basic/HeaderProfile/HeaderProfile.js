@@ -22,26 +22,23 @@ function HeaderProfile() {
 
   return (
     <Dropdown.Base show={showDropdown} close={() => setShowDropdown(false)}>
-      <div className={styles["header-profile-container"]}>
-        <div className={styles["header-profile"]}>
-          <Avatar color="primary">TE</Avatar>
-          <div className={styles["header-profile-info"]}>
-            <Link to="/" className={styles["header-profile-info-title"]}>
-              Tester 123
-            </Link>
-            <p className={styles["header-profile-info-subtitle"]}>User</p>
-          </div>
+      <div className={styles["profile"]}>
+        <Avatar color="primary">TE</Avatar>
+        <div className={styles["profile__info"]}>
+          <Link to="/" className={styles["profile__title"]}>
+            Tester 123
+          </Link>
+          <p className={styles["profile__subtitle"]}>User</p>
         </div>
-        <div
-          className={styles["header-profile-icon"]}
+
+        <ChevronDown
+          className={cx(styles["profile__icon"], {
+            [styles["profile__icon--active"]]: showDropdown,
+          })}
+          width={18}
+          height={18}
           onClick={(e) => toggleDropdown(e)}
-        >
-          <ChevronDown
-            className={cx({ [styles["active"]]: showDropdown })}
-            width={18}
-            height={18}
-          />
-        </div>
+        />
       </div>
 
       <Dropdown.Menu>
@@ -50,10 +47,8 @@ function HeaderProfile() {
         </Dropdown.Item>
         <Dropdown.Item>Change Profile</Dropdown.Item>
         <Dropdown.Item>
-          <div className={styles["dropdown-item-with-icon"]}>
-            <Logout stroke="#f03e3e" width={16} height={16} />{" "}
-            <span>Logout</span>
-          </div>
+          <Logout stroke="#f03e3e" width={16} height={16} />
+          <span className="text-error">Logout</span>
         </Dropdown.Item>
       </Dropdown.Menu>
     </Dropdown.Base>

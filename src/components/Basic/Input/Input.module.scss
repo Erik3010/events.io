@@ -1,15 +1,15 @@
 @import "scss/variables";
 
-.form-control {
+.form {
   display: flex;
   flex-direction: column;
-  label {
+  &__label {
     display: block;
     margin-bottom: 0.35rem;
     font-size: 0.875rem;
     font-weight: 500;
   }
-  input {
+  &__input {
     background: $white;
     border: 0.0625rem solid #e4e6eb;
     font-size: 0.875rem;

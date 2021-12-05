@@ -1,6 +1,6 @@
 @import "scss/variables";
 
-.dropdown-item {
+.item {
   padding: 0.5rem 1rem;
   font-size: 0.75rem;
   font-weight: 500;
@@ -9,5 +9,10 @@
   cursor: pointer;
   &:hover {
     background: $lightGray;
+  }
+  display: flex;
+  align-items: center;
+  > * + * {
+    margin-left: 0.5rem;
   }
 }

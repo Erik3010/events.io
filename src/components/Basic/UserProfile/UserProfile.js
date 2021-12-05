@@ -4,11 +4,11 @@ import Avatar from "components/Basic/Avatar/Avatar";
 
 function UserProfile({ username, email }) {
   return (
-    <div className={styles["user-profile"]}>
+    <div className={styles["profile"]}>
       <Avatar color="accent">RO</Avatar>
-      <div className={styles["user-profile-content"]}>
-        <h4>{username}</h4>
-        <p>{email}</p>
+      <div className={styles["profile__content"]}>
+        <h4 className={styles["profile__title"]}>{username}</h4>
+        <p className={styles["profile__subtitle"]}>{email}</p>
       </div>
     </div>
   );

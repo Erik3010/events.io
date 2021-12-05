@@ -23,7 +23,7 @@ function EventAttendees() {
               />
             </td>
             <td>
-              <div className={styles["ticket-badge"]}>Early bird</div>
+              <div className={styles["badge"]}>Early bird</div>
             </td>
             <td>{new Date().toLocaleString()}</td>
             <td>

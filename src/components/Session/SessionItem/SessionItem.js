@@ -4,9 +4,7 @@ import cx from "classnames";
 
 function SessionItem({ children }) {
   return (
-    <div className={cx([styles["session-item"], styles["talk"]])}>
-      {children}
-    </div>
+    <div className={cx([styles["item"], styles["item--talk"]])}>{children}</div>
   );
 }
 

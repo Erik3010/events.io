@@ -1,45 +1,30 @@
 @import "scss/variables";
 
-.header-profile {
-  @at-root {
-    &-container {
-      display: flex;
-      align-items: center;
+.profile {
+  display: flex;
+  align-items: center;
+  &__icon {
+    color: $text;
+    margin-left: 2.5rem;
+    cursor: pointer;
+    transition: $transition;
+    &--active {
+      transform: rotate(180deg);
     }
-    &-icon {
-      margin-left: 2.5rem;
-      cursor: pointer;
-      color: $text;
-      > svg {
-        transition: $transition;
-        &.active {
-          transform: rotate(180deg);
-        }
+  }
+  &__info {
+    margin-left: 0.85rem;
+    .profile {
+      &__title {
+        font-weight: 600;
+        font-size: 0.85rem;
+      }
+      &__subtitle {
+        font-weight: 500;
+        color: $subtitle;
+        font-size: 0.75rem;
+        margin-top: -0.15rem;
       }
     }
-  }
-  display: flex;
-  align-items: center;
-  &-info {
-    margin-left: 0.85rem;
-    &-title {
-      font-weight: 600;
-      font-size: 0.85rem;
-    }
-    &-subtitle {
-      font-weight: 500;
-      color: $subtitle;
-      font-size: 0.75rem;
-      margin-top: -0.15rem;
-    }
-  }
-}
-
-.dropdown-item-with-icon {
-  display: flex;
-  align-items: center;
-  > * + * {
-    margin-left: 0.5rem;
-    color: $error;
   }
 }

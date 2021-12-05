@@ -2,7 +2,7 @@ import styles from "components/Basic/Dropdown/DropdownItem/DropdownItem.module.s
 
 function DropdownItem({ children, ...props }) {
   return (
-    <div className={styles["dropdown-item"]} {...props}>
+    <div className={styles["item"]} {...props}>
       {children}
     </div>
   );

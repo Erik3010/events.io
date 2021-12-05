@@ -11,10 +11,10 @@
   font-weight: 700;
   font-size: 0.75rem;
   cursor: pointer;
-  &-primary {
+  &--primary {
     background: $primary;
   }
-  &-accent {
+  &--accent {
     background: $accent;
   }
 }

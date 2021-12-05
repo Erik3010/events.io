@@ -13,6 +13,9 @@ import RegistrationHeader from "components/Registration/RegistrationHeader/Regis
 import RegistrationContentHeader from "components/Registration/RegistrationContentHeader/RegistrationContentHeader";
 import RegistrationConfirmation from "components/Registration/RegistrationConfirmation/RegistrationConfirmation";
 
+import AttendeeForm from "components/Registration/AttendeeForm/AttendeeForm";
+import RegistrationConfiguration from "components/Registration/RegistrationConfiguration/RegistrationConfiguration";
+
 function Registration() {
   return (
     <Default>
@@ -50,9 +53,9 @@ function Registration() {
                   event organizer"
             />
             <div className={styles["registration-content-body"]}>
-              {/* <AttendeeForm /> */}
+              <AttendeeForm />
               {/* <RegistrationConfiguration /> */}
-              <RegistrationConfirmation />
+              {/* <RegistrationConfirmation /> */}
             </div>
             <div className={styles["registration-content-action"]}>
               <div>

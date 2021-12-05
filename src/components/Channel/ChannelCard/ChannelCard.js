@@ -5,7 +5,12 @@ import cx from "classnames";
 function ChannelCard({ isActive }) {
   return (
     <div
-      className={cx([styles["card"], { [styles["card--active"]]: isActive }])}
+      className={cx([
+        styles["card"],
+        {
+          [styles["card--active"]]: isActive,
+        },
+      ])}
     >
       <div className={styles["card__title"]}>#roadmap</div>
       <div className={styles["card__subtitle"]}>

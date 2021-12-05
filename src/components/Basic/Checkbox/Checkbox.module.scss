@@ -6,34 +6,41 @@
   cursor: pointer;
   user-select: none;
   padding-left: 1.9rem;
-  input {
+  &:hover {
+    .checkbox__box {
+      background: #f0efef;
+    }
+  }
+  &__input {
     position: absolute;
     opacity: 0;
     cursor: pointer;
     width: 0;
     height: 0;
     &:checked {
-      & ~ .checkbox-box {
+      & ~ .checkbox__box {
         background: $primary;
         border-color: $primary;
-        .checkbox-checkmark {
+        .checkbox__icon {
           stroke-dashoffset: 0;
         }
       }
     }
   }
-  &-label {
-    h4 {
-      font-size: 0.85rem;
-      font-weight: 600;
-      margin-bottom: -0.05rem;
-    }
-    p {
-      color: $subtitle;
-      font-size: 0.7rem;
+  &__label {
+    .checkbox {
+      &__title {
+        font-size: 0.85rem;
+        font-weight: 600;
+        margin-bottom: -0.05rem;
+      }
+      &__subtitle {
+        color: $subtitle;
+        font-size: 0.7rem;
+      }
     }
   }
-  &-box {
+  &__box {
     position: absolute;
     left: 0;
     width: 1.15rem;
@@ -45,16 +52,11 @@
     align-items: center;
     justify-content: center;
     transition: $transition;
-    .checkbox-checkmark {
+    .checkbox__icon {
       stroke: $white;
       stroke-dasharray: 20;
       stroke-dashoffset: 20;
       transition: $transition;
-    }
-  }
-  &:hover {
-    .checkbox-box {
-      background: #f0efef;
     }
   }
 }

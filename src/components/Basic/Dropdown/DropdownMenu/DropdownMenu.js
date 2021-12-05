@@ -17,18 +17,10 @@ function DropdownMenu({ children }) {
   const { show } = useContext(DropdownContext);
 
   return (
-    <Transition
-      in={show}
-      timeout={200}
-      appear
-      unmountOnExit
-    >
+    <Transition in={show} timeout={200} appear unmountOnExit>
       {(state) => {
         return (
-          <div
-            style={{ ...transitionStyle[state] }}
-            className={styles["dropdown-menu"]}
-          >
+          <div style={{ ...transitionStyle[state] }} className={styles["menu"]}>
             {children}
           </div>
         );
