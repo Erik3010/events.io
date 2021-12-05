@@ -2,12 +2,12 @@ import styles from "components/Registration/RegistrationHeader/RegistrationHeade
 
 function RegistrationHeader() {
   return (
-    <div className={styles["registration-header-title"]}>
-      <h1>Vue Conference</h1>
-      <div className={styles["registration-header-subtitle"]}>
-        <div className={styles["registration-sub-content"]}>
+    <div className={styles["header"]}>
+      <h1 className={styles["header__title"]}>Vue Conference</h1>
+      <div className={styles["header__body"]}>
+        <div className={styles["header__label"]}>
           Order Date:{" "}
-          <span>
+          <span className={styles["header__label--bold"]}>
             {new Intl.DateTimeFormat("en-US", {
               year: "numeric",
               month: "long",
@@ -15,9 +15,12 @@ function RegistrationHeader() {
             }).format(new Date())}
           </span>
         </div>
-        <div className={styles["separator"]}>|</div>
-        <div className={styles["registration-sub-content"]}>
-          Location: <span>Online Meeting (Zoom)</span>
+        <div className={styles["header__line"]}>|</div>
+        <div className={styles["header__label"]}>
+          Location:{" "}
+          <span className={styles["header__label--bold"]}>
+            Online Meeting (Zoom)
+          </span>
         </div>
       </div>
     </div>
