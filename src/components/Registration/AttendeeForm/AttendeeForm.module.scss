@@ -1,9 +1,9 @@
 @import "scss/variables";
 
-.attendee-form {
+.form {
   display: grid;
   gap: 1rem;
-  &-group {
+  &__group {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 1rem;

@@ -1,52 +1,50 @@
 @import "scss/variables";
 
-.registration-stepper {
-  &-line {
+.stepper {
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  &--disabled {
+    cursor: not-allowed;
+    .stepper {
+      &__icon {
+        opacity: 0.6;
+      }
+      &__content {
+        .stepper__title,
+        .stepper__subtitle {
+          color: $gray;
+        }
+      }
+    }
+  }
+  &__line {
     height: 1px;
     background: $border;
     width: 2rem;
   }
-  &-item {
-    padding: 0.5rem 1rem;
-    cursor: pointer;
+  &__icon {
+    background: $primary;
+    margin-right: 0.75rem;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
     display: flex;
     align-items: center;
-    &.disabled {
-      cursor: not-allowed;
-      .registration-stepper-item {
-        &-icon {
-          opacity: 0.6;
-        }
-        &-content {
-          p,
-          h3 {
-            color: $gray;
-          }
-        }
-      }
+    justify-content: center;
+    svg {
+      fill: $white;
     }
-    &-icon {
-      background: $primary;
-      margin-right: 0.75rem;
-      border-radius: 50%;
-      width: 30px;
-      height: 30px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      svg {
-        fill: $white;
-      }
+  }
+  &__content {
+    .stepper__subtitle {
+      color: $subtitle;
+      font-size: 0.65rem;
     }
-    &-content {
-      p {
-        color: $subtitle;
-        font-size: 0.65rem;
-      }
-      h3 {
-        font-weight: 600;
-        font-size: 0.875rem;
-      }
+    .stepper__title {
+      font-weight: 600;
+      font-size: 0.875rem;
     }
   }
 }

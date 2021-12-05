@@ -12,18 +12,17 @@ function RegistrationStepperItem({
   return (
     <>
       <div
-        className={cx({
-          [styles["registration-stepper-item"]]: true,
-          [styles["disabled"]]: disabled,
+        className={cx(styles["stepper"], {
+          [styles["stepper--disabled"]]: disabled,
         })}
       >
-        <div className={styles["registration-stepper-item-icon"]}>{icon}</div>
-        <div className={styles["registration-stepper-item-content"]}>
-          <p>Step {stepCount}</p>
-          <h3>{title}</h3>
+        <div className={styles["stepper__icon"]}>{icon}</div>
+        <div className={styles["stepper__content"]}>
+          <p className={styles["stepper__subtitle"]}>Step {stepCount}</p>
+          <h3 className={styles["stepper__title"]}>{title}</h3>
         </div>
       </div>
-      {hasLine && <div className={styles["registration-stepper-line"]}></div>}
+      {hasLine && <div className={styles["stepper__line"]}></div>}
     </>
   );
 }

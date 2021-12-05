@@ -10,7 +10,7 @@ import Button from "components/Basic/Button/Button";
 import RegistrationSummary from "components/Registration/RegistrationSummary/RegistrationSummary";
 import RegistrationStepperItem from "components/Registration/RegistrationStepperItem/RegistrationStepperItem";
 import RegistrationHeader from "components/Registration/RegistrationHeader/RegistrationHeader";
-import RegistrationCard from "components/Registration/RegistrationCardHeader/RegistrationCardHeader";
+import RegistrationCardHeader from "components/Registration/RegistrationCardHeader/RegistrationCardHeader";
 import RegistrationConfirmation from "components/Registration/RegistrationConfirmation/RegistrationConfirmation";
 
 import AttendeeForm from "components/Registration/AttendeeForm/AttendeeForm";
@@ -46,16 +46,16 @@ function Registration() {
         </header>
         <div className={styles["registration__body"]}>
           <div className={styles["card"]}>
-            <RegistrationCard
+            <RegistrationCardHeader
               icon={<UserGroup width={18} height={18} />}
               title="Attendee Info"
             >
               Fill you infomation. So we can show correct information to the
               event organizer
-            </RegistrationCard>
+            </RegistrationCardHeader>
             <div className={styles["card__body"]}>
-              <AttendeeForm />
-              {/* <RegistrationConfiguration /> */}
+              {/* <AttendeeForm /> */}
+              <RegistrationConfiguration />
               {/* <RegistrationConfirmation /> */}
             </div>
             <div className={styles["card__actions"]}>
