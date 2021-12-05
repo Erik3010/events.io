@@ -1,13 +1,13 @@
 @import "scss/variables";
 
-.registration-content-header {
+.header {
   display: flex;
   align-items: center;
   border-bottom: 1px solid $lightGray;
   padding: 1rem 1.25rem 0.75rem;
   margin: -1rem -1.25rem 1rem;
   font-size: 0.875rem;
-  &-icon {
+  &__icon {
     margin-right: 1rem;
     fill: $white;
     background: $primary;
@@ -18,10 +18,10 @@
     width: 36px;
     height: 36px;
   }
-  &-title {
+  &__title {
     font-weight: 600;
   }
-  &-subtitle {
+  &__subtitle {
     color: $subtitle;
     font-size: 0.7rem;
   }

@@ -1,38 +1,34 @@
 @import "scss/variables";
 
 .registration {
-  &-header {
+  &__header {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    .registration-stepper {
+    .registration__stepper {
       display: flex;
       align-items: center;
     }
   }
-  &-body {
+  &__body {
     display: grid;
     grid-template-columns: 2fr 1fr;
     align-items: start;
     gap: 2rem;
     margin-top: 3rem;
-    .registration {
-      &-content {
-        background: $white;
-        border: 1px solid $border;
-        border-radius: 0.35rem;
+    .card {
+      background: $white;
+      border: 1px solid $border;
+      border-radius: 0.35rem;
+      padding: 1rem 1.25rem 1.25rem;
+      &__body {
+        padding-bottom: 0.5rem;
       }
-      &-content {
-        padding: 1rem 1.25rem 1.25rem;
-        &-body {
-          padding-bottom: 0.5rem;
-        }
-        &-action {
-          margin-top: 1.25rem;
-          display: flex;
-          .right {
-            margin-left: auto;
-          }
+      &__actions {
+        margin-top: 1.25rem;
+        display: flex;
+        &--right {
+          margin-left: auto;
         }
       }
     }

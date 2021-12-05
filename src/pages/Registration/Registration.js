@@ -10,7 +10,7 @@ import Button from "components/Basic/Button/Button";
 import RegistrationSummary from "components/Registration/RegistrationSummary/RegistrationSummary";
 import RegistrationStepperItem from "components/Registration/RegistrationStepperItem/RegistrationStepperItem";
 import RegistrationHeader from "components/Registration/RegistrationHeader/RegistrationHeader";
-import RegistrationContentHeader from "components/Registration/RegistrationContentHeader/RegistrationContentHeader";
+import RegistrationCard from "components/Registration/RegistrationCardHeader/RegistrationCardHeader";
 import RegistrationConfirmation from "components/Registration/RegistrationConfirmation/RegistrationConfirmation";
 
 import AttendeeForm from "components/Registration/AttendeeForm/AttendeeForm";
@@ -19,10 +19,10 @@ import RegistrationConfiguration from "components/Registration/RegistrationConfi
 function Registration() {
   return (
     <Default>
-      <div className={styles["registration-container"]}>
-        <div className={styles["registration-header"]}>
+      <div className={styles["registration"]}>
+        <header className={styles["registration__header"]}>
           <RegistrationHeader />
-          <div className={styles["registration-stepper"]}>
+          <div className={styles["registration__stepper"]}>
             <RegistrationStepperItem
               icon={<UserGroup width={16} height={16} />}
               stepCount={1}
@@ -43,25 +43,26 @@ function Registration() {
               disabled={true}
             />
           </div>
-        </div>
-        <div className={styles["registration-body"]}>
-          <div className={styles["registration-content"]}>
-            <RegistrationContentHeader
+        </header>
+        <div className={styles["registration__body"]}>
+          <div className={styles["card"]}>
+            <RegistrationCard
               icon={<UserGroup width={18} height={18} />}
               title="Attendee Info"
-              tagline="Fill you infomation. So we can show correct information to the
-                  event organizer"
-            />
-            <div className={styles["registration-content-body"]}>
+            >
+              Fill you infomation. So we can show correct information to the
+              event organizer
+            </RegistrationCard>
+            <div className={styles["card__body"]}>
               <AttendeeForm />
               {/* <RegistrationConfiguration /> */}
               {/* <RegistrationConfirmation /> */}
             </div>
-            <div className={styles["registration-content-action"]}>
+            <div className={styles["card__actions"]}>
               <div>
                 <Button type="secondary">Back</Button>
               </div>
-              <div className={styles["right"]}>
+              <div className={styles["card__actions--right"]}>
                 <Button type="primary">Next</Button>
               </div>
             </div>
