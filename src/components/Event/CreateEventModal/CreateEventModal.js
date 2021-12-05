@@ -6,7 +6,7 @@ import { ReactComponent as Cancel } from "assets/icons/cancel.svg";
 
 import { Transition } from "react-transition-group";
 import cx from "classnames";
-import { useEffect } from "react/cjs/react.development";
+import { useEffect } from "react";
 
 const transitionStyle = {
   entering: { opacity: 0, transform: "scale(.95)" },

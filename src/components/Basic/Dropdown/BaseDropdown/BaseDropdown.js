@@ -1,7 +1,7 @@
 import styles from "components/Basic/Dropdown/BaseDropdown/BaseDropdown.module.scss";
 
 import DropdownContext from "components/Basic/Dropdown/DropdownContext";
-import { useEffect } from "react/cjs/react.development";
+import { useEffect } from "react";
 
 function BaseDropdown({ show, close, children }) {
   const contextValue = { show, close };
