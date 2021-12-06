@@ -1,0 +1,41 @@
+@import "scss/variables";
+
+.section {
+  &__header {
+    margin-bottom: 1rem;
+    .section {
+      &__title {
+        font-weight: 600;
+        font-size: 0.9rem;
+        margin: 0;
+      }
+      &__subtitle {
+        font-size: 0.7rem;
+        color: $subtitle;
+      }
+    }
+  }
+  &__content {
+    &--stack {
+      &-horizontal {
+        > * + * {
+          margin-left: 0.75rem;
+        }
+      }
+      &-vertical {
+        > * + * {
+          margin-top: 0.75rem;
+        }
+      }
+    }
+    &--horizontal-overflowed {
+      display: flex;
+      overflow: auto;
+      max-width: 700px;
+      flex-wrap: nowrap;
+      &::-webkit-scrollbar {
+        display: none;
+      }
+    }
+  }
+}

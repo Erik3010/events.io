@@ -1,0 +1,36 @@
+import styles from "components/Registration/RegistrationSection/RegistrationSection.module.scss";
+
+import cx from "classnames";
+
+function RegistrationSection({
+  children,
+  title,
+  subtitle,
+  stackVertical = false,
+  stackHorizontal = false,
+  horizontalOverflow = false,
+}) {
+  return (
+    <section className={styles["section"]}>
+      <header className={styles["section__header"]}>
+        <h1 className={styles["section__title"]}>{title}</h1>
+        <p className={styles["section__subtitle"]}>{subtitle}</p>
+      </header>
+      <div
+        className={cx([
+          styles["section__content"],
+          {
+            [styles["section__content--stack-vertical"]]: stackVertical,
+            [styles["section__content--stack-horizontal"]]: stackHorizontal,
+            [styles["section__content--horizontal-overflowed"]]:
+              horizontalOverflow,
+          },
+        ])}
+      >
+        {children}
+      </div>
+    </section>
+  );
+}
+
+export default RegistrationSection;

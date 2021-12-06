@@ -23,71 +23,24 @@
     }
     &__content {
       &--stack {
-        &-vertical {
+        &-horizontal {
           > * + * {
             margin-left: 0.75rem;
           }
         }
-        &-horizontal {
+        &-vertical {
           > * + * {
             margin-top: 0.75rem;
           }
         }
       }
-      &--overflowed {
+      &--horizontal-overflowed {
         display: flex;
         overflow: auto;
         max-width: 700px;
         flex-wrap: nowrap;
         &::-webkit-scrollbar {
           display: none;
-        }
-      }
-    }
-  }
-}
-
-.registration {
-  // &-ticket {
-  //   &-container {
-  //     display: flex;
-  //     overflow: auto;
-  //     max-width: 700px;
-  //     flex-wrap: nowrap;
-  //     > * + * {
-  //       margin-left: 0.75rem;
-  //     }
-  //     &::-webkit-scrollbar {
-  //       display: none;
-  //     }
-  //   }
-  // }
-  &-workshop {
-    &-item {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 1rem;
-      border-radius: 0.45rem;
-      border: 1px solid $lightGray;
-      transition: $transition;
-      &:hover {
-        background: $transparentPrimary;
-      }
-      &.active {
-        background: $transparentPrimary;
-        border-color: $primary;
-        box-shadow: $shadowSm;
-      }
-      &-info {
-        text-align: right;
-        &-price {
-          font-weight: 600;
-          color: $primary;
-          &-subtitle {
-            font-size: 0.65rem;
-            color: $subtitle;
-          }
         }
       }
     }
