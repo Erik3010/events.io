@@ -1,8 +1,26 @@
 @import "scss/variables";
 
-.registration-ticket {
-  &-item {
-    &-check {
+.card {
+  background: $white;
+  position: relative;
+  transition: $transition;
+  cursor: pointer;
+  min-width: 250px;
+  border: 1px solid $border;
+  border-radius: 0.5rem;
+  padding: 0.75rem 1rem;
+  &:hover {
+    box-shadow: $shadowSm;
+    border-color: $primary;
+  }
+  &--active {
+    border: 1.75px solid $primary;
+    box-shadow: $shadowMd;
+    background: $transparentPrimary;
+  }
+  &__icon {
+    stroke: $white;
+    &-wrapper {
       position: absolute;
       right: 0.75rem;
       background: $primary;
@@ -12,50 +30,30 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      svg {
-        stroke: $white;
-      }
     }
-    &:hover {
-      box-shadow: $shadowSm;
-      border-color: $primary;
+  }
+  &__heading {
+    display: flex;
+    align-items: center;
+    margin-bottom: 0.15rem;
+    > * + * {
+      margin-left: 0.35rem;
     }
-    &.active {
-      border: 1.75px solid $primary;
-      box-shadow: $shadowMd;
-      background: $transparentPrimary;
-    }
-    background: $white;
-    position: relative;
-    transition: $transition;
-    cursor: pointer;
-    min-width: 250px;
-    border: 1px solid $border;
-    border-radius: 0.5rem;
-    padding: 0.75rem 1rem;
-    &-header {
-      &-title {
-        font-weight: 600;
-        display: flex;
-        align-items: center;
-        margin-bottom: 0.15rem;
-        > * + * {
-          margin-left: 0.35rem;
-        }
-      }
-      &-tagline {
-        font-size: 0.75rem;
-        color: $subtitle;
-      }
-    }
-    &-content {
-      height: 3rem;
-      display: flex;
-      flex-direction: column;
-      justify-content: flex-end;
-      color: $primary;
-      font-weight: 500;
-      font-size: 0.875rem;
-    }
+  }
+  &__title {
+    font-weight: 600;
+  }
+  &__subtitle {
+    font-size: 0.75rem;
+    color: $subtitle;
+  }
+  &__price {
+    height: 3rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    color: $primary;
+    font-weight: 500;
+    font-size: 0.875rem;
   }
 }

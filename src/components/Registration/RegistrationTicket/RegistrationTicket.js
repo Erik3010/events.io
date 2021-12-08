@@ -9,25 +9,21 @@ function RegistrationTicket({ isActive = false }) {
   return (
     <div
       className={cx({
-        [styles["registration-ticket-item"]]: true,
-        [styles["active"]]: isActive,
+        [styles["card"]]: true,
+        [styles["card--active"]]: isActive,
       })}
     >
       {isActive && (
-        <div className={styles["registration-ticket-item-check"]}>
-          <Check width={12} height={12} />
+        <div className={styles["card__icon-wrapper"]}>
+          <Check className={styles["card__icon"]} width={12} height={12} />
         </div>
       )}
-      <div className={styles["registration-ticket-item-header"]}>
-        <div className={styles["registration-ticket-item-header-title"]}>
-          <div>Early Bird</div>
-          <TicketBadge>Amount</TicketBadge>
-        </div>
-        <div className={styles["registration-ticket-item-header-tagline"]}>
-          30 tickets left
-        </div>
+      <div className={styles["card__heading"]}>
+        <div className={styles["card__title"]}>Early Bird</div>
+        <TicketBadge>Amount</TicketBadge>
       </div>
-      <div className={styles["registration-ticket-item-content"]}>$100.00</div>
+      <div className={styles["card__subtitle"]}>30 tickets left</div>
+      <div className={styles["card__price"]}>$100.00</div>
     </div>
   );
 }
