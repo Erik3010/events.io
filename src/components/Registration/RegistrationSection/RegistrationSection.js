@@ -5,7 +5,7 @@ import cx from "classnames";
 function RegistrationSection({
   children,
   title,
-  subtitle,
+  subtitle = null,
   stackVertical = false,
   stackHorizontal = false,
   horizontalOverflow = false,
@@ -14,7 +14,7 @@ function RegistrationSection({
     <section className={styles["section"]}>
       <header className={styles["section__header"]}>
         <h1 className={styles["section__title"]}>{title}</h1>
-        <p className={styles["section__subtitle"]}>{subtitle}</p>
+        {subtitle && <p className={styles["section__subtitle"]}>{subtitle}</p>}
       </header>
       <div
         className={cx([
