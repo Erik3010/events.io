@@ -9,6 +9,7 @@ function RegistrationSection({
   stackVertical = false,
   stackHorizontal = false,
   horizontalOverflow = false,
+  withBorder = false,
 }) {
   return (
     <section className={styles["section"]}>
