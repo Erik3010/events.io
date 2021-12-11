@@ -6,7 +6,11 @@ import RegistrationSection from "components/Registration/RegistrationSection/Reg
 function RegistrationConfirmation() {
   return (
     <div className={styles["registration-section-container"]}>
-      <RegistrationSection title="Attendee Info" stackVertical={true}>
+      <RegistrationSection
+        title="Attendee Info"
+        stackVertical={true}
+        withBorder={true}
+      >
         <div className={styles["registration-detail-row"]}>
           <div className={styles["registration-detail-item"]}>
             <p>First Name</p>
@@ -29,7 +33,7 @@ function RegistrationConfirmation() {
         </div>
       </RegistrationSection>
 
-      <RegistrationSection title="Ticket Choosed">
+      <RegistrationSection title="Ticket Choosed" withBorder={true}>
         <div className={styles["registration-section-ticket"]}>
           <div className={styles["registration-section-ticket-content"]}>
             <div
@@ -54,7 +58,11 @@ function RegistrationConfirmation() {
         </div>
       </RegistrationSection>
 
-      <RegistrationSection title="Additional Workshop" stackVertical={true}>
+      <RegistrationSection
+        title="Additional Workshop"
+        stackVertical={true}
+        withBorder={true}
+      >
         <div className={styles["registration-section-workshop"]}>
           {Array(5)
             .fill("")
@@ -86,7 +94,7 @@ function RegistrationConfirmation() {
         </div>
       </RegistrationSection>
 
-      <div className={styles["registration-section"]}>
+      {/* <div className={styles["registration-section"]}>
         <div className={styles["registration-section-title"]}>
           <h4>Attendee Info</h4>
         </div>
@@ -179,7 +187,7 @@ function RegistrationConfirmation() {
               })}
           </div>
         </div>
-      </div>
+      </div> */}
     </div>
   );
 }

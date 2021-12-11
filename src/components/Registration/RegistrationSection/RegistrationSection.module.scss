@@ -2,7 +2,11 @@
 
 .section {
   &__header {
-    margin-bottom: 1rem;
+    margin-bottom: 0.85rem;
+    padding-bottom: 0.45rem;
+    &--bordered {
+      border-bottom: 1px solid $lightGray;
+    }
     .section {
       &__title {
         font-weight: 600;

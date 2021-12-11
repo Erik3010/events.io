@@ -13,7 +13,11 @@ function RegistrationSection({
 }) {
   return (
     <section className={styles["section"]}>
-      <header className={styles["section__header"]}>
+      <header
+        className={cx(styles["section__header"], {
+          [styles["section__header--bordered"]]: withBorder,
+        })}
+      >
         <h1 className={styles["section__title"]}>{title}</h1>
         {subtitle && <p className={styles["section__subtitle"]}>{subtitle}</p>}
       </header>
