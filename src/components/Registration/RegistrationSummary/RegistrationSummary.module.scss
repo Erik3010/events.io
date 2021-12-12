@@ -1,27 +1,27 @@
 @import "scss/variables";
 
-.registration-summary {
+.summary {
   background: $white;
   border: 1px solid $border;
   border-radius: 0.35rem;
   padding: 1rem 1.25rem;
-  &-title {
+  &__header {
     background: rgba(52, 93, 238, 0.15);
     border-radius: 0.25rem;
     padding: 0.5rem 0.75rem;
     margin-bottom: 1rem;
-    &-tagline {
-      font-size: 0.65rem;
-      color: $primary;
-    }
-    &-id {
-      font-weight: 600;
-      font-size: 0.875rem;
-      color: $primary;
-    }
+  }
+  &__subtitle {
+    font-size: 0.65rem;
+    color: $primary;
+  }
+  &__title {
+    font-weight: 600;
+    font-size: 0.875rem;
+    color: $primary;
   }
   &-content {
-    .registration-summary-list {
+    .summary-list {
       &-title {
         font-weight: 600;
         margin-bottom: 0.5rem;
@@ -58,7 +58,7 @@
     border-top: 1px dashed $border;
     width: 100%;
   }
-  &-footer {
+  &__footer {
     margin-top: 1.5rem;
     > * {
       display: block;
