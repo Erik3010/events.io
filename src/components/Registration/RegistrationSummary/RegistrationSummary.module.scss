@@ -20,36 +20,29 @@
     font-size: 0.875rem;
     color: $primary;
   }
-  &__content {
-    .summary__list {
-      &-title {
-        font-weight: 600;
-        margin-bottom: 0.5rem;
-        font-size: 0.85rem;
-      }
-      &-content {
-        font-size: 0.8rem;
-        > * + * {
-          margin-top: 0.25rem;
-        }
-        &-item {
-          display: flex;
-          justify-content: space-between;
-          > * {
-            color: $subtitle;
-          }
-          .times {
-            color: $gray;
-          }
-          &-value {
-            color: $lightText;
-            font-weight: 500;
-          }
-          &-gtotal {
-            font-size: 0.875rem;
-          }
-        }
-      }
+  &__heading {
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    font-size: 0.85rem;
+  }
+  &__row {
+    font-size: 0.8rem;
+    display: flex;
+    justify-content: space-between;
+    > * {
+      color: $subtitle;
+    }
+    &-value {
+      color: $lightText;
+      font-weight: 500;
+    }
+    &--lg-font {
+      font-size: 0.875rem;
+    }
+  }
+  &__list {
+    > * + * {
+      margin-top: 0.25rem;
     }
   }
   &__divider {
