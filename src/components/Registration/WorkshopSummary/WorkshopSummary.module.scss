@@ -1,0 +1,27 @@
+@import "scss/variables";
+
+.item {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.45rem 0;
+  &__title {
+    font-size: 0.85rem;
+    font-weight: 600;
+    margin-bottom: -0.1rem;
+  }
+  &__subtitle {
+    color: $subtitle;
+    font-size: 0.7rem;
+  }
+  &__pricing {
+    text-align: right;
+  }
+  &__price {
+    color: $primary;
+    font-size: 0.9rem;
+  }
+  &__tax {
+    color: $subtitle;
+    font-size: 0.65rem;
+  }
+}

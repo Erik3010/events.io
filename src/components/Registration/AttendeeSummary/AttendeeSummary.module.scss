@@ -1,0 +1,15 @@
+@import "scss/variables";
+
+.summary {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  &__label {
+    font-size: 0.7rem;
+    font-weight: 500;
+    color: $gray;
+  }
+  &__value {
+    font-weight: 500;
+    font-size: 0.875rem;
+  }
+}

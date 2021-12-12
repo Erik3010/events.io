@@ -1,0 +1,29 @@
+@import "scss/variables";
+
+.ticket {
+  display: flex;
+  justify-content: space-between;
+  border: 1px solid $border;
+  box-shadow: $shadowSm;
+  border-radius: 0.5rem;
+  padding: 1rem;
+  &__header {
+    display: flex;
+    align-items: center;
+  }
+  &__title {
+    display: inline-block;
+    margin-right: 0.5rem;
+    font-weight: 600;
+  }
+  &__description {
+    color: $subtitle;
+    font-size: 0.85rem;
+    margin-top: 0.25rem;
+  }
+  &__price {
+    font-weight: 600;
+    font-size: 1.05rem;
+    color: $primary;
+  }
+}
