@@ -20,8 +20,8 @@
     font-size: 0.875rem;
     color: $primary;
   }
-  &-content {
-    .summary-list {
+  &__content {
+    .summary__list {
       &-title {
         font-weight: 600;
         margin-bottom: 0.5rem;
@@ -52,7 +52,7 @@
       }
     }
   }
-  &-divider {
+  &__divider {
     margin: 0.75rem 0;
     height: 1px;
     border-top: 1px dashed $border;

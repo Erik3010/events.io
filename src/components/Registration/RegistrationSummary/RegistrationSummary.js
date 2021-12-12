@@ -13,6 +13,25 @@ function RegistrationSummaryHeader() {
   );
 }
 
+function RegistrationSummaryItemHeading({ children }) {
+  return <div className={styles["summary__list-title"]}>{children}</div>;
+}
+
+function RegistrationSummaryItem({ label, children }) {
+  return (
+    <div className={styles["summary__list-content-item"]}>
+      <span>{label}</span>
+      <span className={styles["summary__list-content-item-value"]}>
+        {children}
+      </span>
+    </div>
+  );
+}
+
+function RegistrationSummaryDivider() {
+  return <div className={styles["summary__divider"]}></div>;
+}
+
 function RegistrationSummaryFooter() {
   return (
     <div className={styles["summary__footer"]}>
@@ -25,91 +44,63 @@ function RegistrationSummary() {
   return (
     <aside className={styles["summary"]}>
       <RegistrationSummaryHeader />
-      <div className={styles["summary-content"]}>
-        <div className={styles["summary-list"]}>
-          <div className={styles["summary-list-title"]}>
+      <div className={styles["summary__content"]}>
+        <div className={styles["summary__list"]}>
+          <RegistrationSummaryItemHeading>
             Registration Information
-          </div>
-          <div className={styles["summary-list-content"]}>
-            <div className={styles["summary-list-content-item"]}>
-              <span>Date</span>
-              <span className={styles["summary-list-content-item-value"]}>
-                {new Intl.DateTimeFormat("en-US", {
-                  year: "numeric",
-                  month: "short",
-                  day: "numeric",
-                }).format(new Date())}
-              </span>
-            </div>
-            <div className={styles["summary-list-content-item"]}>
-              <span>Time</span>
-              <span className={styles["summary-list-content-item-value"]}>
-                10:10
-              </span>
-            </div>
-            <div className={styles["summary-list-content-item"]}>
-              <span>Total People</span>
-              <span className={styles["summary-list-content-item-value"]}>
-                2
-              </span>
-            </div>
+          </RegistrationSummaryItemHeading>
+          <div className={styles["summary__list-content"]}>
+            <RegistrationSummaryItem label="Date">
+              {new Intl.DateTimeFormat("en-US", {
+                year: "numeric",
+                month: "short",
+                day: "numeric",
+              }).format(new Date())}
+            </RegistrationSummaryItem>
+            <RegistrationSummaryItem label="Time">
+              10:10
+            </RegistrationSummaryItem>
+            <RegistrationSummaryItem label="Total People">
+              2
+            </RegistrationSummaryItem>
           </div>
         </div>
-        <div className={styles["summary-divider"]}></div>
-        <div className={styles["summary-list"]}>
-          <div className={styles["summary-list-title"]}>Tickets</div>
-          <div className={styles["summary-list-content"]}>
-            <div className={styles["summary-list-content-item"]}>
-              <span>
-                1 <span className={styles["times"]}>x</span> Early bid
-              </span>
-              <span className={styles["summary-list-content-item-value"]}>
-                $10.00
-              </span>
-            </div>
-            <div className={styles["summary-list-content-item"]}>
-              <span>
-                2 <span className={styles["times"]}>x</span> Early bid
-              </span>
-              <span className={styles["summary-list-content-item-value"]}>
-                $20.00
-              </span>
-            </div>
+        <RegistrationSummaryDivider />
+        <div className={styles["summary__list"]}>
+          <RegistrationSummaryItemHeading>
+            Tickets
+          </RegistrationSummaryItemHeading>
+          <div className={styles["summary__list-content"]}>
+            <RegistrationSummaryItem label="1 x Early bid">
+              $10.00
+            </RegistrationSummaryItem>
+            <RegistrationSummaryItem label="2 x Early bid">
+              $20.00
+            </RegistrationSummaryItem>
           </div>
         </div>
-        <div className={styles["summary-divider"]}></div>
-        <div className={styles["summary-list"]}>
-          <div className={styles["summary-list-content"]}>
-            <div className={styles["summary-list-content-item"]}>
-              <span>Subtotal</span>
-              <span className={styles["summary-list-content-item-value"]}>
-                $30.00
-              </span>
-            </div>
-            <div className={styles["summary-list-content-item"]}>
-              <span>Fee</span>
-              <span
-                className={cx(
-                  styles["summary-list-content-item-value"],
-                  "text-error"
-                )}
-              >
-                -$10.00
-              </span>
-            </div>
+        <RegistrationSummaryDivider />
+        <div className={styles["summary__list"]}>
+          <div className={styles["summary__list-content"]}>
+            <RegistrationSummaryItem label="Subtotal">
+              $30.00
+            </RegistrationSummaryItem>
+            <RegistrationSummaryItem label="Tax">
+              <span className="text-error">-$10.00</span>
+            </RegistrationSummaryItem>
           </div>
         </div>
-        <div className={styles["summary-divider"]}></div>
-        <div className={styles["summary-list"]}>
-          <div className={styles["summary-list-content"]}>
+        <RegistrationSummaryDivider />
+        <div className={styles["summary__list"]}>
+          <div className={styles["summary__list-content"]}>
             <div
               className={cx(
-                styles["summary-list-content-item"],
-                styles["summary-list-content-item-gtotal"]
+                styles["summary__list-content-item"],
+                styles["summary__list-content-item-gtotal"]
               )}
             >
               <span>Grandtotal</span>
-              <span className={styles["summary-list-content-item-value"]}>
+              <span className={styles["summary__list-content-item-value"]}>
                 $25.00
               </span>
             </div>
