@@ -55,8 +55,8 @@ function Registration() {
             </RegistrationCardHeader>
             <div className={styles["card__body"]}>
               {/* <AttendeeForm /> */}
-              {/* <RegistrationConfiguration /> */}
-              <RegistrationConfirmation />
+              <RegistrationConfiguration />
+              {/* <RegistrationConfirmation /> */}
             </div>
             <div className={styles["card__actions"]}>
               <div>
