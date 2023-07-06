@@ -46,7 +46,7 @@ function HeaderProfile() {
           View Profile
         </Dropdown.Item>
         <Dropdown.Item>Change Profile</Dropdown.Item>
-        <Dropdown.Item>
+        <Dropdown.Item onClick={() => history.push("/login")}>
           <Logout stroke="#f03e3e" width={16} height={16} />
           <span className="text-error">Logout</span>
         </Dropdown.Item>
